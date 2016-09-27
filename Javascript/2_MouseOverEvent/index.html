@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Over</title>
+</head>
+<script type="text/javascript">
+    window.onload = function() {
+        var imgObj = document.getElementById("img");
+        imgObj.onmouseover = function() {
+            imgObj.src = "images/jd2.png";
+            imgObj.onmouseout = function () {
+                imgObj.src = "images/jd1.png";
+            }
+        }
+    }
+</script>
+<body>
+<img src="images/jd1.png" id="img" alt="">
+</body>
+</html>
