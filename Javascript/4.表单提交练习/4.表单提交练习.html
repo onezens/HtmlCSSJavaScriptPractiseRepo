@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" id="search"> <button onclick="search()">查询</button>
+</div>
+<div>
+    <input type="text">default
+    <input type="text" id="autoFocus">自动获取焦点
+    <input type="text" id="mouseOverFocus">鼠标经过获取焦点
+</div>
+<script>
+    function  $(id) { return document.getElementById(id); }
+    function  search(){
+        var text = $('search').value;
+        if(text == ""){
+            alert("search content is empty");
+        }else {
+            alert("search content:" + text);
+        }
+    }
+    $('autoFocus').focus();
+    $('mouseOverFocus').onmouseover = function(){
+        //this.focus();
+        this.select();
+    }
+
+</script>
+</body>
+</html>
