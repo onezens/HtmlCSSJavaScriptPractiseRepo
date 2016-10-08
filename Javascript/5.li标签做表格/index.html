@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            line-height: 30px;
+            list-style-type: none;
+        }
+        li span {
+            margin: 5px;
+        }
+        .box {
+            width: 280px;
+        }
+        .current {
+            /*!important 优先级设置为最高, 替换行内式的样式*/
+            background-color: #bbbbbb !important;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+        <li><span>上证指数</span><span>3641</span><span>10-1</span><span>0.18%</span></li>
+    </ul>
+</div>
+<script>
+    var lis = document.getElementsByTagName('li');
+    for(var i=0, length=lis.length; i<length; i++){
+        if(i%2 == 0){
+            lis[i].style.backgroundColor = '#eee';
+        }else {
+            lis[i].style.backgroundColor = '#ddd';
+        }
+        lis[i].onmouseover = function() {
+            this.className = "current";
+        }
+        lis[i].onmouseout = function() {
+            this.className = "";
+        }
+    }
+</script>
+</body>
+</html>

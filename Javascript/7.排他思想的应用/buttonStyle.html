@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .current {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="buttons">
+    <button>按钮样式</button>
+    <button>按钮样式</button>
+    <button>按钮样式</button>
+    <button>按钮样式</button>
+    <button>按钮样式</button>
+    <button>按钮样式</button>
+    <button>按钮样式</button>
+</div>
+<script>
+    var btns = document.getElementById("buttons").getElementsByTagName("button");
+    for(var i= 0,length=btns.length; i<length; i++){
+        btns[i].onclick = function () {
+            for(var j=0; j<btns.length; j++){
+                btns[j].className = "";
+            }
+            this.className = "current";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="top">
+    <button onclick="allSelect()">全选</button>
+    <button onclick="revertSelect()">反选</button>
+    <button onclick="cancelAll()">取消</button>
+</div>
+<div id="bottom">
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+    <li>选项:<input type="checkbox"/></li>
+</div>
+<script>
+    var options = document.getElementsByTagName("input");
+    function allSelect() {
+        for(var i= 0, length=options.length; i<length; i++){
+            options[i].checked = true;
+        }
+    }
+
+    function  cancelAll() {
+        for(var i= 0,length=options.length; i<length; i++){
+            options[i].checked = false;
+        }
+    }
+
+    function  revertSelect() {
+        for(var i= 0,length=options.length; i<length; i++){
+            options[i].checked = !options[i].checked;
+        }
+    }
+</script>
+</body>
+</html>
