@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul,li {
+            list-style-type: none;
+        }
+        .box {
+            width: 730px;
+            height: 454px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        img {
+            display: block;
+        }
+        .circle {
+            bottom: 20px;
+            left:50%;
+            position: absolute;
+            margin-left: -50px;
+        }
+        .circle span {
+            width: 18px;
+            height: 18px;
+            background-color: pink;
+            border-radius: 50%;
+            float: left;
+            text-align: center;
+            line-height: 18px;
+            margin-right: 20px;
+        }
+        .circle span.current {
+            background-color: #a54ca8;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box" id="scroll">
+    <div class="slider" id="slider">
+        <ul id="images">
+            <li><img src="images/11.jpg" alt=""></li>
+            <li><img src="images/22.jpg" alt=""></li>
+            <li><img src="images/33.jpg" alt=""></li>
+            <li><img src="images/44.jpg" alt=""></li>
+            <li><img src="images/55.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var circleDiv = document.createElement("div");
+    var slider = document.getElementById("slider");
+    //circleDiv.className = "circle";
+    circleDiv.setAttribute("class", "circle");
+    slider.appendChild(circleDiv);
+    for(var i= 0, length = slider.children[0].children.length; i < length; i++) {
+        var span = document.createElement("span");
+        circleDiv.appendChild(span);
+        span.innerHTML = i+1;
+    }
+    circleDiv.children[0].setAttribute("class", "current");
+
+</script>
+</body>
+</html>

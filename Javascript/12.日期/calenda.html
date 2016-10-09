@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .calendar {
+            width: 150px;
+            height: 180px;
+            background-color: #a54ca8;
+            margin: 100px auto;
+
+            text-align: center;
+        }
+        .calendar p {
+            width: 100%;
+            color: #fff;
+            font-size: 12px;
+            line-height: 60px;
+
+        }
+        .calendar span {
+            width: 76px;
+            height: 76px;
+            background-color: yellowgreen;
+            display: block;
+            margin: 0 auto;
+            font-size: 50px;
+            line-height: 76px;
+        }
+    </style>
+</head>
+<body>
+<div class="calendar" id="calendar">
+    <p></p>
+    <span class="day"></span>
+</div>
+<script>
+    var calendar = document.getElementById("calendar");
+    var dateStr = calendar.getElementsByTagName("p");
+    var day = calendar.getElementsByTagName("span");
+    var date = new Date();
+    var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    dateStr[0].innerHTML = date.getFullYear() + "年" + (date.getMonth()+1) + "月" + date.getDate()+ "日 " + week[date.getDay()];
+    day[0].innerHTML = date.getDate();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            margin: 100px auto;
+            border: 1px solid #828283;
+            width: 600px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+
+        }
+        textarea {
+            width: 460px;
+            resize: none;
+        }
+        .box li {
+            list-style-type: none;
+            margin-left: 26px;
+            margin-right: 70px;
+            border-bottom: 1px dashed #bbbbbb;
+            line-height:30px;
+        }
+        .box li a {
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box" class="box">微博发布
+    <textarea name="content" id="textarea" cols="30" rows="10"></textarea>
+    <button onclick="sendWeibo()">发送</button>
+</div>
+<script>
+
+        var newUl = document.createElement("ul");
+        var box = document.getElementById("box");
+        box.appendChild(newUl);
+        function sendWeibo(){
+            var inputarea = document.getElementById("textarea");
+            var newLi = document.createElement("li");
+            if(newUl.children.length == 0){
+                newUl.appendChild(newLi);
+            }else {
+                newUl.insertBefore(newLi, newUl.children[0]);
+            }
+            newLi.innerHTML = inputarea.value + "<a href='javascript:'>delete</a>";
+            newLi.children[0].onclick = function () {
+                var parent = this.parentNode;
+                parent.parentNode.removeChild(parent);
+            }
+            inputarea.value = "";
+        }
+
+</script>
+</body>
+</html>
