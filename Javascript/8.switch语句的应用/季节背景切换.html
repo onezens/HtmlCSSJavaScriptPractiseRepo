@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: -1;
+
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--<input type="text" list="text_list">-->
+<!--<datalist id="text_list">-->
+    <!--<option value="http://www.w3school.com.cn" />-->
+    <!--<option value="http://www.google.com" />-->
+    <!--<option value="http://www.microsoft.com" />-->
+<!--</datalist>-->
+<select name="sele" id="sele">
+    <option value="spring">spring</option>
+    <option value="summer">summer</option>
+    <option value="autumn">autumn</option>
+    <option value="winter">winter</option>
+</select>
+<div>
+    <img src="images/chun.jpg" id="image" alt="">
+</div>
+<script>
+    window.onload = function() {
+        var sel = document.getElementById("sele");
+        var img = document.getElementById("image");
+        sel.onchange = function() {
+            switch (this.value){
+                case "spring":
+                    img.src="images/chun.jpg";
+                    break;
+                case "summer":
+                    img.src="images/xia.jpg";
+                    break;
+                case "autumn":
+                    img.src="images/qiu.jpg";
+                    break;
+                case "winter":
+                    img.src="images/dong.jpg";
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    var arr = [1, 3, 5];
+    console.log("original : " + arr);
+
+    //push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度
+    console.log( "push log for new array length: " + arr.push(7));
+    console.log( "push new item 7 log : " + arr);
+
+    console.log( "push log for new array length : " + arr.push(9,0));
+    //和上面有差别,[9,0]整体看做一个数组对象插入到最后面
+    //console.log( "push log for new array length : " + arr.push([9,0]));
+    console.log( "push new item 9,0 log : " + arr);
+
+    //unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度
+    console.log("unshift log for new array length : " + arr.unshift(7));
+    console.log("unshift new item 7 log : " + arr);
+
+    console.log("unshift log for new array length : " + arr.unshift(9,0));
+    console.log("unshift new item 9,0 log : " + arr);
+
+    //pop()  移除最后一个元素, 返回值:返回最后一个值 不能删除多个值
+    console.log("pop log for item : " + arr.pop());
+    console.log("pop last item for array : " + arr);
+
+    //shift() 方法用于把数组的第一个元素从其中删除，并返回第一个元素的值
+    console.log("shift log for item : " + arr.shift());
+    console.log("shift first item for array : " + arr);
+
+    //concat() 该方法用于连接两个或多个数组。它不会改变现有的数组，返回一个新的连接后的数组
+    var arr1 = [1,3,5];
+    var arr2 = [7,9];
+    var arr3 = [0];
+    var result = arr1.concat(arr2, arr3);
+    console.log("combine arr1: " + arr1 + " arr2: " + arr2 + " result: " + result + " length: " + result.length );
+    console.log("original arr1: " + arr1 + " arr2: " + arr2 + " arr3 : " + arr3);
+
+    //join() 将数组各个元素是通过指定的分隔符进行连接成为一个字符串。   arrayObject.join(separator)
+    console.log("array : " + arr + " convert string for - : " + arr.join("-"));
+
+    //split() 把一个字符串分割成字符串数组 stringObject.split(separator,howmany)
+    // howmany 可选。该参数可指定返回的数组的最大长度
+    var txt = "aa-bb-cc-daad";
+    console.log("string : " + txt + " convert to Array : " + txt.split("-"));
+
+
+
+</script>
+
+</body>
+</html>

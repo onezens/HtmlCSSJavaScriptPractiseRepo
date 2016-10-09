@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <ul>
+        <li>hello world!</li>
+        <li>hello world!</li>
+        <li>hello world!</li>
+        <li>hello world!</li>
+        <li class="232">hello world!</li>
+        <li>hello world!</li>
+        <li>hello world!</li>
+        <li>hello world!</li>
+        <li>hello world!</li>
+        <li class="232">hello world!</li>
+    </ul>
+</div>
+<script>
+    window.onload = function() {
+        function  getClassName(name){
+            //如果浏览器兼容使用系统的,不兼容走自定义的
+            if(document.getElementsByClassName(name)){
+                return document.getElementsByClassName(name);
+            }
+            var arr = [];
+            var doms = document.getElementsByTagName("*");
+            for(var i= 0,length=doms.length; i < length; i++){
+                if(doms[i].className == name){
+                    arr.push(doms[i]);
+                }
+            }
+            return arr;
+        }
+        var objs = getClassName("232");
+        objs[0].style.color = "blue";
+        objs[1].style.color = "red";
+    }
+</script>
+</body>
+</html>
