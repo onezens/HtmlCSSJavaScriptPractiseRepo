@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text"><button id="btn">send message</button>
+<script>
+    var btn = document.getElementById("btn");
+    var countDownTime = 10;
+    var timer = null;
+    btn.onclick = function(){
+        clearInterval(timer);
+        timer = setInterval(clockRun, 1000);
+        this.disabled = true;
+        function clockRun(){
+            countDownTime--;
+            if (countDownTime<0){
+                countDownTime = 10;
+                btn.disabled = false;
+                btn.innerHTML = "send message";
+                clearInterval(timer);
+            }else{
+                btn.innerHTML = "count down " + countDownTime + "s";
+            }
+        }
+    }
+</script>
+</body>
+</html>

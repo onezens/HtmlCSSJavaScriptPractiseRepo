@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .clock {
+            background: url("images/clock.jpg");
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .clock div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .hour {
+            background: url("images/hour.png") no-repeat center;
+
+        }
+        .minute {
+            background: url("images/minute.png") no-repeat center;
+        }
+        .second {
+            background: url("images/second.png") no-repeat center;
+        }
+    </style>
+</head>
+<body>
+<div class="clock" id="clock">
+    <div id="hour" class="hour"></div>
+    <div id="minute" class="minute"></div>
+    <div id="second" class="second"></div>
+</div>
+<script>
+    var hour = document.getElementById("hour");
+    var minute = document.getElementById("minute");
+    var second = document.getElementById("second");
+    var h= 0,m= 0,s=0;
+    function clockRun(){
+        var date = new Date();
+        s = date.getSeconds() + date.getMilliseconds() / 1000;
+        m = date.getMinutes() + s/60;
+        h = date.getHours() % 12 + m /60;
+
+        hour.style.webkitTransform = "rotate(" + h*30 +"deg)";
+        minute.style.webkitTransform = "rotate(" + m*6 + "deg)";
+        second.style.webkitTransform = "rotate(" + s*6 + "deg)";
+    }
+    clockRun();
+    setInterval(clockRun, 100);
+</script>
+</body>
+</html>

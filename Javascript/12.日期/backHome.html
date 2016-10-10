@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="gohome"></div>
+<script>
+    var obj = document.getElementById("gohome");
+    var count = 5;
+    var homeAdd = "http://www.wackosix.cn";
+    setTimeout(countDown, 1000); //执行一次
+    function countDown() {
+        count -- ;
+        if (count<0){
+            window.location.href = homeAdd;
+        }else{
+            obj.innerHTML = "<a href=" + homeAdd + ">" + "还剩余" + count + "秒将返回首页!" + "</a>";
+            setTimeout(arguments.callee, 1000); //arguments.callee 调用自己 递归调用
+        }
+    }
+</script>
+</body>
+</html>

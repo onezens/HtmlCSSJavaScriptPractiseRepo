@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            font-size: 36px;
+            color: #ec50a7;
+            margin: 100px auto;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="countdown">距离2016年11月11日还剩32天13小时23分钟12秒121毫秒</div>
+<script>
+
+    var endTime = new Date("2016-10-11 00:00:00");
+    var endTimeStr = endTime.getFullYear() + "年" + (endTime.getMonth()+1) + "月" + endTime.getDate() + "日";
+
+    function clock() {
+        var date = new Date();
+        var timeSpan = endTime.getTime() - date.getTime(); //获取两个时间相差的毫秒数
+        var day = parseInt(timeSpan / (3600*1000*24));
+        timeSpan = timeSpan - (day*3600*1000*24);
+        var hour = parseInt(timeSpan / (3600*1000));
+        timeSpan = timeSpan - hour*3600*1000;
+        var minute = parseInt(timeSpan / (60*1000));
+        timeSpan = timeSpan - minute*60*1000;
+        var second = parseInt(timeSpan / 1000);
+        timeSpan = timeSpan - second*1000;
+        second = second<10 ? '0'+second : second;
+        var minsecond = parseInt(timeSpan);
+        if(minsecond<10){
+            minsecond = '00' + minsecond;
+        }else if (minsecond<100){
+            minsecond = '0' + minsecond;
+        }
+        var countDownStr = day + "天" + hour + "时" + minute + "分" + second + "秒" + minsecond + "毫秒";
+        document.getElementById("countdown").innerHTML = "距离" + endTimeStr + "还剩" + countDownStr;
+    }
+
+    setInterval(clock, 100);
+
+</script>
+</body>
+</html>
