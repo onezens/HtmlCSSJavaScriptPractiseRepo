@@ -48,6 +48,10 @@
         hour.style.webkitTransform = "rotate(" + h*30 +"deg)";
         minute.style.webkitTransform = "rotate(" + m*6 + "deg)";
         second.style.webkitTransform = "rotate(" + s*6 + "deg)";
+        //适配
+        hour.style.MozTransform = "rotate(" + h*30 +"deg)";
+        minute.style.MozTransform = "rotate(" + m*6 + "deg)";
+        second.style.MozTransform = "rotate(" + s*6 + "deg)";
     }
     clockRun();
     setInterval(clockRun, 100);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 512px;
+            height: 400px;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #cccccc;
+        }
+        #pic {
+            width: 100%;
+            position: absolute;
+        }
+        .top {
+            width: 100%;
+            height: 200px;
+            top: 0px;
+            position: absolute;
+        }
+        .bottom {
+            width: 100%;
+            height: 200px;
+            bottom: 0px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <img src="images/mi.png" id="pic" alt="">
+    <div class="top" id="top"></div>
+    <div class="bottom" id="bottom"></div>
+</div>
+<script>
+    var pic = document.getElementById("pic");
+    var up = document.getElementById("top");
+    var down = document.getElementById("bottom");
+    var topoffset = 0;
+    var timer = null;
+    up.onmouseover = function() {
+        clearInterval(timer);
+        function moveUp(){
+            topoffset = topoffset - 1;
+            if(topoffset<=-1070){
+                topoffset = -1070;
+                clearInterval(timer);
+            }
+            pic.style.top = topoffset + "px";
+        }
+        timer = setInterval(moveUp, 10);
+    }
+    down.onmouseover = function() {
+        clearInterval(timer);
+        function moveDown() {
+            topoffset = topoffset + 3;
+            if(topoffset>=0){
+                topoffset = 0;
+                clearInterval(timer);
+            }
+            pic.style.top = topoffset + "px";
+        }
+        timer = setInterval(moveDown, 10);
+    }
+    up.onmouseout = down.onmouseout = function() {
+        clearInterval(timer);
+    }
+</script>
+</body>
+</html>
