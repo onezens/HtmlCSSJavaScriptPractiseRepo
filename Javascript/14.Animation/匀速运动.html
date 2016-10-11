@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 100px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+<button onclick="start()">开始</button>
+<div id="box"></div>
+<script>
+    var box = document.getElementById("box");
+    var x = 0;
+    var timer = null;
+    function start() {
+        function move() {
+            x++;
+            box.style.left = x + "px";
+            if(x == 500){
+                clearInterval(timer);
+                x = 0;
+            }
+        }
+        timer = setInterval(move, 1);
+    }
+</script>
+</body>
+</html>

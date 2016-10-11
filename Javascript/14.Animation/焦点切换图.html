@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0}
+        img {
+            vertical-align: top;
+        }
+        #box {
+            width: 490px;
+            height: 170px;
+            margin: 100px auto;
+            position: relative;
+            background-color: pink;
+            overflow: hidden;
+        }
+        #box ul {
+            list-style-type: none;
+            width: 1960px;
+            height: 100%;
+            position: absolute;
+        }
+        #box ul li {
+            float: left;
+        }
+        #index {
+            position: absolute;
+            bottom: 10px;
+            height: 26px;
+            left: 50%;
+            margin-left: -60px;
+        }
+        #index span {
+            width: 20px;
+            font-size: 20px;
+            background-color: #ffffff;
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        #index span.current {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="images/01.jpg" alt=""></li>
+        <li><img src="images/02.jpg" alt=""></li>
+        <li><img src="images/03.jpg" alt=""></li>
+        <li><img src="images/04.jpg" alt=""></li>
+    </ul>
+    <div id="index"></div>
+</div>
+<script>
+    var box = document.getElementById("box");
+    var index = document.getElementById("index");
+    var imgUl = box.children[0];
+    for(var i= 0,length=imgUl.children.length; i<length; i++) {
+        var newSpan = document.createElement("span");
+        newSpan.innerHTML = i+1;
+        newSpan.tag = i;
+        index.appendChild(newSpan);
+        newSpan.onmouseover =function() {
+            moveToIndex(this.tag);
+            for(var j=0; j<imgUl.children.length; j++){
+                index.children[j].setAttribute("class", "");
+            }
+            this.setAttribute("class", "current");
+        }
+
+    }
+    index.children[0].setAttribute("class", "current");
+    var timer = null;
+    var x = 0;
+    function moveToIndex(index){
+        var target = -index * 490;
+        clearInterval(timer);
+        timer = setInterval(move, 20);
+        function move() {
+            x = x + (target-x)/10;
+            imgUl.style.left = x + "px";
+        }
+    }
+
+</script>
+</body>
+</html>

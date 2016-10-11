@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{padding: 0px; margin: 0px}
+        #scroll {
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+            border: 1px solid #828283;
+            overflow: hidden;
+            position: relative;
+        }
+        #scroll div {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, .3);
+            border: 1px solid #cccccc;
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            color: #ffffff;
+            font-size: 40px;
+            text-align: center;
+        }
+        #left {
+            left: 0px;
+        }
+        #right {
+            right: 0px;
+        }
+        img {
+            vertical-align: top;
+        }
+        #imgs {
+            list-style-type: none;
+            width: 2080px;
+            height: 100%;
+        }
+        #imgs li {
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<div id="scroll">
+    <div id="left"><</div>
+    <div id="right">></div>
+    <ul id="imgs">
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+    </ul>
+
+</div>
+</body>
+</html>

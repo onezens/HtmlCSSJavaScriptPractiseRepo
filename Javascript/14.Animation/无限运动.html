@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0}
+        #box {
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            background-color: pink;
+            overflow: hidden;
+        }
+        #box ul li {
+            float: left;
+        }
+        #box ul {
+            height: 100%;
+            list-style-type: none;
+            position: absolute;
+            left: 0px;
+            top:0px;
+        }
+        img {
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="images/11.jpg" alt=""></li>
+        <li><img src="images/12.jpg" alt=""></li>
+        <li><img src="images/13.jpg" alt=""></li>
+        <li><img src="images/14.jpg" alt=""></li>
+    </ul>
+</div>
+<script>
+    var imgCount = 4;
+    var imgWidth = 300;
+    var boxWidth = 800;
+    var span = boxWidth/imgWidth;
+    var spanInt = parseInt(span);
+    var appendEleCount = (span - spanInt) > 0 ? spanInt+1 : spanInt;
+    var box = document.getElementById("box");
+    box.style.width = boxWidth + "px";
+    var boxUl = box.children[0];a
+    boxUl.style.width = (imgCount+appendEleCount)*imgWidth + "px";
+    console.log(appendEleCount);
+    for(var i=0; i<appendEleCount; i++){
+        boxUl.appendChild(boxUl.children[i].cloneNode(true));
+    }
+    var x = 0;
+    var timer = setInterval(autoPlay, 10);
+    function autoPlay(){
+        x = x-1;
+        x = x<(-(imgCount+appendEleCount)*imgWidth + boxWidth) ? x=boxWidth-appendEleCount*imgWidth : x;
+        boxUl.style.left = x + "px";
+    }
+    box.onmouseover = function() {
+        clearInterval(timer);
+    }
+    box.onmouseout = function() {
+        timer = setInterval(autoPlay,10);
+    }
+
+</script>
+</body>
+</html>
