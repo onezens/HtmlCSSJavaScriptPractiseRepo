@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    var str = "adasdasdasdafa";
+    var indexStr = "sd";
+    console.log("string : " + str + " index string : " + indexStr + " position");
+    console.log("indexOf : " + str.indexOf(indexStr));  //从前面去检索位置
+    console.log("lastIndexOf : " + str.lastIndexOf(indexStr));  //从末尾去检索位置
+
+    var urlStr = "http://www.baidu.com?uid=23134134";
+    console.log("urlStr : " + urlStr);
+    console.log("encodeURIComponent : " + encodeURIComponent(urlStr)); //url 编码
+    console.log("decodeURIComponent : " + decodeURIComponent(encodeURIComponent(urlStr))); // url 解码
+
+    var str1 = "what`s you name ?";
+    var str2 = "my name is zhen.";
+    console.log("str1 : " + str1 + " str2 : " + str2);
+    console.log("str1 concat str2 : " + str1.concat(str2)); //连接两个字符串
+    console.log("str1 substr for index 2 : " + str1.substr(2)); //从索引处开始,取到末尾
+    console.log("str1 substr for index 2 length 4 : " + str1.substr(2, 4)); //从索引处开始,去length个字符
+
+    //从索引处开始,取到末尾
+    console.log("str1 substring for index 2 : " + str1.substring(2));
+    //从索引处开始,结束的索引结束(包括开始索引,不包括结束索引)
+    console.log("str1 substring for start index 2 end index 4 : " + str1.substring(2, 4));
+
+    //从索引处开始,取到末尾
+    console.log("str1 slice for index 2 : " + str1.slice(2));
+    //从索引处开始,结束的索引结束(包括开始索引,不包括结束索引)
+    console.log("str1 slice for start index 2 end index 4 : " + str1.slice(2, 4));
+    //末尾索引开始,到末尾
+    console.log("str1 slice for index -4 : " + str1.slice(-4));
+
+    //保留小数处理
+    var PI = 3.14159265352;
+    console.log(PI + " 保留2位小数处理 : ");
+    var dotIndex = PI.toString().indexOf(".");
+    console.log(PI.toString().substring(0, dotIndex+3));
+    console.log(PI.toString().slice(0, dotIndex+3));
+    console.log(PI.toString().substr(0, dotIndex+3));
+    console.log(PI.toFixed(2));
+    console.log(parseInt(PI*100) / 100);
+
+    //大小写处理:
+    var txt1 = "how are you ?";
+    var txt2 = "I AM Fine, thank you !";
+    console.log(txt1 + " toUpperCase: " +txt1.toUpperCase());
+    console.log(txt2 + " toLowerCase: " + txt2.toLowerCase());
+
+
+
+
+
+</script>
+
+</body>
+</html>
