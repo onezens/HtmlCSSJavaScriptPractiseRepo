@@ -13,7 +13,7 @@
             overflow: hidden;
             position: relative;
         }
-        #scroll div {
+        #scroll span {
             width: 40px;
             height: 40px;
             background-color: rgba(0, 0, 0, .3);
@@ -24,6 +24,8 @@
             color: #ffffff;
             font-size: 40px;
             text-align: center;
+            display: none;
+            cursor: pointer;
         }
         #left {
             left: 0px;
@@ -38,6 +40,8 @@
             list-style-type: none;
             width: 2080px;
             height: 100%;
+            position: absolute;
+            left: 0px;
         }
         #imgs li {
             float: left;
@@ -47,15 +51,62 @@
 </head>
 <body>
 <div id="scroll">
-    <div id="left"><</div>
-    <div id="right">></div>
     <ul id="imgs">
         <li><img src="images/1.jpg" alt=""></li>
         <li><img src="images/2.jpg" alt=""></li>
         <li><img src="images/3.jpg" alt=""></li>
         <li><img src="images/4.jpg" alt=""></li>
     </ul>
-
+    <span id="left"><</span>
+    <span id="right">></span>
 </div>
+
+<script>
+    var scroll = document.getElementById("scroll");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+    var imgUl = document.getElementById("imgs");
+    scroll.onmouseover = function() {
+        left.style.display = "block";
+        right.style.display = "block";
+    }
+    scroll.onmouseout = function(){
+        left.style.display = "none";
+        right.style.display = "none";
+    }
+    var x = 0
+    var index = 0;
+    var target = 0;
+    var timer = null;
+    left.onclick = function() {
+        clearInterval(timer);
+        operateIndex(false);
+        target = -index*520;
+        timer = setInterval(move, 20);
+    }
+    right.onclick = function() {
+        operateIndex(true);
+        target = -index*520;
+        clearInterval(timer);
+        timer = setInterval(move, 20);
+    }
+    function move() {
+        x = x + (target - x)/10;
+        var span = Math.abs(target - x);
+        if(span<=0.000000001){
+            x = target;
+            clearInterval(timer);
+        }
+        imgUl.style.left = x + "px";
+    }
+    function operateIndex(isIncrease){
+        if (isIncrease){
+            index<3 ? index++ : index;
+        }else{
+            index>0 ? index-- : index;
+        }
+    }
+
+</script>
 </body>
 </html>
