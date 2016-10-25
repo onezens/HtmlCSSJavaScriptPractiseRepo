@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box>ul {
+            color: orange;
+        }
+        ul>.li2 {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        /*儿子后代以后都选不中*/
+        div>.li2 {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <ul>
+        <li>This is a list.</li>
+        <li class="li2">This is a list.</li>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+    </ul>
+</div>
+
+</body>
+</html>
