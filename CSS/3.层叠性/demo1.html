@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box1 div {
+            color: blue;
+        }
+
+        #box {
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box1">
+    <div class="box2">
+        <div class="box3" id="box">
+            <!-- my color? 不属于盒子的标签,属于盒子的内容, 选中盒子,里面的内容相当于继承盒子的属性 -->
+            <!--两个选择器都没有选中, 都属于继承, 继承权重为0,所以综合看权重, 蓝色的权重高-->
+            my color?
+        </div>
+    </div>
+</div>
+</body>
+</html>
