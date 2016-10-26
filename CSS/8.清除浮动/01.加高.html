@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*
+            给父亲加高,避免了,box1和box2两个盒子贴靠一起浮动。
+        */
+        /*
+            靠内容来撑出高度的时候,里面的内容也不能浮动
+        */
+        .box1 li, .box2 li {
+            float: left;
+            margin-right: 30px;
+        }
+        .box1 {
+            height: 40px;
+            border: 1px solid #cccccc;
+        }
+        /*.box3 {*/
+            /*height: 100px;*/
+        /*}*/
+        .box4 {
+            float: left;
+            width:100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+        .box5 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <ul>
+        <li>this is a list 1.</li>
+        <li>this is a list 1.</li>
+        <li>this is a list 1.</li>
+        <li>this is a list 1.</li>
+    </ul>
+</div>
+
+<div class="box2">
+    <ul>
+        <li>this is a list 2 .</li>
+        <li>this is a list 2 .</li>
+        <li>this is a list 2 .</li>
+        <li>this is a list 2 .</li>
+    </ul>
+</div>
+<div class="box3">
+    asdfasdfasdfasd;asdfasdfasdfasd;
+    <div class="box4"></div>
+</div>
+<div class="box5"></div>
+</body>
+</html>
