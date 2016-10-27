@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .cl {
+            clear: both;
+        }
+        body {
+            font-size: 14px;
+            font-family: "Microsoft YaHei","Simsun";
+            height: 1500px;
+        }
+        .header {
+            background-color: #191d3a;
+            /*height: 58px;*/
+            overflow: hidden;
+        }
+        .inner {
+            width: 1000px;
+            overflow: hidden;
+            margin: 0 auto;
+            /*background-color: yellowgreen;*/
+        }
+        .header .logo {
+            float: left;
+            margin-right: 40px;
+            height: 58px; /*h5 和 xt标准的高度不太一样*/
+        }
+        .header .nav {
+            float: left;
+        }
+        .header  .nav ul {
+            list-style: none;
+        }
+        .header  .nav ul li {
+            float: left;
+            width: 100px;
+            height: 58px;
+            text-align: center;
+        }
+        .header .nav li a {
+            display: block;
+            color: #818496;
+            width: 100%;
+            height: 100%;
+            line-height: 58px;
+            text-decoration: none;
+            border-left: 1px solid #252947;
+        }
+        .header .nav li a:hover {
+            background-color: #252947;
+            color: whitesmoke;
+        }
+        .header .last {
+            border-right: 1px solid #252947;
+        }
+        .header .jrwm {
+            /*background: url("../../images/boya/jrwm.png") no-repeat;*/
+            float: left;
+            width: 52px;
+            height: 22px;
+            padding: 12px 48px;
+        }
+        .header .jrwm img {
+            cursor: pointer;
+        }
+        .banner {
+            background: url("../../images/boya/banner.jpg") no-repeat top center;
+            height: 465px;
+        }
+        .content {
+            margin: 1px auto;
+            width: 1000px;
+            height: 279px;
+            /*background-color: cyan;*/
+            border-bottom: 1px solid #dbe1e7;
+        }
+        .content .news {
+            float: left;
+            width: 220px;
+            height: 182px;
+            /*background-color: skyblue;*/
+            margin: 49px 40px 49px 0;
+            text-align: center;
+        }
+        .content .news+.last {
+            margin:  49px 0px;
+        }
+        .content .news img {
+            width: 220px;
+        }
+        .content .news p {
+            font-weight: bold;
+            line-height: 36px;
+        }
+        .content .news a {
+            color: #38b774;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 13px;
+            padding-right: 8px;
+            background: url("../../images/boya/sanjiaoxing.png") no-repeat right center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="inner">
+            <h1 class="logo"><img src="../../images/boya/logo.png" alt=""></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">博雅游戏</a></li>
+                    <li><a href="#">博雅新闻</a></li>
+                    <li><a href="#">博雅咨询</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#" class="last">投资者关系</a></li>
+                </ul>
+            </div>
+            <div class="jrwm">
+                <img src="../../images/boya/jrwm.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div class="banner"></div>
+    <div class="content">
+        <div class="news"><img src="../../images/boya/pro1.jpg" alt=""><p>BPT宣传片</p><a href="#">点击播放</a></div>
+        <div class="news"><img src="../../images/boya/pro2.jpg" alt=""><p>BPT宣传片</p><a href="#">点击播放</a></div>
+        <div class="news"><img src="../../images/boya/pro3.jpg" alt=""><p>BPT宣传片</p><a href="#">点击播放</a></div>
+        <div class="news last"><img src="../../images/boya/pro4.jpg" alt=""><p>BPT宣传片</p><a href="#">点击播放</a></div>
+    </div>
+</body>
+</html>
