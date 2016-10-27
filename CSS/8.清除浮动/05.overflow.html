@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* overflow:hidden 可以清楚浮动, 浮动的子标签可以撑大父亲盒子 , 原先的作用是: 超过父亲盒子则不显示*/
+        .box {
+            width: 400px;
+            border: 10px solid #a54ca8;
+            overflow: hidden;
+        }
+        .span1 {
+            float: left;
+            width: 100px;
+            height: 80px;
+            background-color: red;
+        }
+        .span2 {
+            float: left;
+            width: 100px;
+            height: 340px;
+            background-color: yellowgreen;
+        }
+        .span3 {
+            float: left;
+            width: 100px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="span1"></span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+    </div>
+</body>
+</html>

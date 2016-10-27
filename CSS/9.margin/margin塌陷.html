@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* margin塌陷现象是水平方向的标签, margin 不能叠加, 两者之间的距离以大的为准 */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            margin-bottom: 20px;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 30px;
+        }
+        /*脱离标准流则可以叠加*/
+        .box3 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            margin-bottom: 20px;
+        }
+        .box4 {
+            float: left;
+            clear: both;
+            width: 100px;
+            height: 100px;
+            background-color: peru;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+</body>
+</html>
