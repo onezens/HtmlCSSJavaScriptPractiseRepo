@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*  background-attachment: fixed; 背景图片固定,滚动的时候不随背景图片的滚动而滚动 */
+        .box1 {
+
+            background-image: url(../../images/fengjing.png);
+            width: 670px;
+            height:420px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        /* 默认背景是平铺 */
+        .box2 {
+            width: 600px;
+            height: 600px;
+            background-image: url("../../images/fengjing_thumb.png");
+            border: 1px solid #000000;
+        }
+        .box3 {
+            width: 800px;
+            height: 400px;
+            background-image: url("../../images/fengjing_thumb.png");
+            background-repeat: repeat-x;
+            background-position: center center;
+            border: 1px solid chartreuse;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>
