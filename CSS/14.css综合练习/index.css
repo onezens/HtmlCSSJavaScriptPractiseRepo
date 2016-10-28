@@ -1,0 +1,198 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: "Microsoft YaHei", "Simsun";
+    font-size: 14px;
+    /*height: 3000px;*/
+}
+.header {
+    background-color: #191d3a;
+}
+.header .inner {
+    width: 1000px;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+.header .logo {
+    float: left;
+    margin-right: 46px;
+    overflow: hidden;
+}
+.header .logo h1 a {
+    display: block;
+    background-image: url("../../images/boya/logo.png");
+    text-indent: -9999em;
+    width: 185px;
+    height: 58px;
+}
+.nav {
+    /*background-color: yellowgreen;*/
+    /*overflow: hidden;*/
+}
+.nav ul {
+    list-style: none;
+}
+.nav ul li {
+    text-align: center;
+    width: 100px;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #252947;
+}
+.nav ul li.last {
+    border-right: 1px solid #252947;
+}
+.nav ul li a {
+    display: block;
+    line-height: 58px;
+    color: #818496;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    color: whitesmoke;
+    background-color: #252947;
+}
+.header .jrwm {
+    float: left;
+    padding-left: 48px;
+    padding-top: 13px;
+    cursor: pointer;
+}
+.banner {
+    background: url("../../images/boya/banner.jpg") no-repeat top center;
+    height: 465px;
+}
+.content {
+    width: 1001px;
+    height: 280px;
+    margin: 1px auto;
+    border-bottom: 1px solid #dbe1e7;
+}
+.content .product {
+    width: 218px;
+    height: 181px;
+    margin: 50px 43px 50px 0;
+    float: left;
+    text-align: center;
+}
+.content .product img {
+    width: 218px;
+    height: 130px;
+}
+.content .product h3 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 35px;
+}
+.content .product a {
+    text-decoration: none;
+    color: #38b774;
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 8px;
+    background: url("../../images/boya/sanjiaoxing.png") no-repeat right center;
+}
+.content .product.last {
+    margin-right: 0px;
+}
+.news {
+    height: 420px;
+    background: url("../../images/boya/indexmainbg.jpg") no-repeat bottom center;
+}
+.newsInner {
+    width: 1000px;
+    /*background-color: cyan;*/
+    margin: 0px auto;
+    padding: 53px 0;
+    height: 314px;
+    position: relative;
+}
+.newsInner .newsList {
+    background: url("../../images/boya/bynewsbg.jpg");
+    width: 500px;
+    height: 100%;
+    float: left;
+}
+.newsInner .newsList img {
+    position: absolute;
+    left: 218px;
+    top: 93px;
+}
+.newsInner .newsList ul {
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    top: 172px;
+}
+.newsInner .newsList ul li {
+    /*background-color: yellowgreen;*/
+    width: 460px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #dbe1e7;
+    margin-left: 40px;
+}
+.newsInner .newsList ul .date {
+    float: left;
+    color: #c0c4cf;
+    padding-right: 40px;
+    font-size: 12px;
+}
+.newsInner .newsList ul .title {
+    float: left;
+}
+.newsInner .newsList ul .title a {
+    color: #000000;
+    text-decoration: none;
+}
+.newsInner .newsList ul .title a:hover {
+    color: orange;
+}
+.newsInner .jobList {
+    background: url("../../images/boya/byhrbg3.jpg");
+    width: 500px;
+    height: 100%;
+    float: left;
+}
+.newsInner .jobList .jobContent {
+    position: absolute;
+    left: 520px;
+    top: 168px;
+}
+.newsInner .jobList .jobContent p {
+    color: white;
+    font-weight: bold;
+}
+.newsInner .jobList .jobContent ul {
+    list-style: none;
+}
+.newsInner .jobList .jobContent ul li {
+    border-bottom: 1px solid #6fdea3;
+    width: 306px;
+}
+.newsInner .jobList .jobContent ul li a {
+    font-size: 15px;
+    color: white;
+    line-height: 37px;
+    text-decoration: none;
+}
+.newsInner .jobList .jobContent ul li a:hover {
+    color: orange;
+}
+.newsInner .jobList .moreImg {
+    position: absolute;
+    left: 717px;
+    top: 93px;
+}
+.newsInner .jobList .titleImg {
+    position: absolute;
+    left: 579px;
+    top: 93px;
+}
+.footer {
+    background-color: #191d3a;
+    height: 90px;
+}
