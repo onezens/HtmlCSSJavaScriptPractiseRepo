@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background: url("../../images/pingpu1.jpeg");
+            height: 3000px;
+            padding-top: 50px;
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .header {
+            background-color: brown;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 99999999;
+        }
+        .nav {
+            width: 600px;
+            margin: 0 auto;
+        }
+        .nav ul {
+            list-style: none;
+        }
+        .nav ul li {
+            float: left;
+            width: 100px;
+            height: 100%px;
+            background-color: skyblue;
+            line-height: 50px;
+            text-align: center;
+            color: whitesmoke;
+        }
+        .backTop {
+            background-color: skyblue;
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            text-align: center;
+        }
+        .backTop a {
+            text-decoration: none;
+            font-size: 17px;
+            line-height: 25px;
+            color: forestgreen;
+        }
+        /*
+            z-index:要让其有效果,必须要加定位
+            z-index:最终效果和父标签有关,父标签大则在上层
+        */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            /* 滚动的时候会显示在导航栏的顶部,需要设置导航栏的z-index值 */
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li>导航栏目</li>
+                <li>导航栏目</li>
+                <li>导航栏目</li>
+                <li>导航栏目</li>
+                <li>导航栏目</li>
+                <li>导航栏目</li>
+            </ul>
+        </div>
+    </div>
+    <div class="backTop">
+        <a href="#">返回顶部</a>
+    </div>
+    <div class="box1"></div>
+</body>
+</html>
