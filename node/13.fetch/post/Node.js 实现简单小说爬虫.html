@@ -1,0 +1,231 @@
+
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/coderleon/p/novel_crawler_by_nodejs.html">Node.js &#x5B9E;&#x73B0;&#x7B80;&#x5355;&#x5C0F;&#x8BF4;&#x722C;&#x866B;</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="cnblogs-markdown"><p>&#x6700;&#x8FD1;&#x56E0;&#x4E3A;&#x5267;&#x8352;&#xFF0C;&#x8001;&#x5927;&#x8FFD;&#x4E86;&#x7231;&#x5947;&#x827A;&#x7684;&#x4E00;&#x90E8;&#x7F51;&#x5267;&#xFF0C;&#x7531;&#x4E01;&#x58A8;&#x7684;&#x540C;&#x540D;&#x5C0F;&#x8BF4;&#x300A;&#x7F8E;&#x4EBA;&#x4E3A;&#x9985;&#x300B;&#x6539;&#x7F16;&#xFF0C;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x653E;&#x51FA;&#x4E24;&#x5B63;&#xFF0C;&#x867D;&#x7136;&#x6574;&#x90E8;&#x5267;&#x69FD;&#x70B9;&#x6EE1;&#x6EE1;&#xFF0C;&#x4F46;&#x662F;&#x8001;&#x5927;&#x770B;&#x5F97;&#x4E0D;&#x4EA6;&#x4E50;&#x4E4E;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x770B;&#x5B8C;&#x7B2C;&#x4E8C;&#x5B63;&#x4E4B;&#x540E;&#x8DDF;&#x6211;&#x8981;&#x5C0F;&#x8BF4;&#x8D44;&#x6E90;&#xFF0C;&#x76F4;&#x63A5;&#x8981;&#x5954;&#x539F;&#x8457;&#x53BB;&#x770B;&#x7ED3;&#x5C40;&#x2026;&#x2026;<br>
+&#x968F;&#x624B;&#x641C;&#x4E86;&#x4E0B;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x7EBF;&#x8D44;&#x6E90;&#xFF0C;&#x4E0B;&#x8F7D;&#x7684;&#x8BDD;&#x9700;&#x8981;&#x767B;&#x5F55;&#xFF0C;&#x6CE8;&#x518C;&#x767B;&#x5F55;&#x597D;&#x9EBB;&#x70E6;&#xFF0C;&#x5199;&#x4E2A;&#x722C;&#x866B;&#x73A9;&#x73A9;&#x4E5F;&#x597D;&#xFF0C;&#x4E8E;&#x662F;&#x52A8;&#x624B;&#x7528; node &#x5199;&#x4E86;&#x4E00;&#x4E2A;&#xFF0C;&#x8FD9;&#x91CC;&#x505A;&#x4E0B;&#x7B14;&#x8BB0;<br>
+</p>
+<h3 id="&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;">&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;</h3>
+<ul>
+<li>&#x83B7;&#x53D6; URLs &#x5217;&#x8868;(&#x8BF7;&#x6C42;&#x8D44;&#x6E90; <code>request</code> &#x6A21;&#x5757;)</li>
+<li>&#x6839;&#x636E; URLs &#x5217;&#x8868;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x9875;&#x9762;&#x6E90;&#x7801;(&#x53EF;&#x80FD;&#x9047;&#x5230;&#x9875;&#x9762;&#x7F16;&#x7801;&#x95EE;&#x9898;&#xFF0C;<code>iconv-lite</code> &#x6A21;&#x5757;)</li>
+<li>&#x6E90;&#x7801;&#x89E3;&#x6790;&#xFF0C;&#x83B7;&#x53D6;&#x5C0F;&#x8BF4;&#x4FE1;&#x606F;( <code>cheerio</code> &#x6A21;&#x5757;)</li>
+<li>&#x4FDD;&#x5B58;&#x5C0F;&#x8BF4;&#x4FE1;&#x606F;&#x5230; Markdown &#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x9002;&#x5F53;&#x4FEE;&#x9970;&#x4EE5;&#x53CA;&#x7AE0;&#x8282;&#x4FE1;&#x606F;(&#x5199;&#x6587;&#x4EF6; <code>fs</code>&#x3001;&#x540C;&#x6B65;&#x8BF7;&#x6C42;&#x8D44;&#x6E90; <code>sync-request</code> &#x6A21;&#x5757;)</li>
+<li>Markdown &#x8F6C; PDF (&#x4F7F;&#x7528; Pandoc &#x6216;&#x8005; Chrome &#x7684;&#x6253;&#x5370;&#x529F;&#x80FD;)</li>
+</ul>
+<h3 id="&#x83B7;&#x53D6;-urls">&#x83B7;&#x53D6; URLs</h3>
+<p>&#x6839;&#x636E;&#x5C0F;&#x8BF4;&#x7684;&#x5BFC;&#x822A;&#x9875;&#xFF0C;&#x83B7;&#x53D6;&#x5C0F;&#x8BF4;&#x6240;&#x6709;&#x7AE0;&#x8282;&#x7684; URL&#xFF0C;&#x5E76;&#x4E14;&#x4EE5; JSON &#x6570;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#x5B58;&#x50A8;&#x3002;</p>
+<ul>
+<li>&#x9996;&#x9009;&#x901A;&#x8FC7; <code>http.get()</code> &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x9875;&#x9762;&#x6E90;&#x7801;</li>
+<li>&#x83B7;&#x53D6;&#x5230;&#x6E90;&#x7801;&#xFF0C;&#x6253;&#x5370;&#x53D1;&#x73B0;&#x4E2D;&#x6587;&#x4E71;&#x7801;&#xFF0C;&#x67E5;&#x770B;&#x53D1;&#x73B0; <code>charset = &apos;gbk&apos;</code>&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8F6C;&#x7801;</li>
+<li>&#x4F7F;&#x7528; <code>iconv-lite</code> &#x6A21;&#x5757;&#x8FDB;&#x884C;&#x8F6C;&#x7801;&#xFF0C;&#x4E2D;&#x6587;&#x663E;&#x793A;&#x6B63;&#x5E38;&#x540E;&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6E90;&#x7801;&#xFF0C;&#x83B7;&#x53D6;&#x9700;&#x8981;&#x7684; URL&#xFF0C;&#x4E3A;&#x4E86;&#x66F4;&#x65B9;&#x4FBF;&#x5730;&#x89E3;&#x6790;&#xFF0C;&#x9700;&#x8981;&#x5F15;&#x8FDB; <code>cheerio</code> &#x6A21;&#x5757;&#xFF0C;<code>cheerio</code> &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x8FD0;&#x884C;&#x5728;&#x540E;&#x53F0;&#x7684; jQuery&#xFF0C;&#x7528;&#x6CD5;&#x4E0E; jQuery &#x4E5F;&#x5341;&#x5206;&#x76F8;&#x4F3C;&#xFF0C;&#x719F;&#x6089; jQuery &#x7684;&#x540C;&#x5B66;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x7684;&#x4E0A;&#x624B;</li>
+<li>&#x5C06;&#x6E90;&#x7801;&#x52A0;&#x8F7D;&#x8FDB; <code>cheerio</code>&#xFF0C;&#x5206;&#x6790;&#x4E86;&#x6E90;&#x7801;&#x540E;&#x5F97;&#x77E5;&#x6240;&#x6709;&#x7AE0;&#x8282;&#x4FE1;&#x606F;&#x90FD;&#x5B58;&#x4E8E;&#x88AB; <code>div</code> &#x5305;&#x88F9;&#x7684; <code>a</code> &#x6807;&#x7B7E;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7; <code>cheerio</code> &#x53D6;&#x51FA;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684; <code>a</code> &#x6807;&#x7B7E;&#x7EC4;&#xFF0C;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x83B7;&#x53D6;&#x7AE0;&#x8282;&#x7684; title &#x548C; URL&#xFF0C;&#x4FDD;&#x5B58;&#x4E3A;&#x5BF9;&#x8C61;&#xFF0C;&#x5B58;&#x8FDB;&#x6570;&#x7EC4;&#xFF0C;(<strong>&#x56E0;&#x4E3A;&#x94FE;&#x63A5;&#x4E2D;&#x5B58;&#x50A8;&#x7684; URL &#x4E0D;&#x5B8C;&#x6574;&#xFF0C;&#x6240;&#x4EE5;&#x5B58;&#x50A8;&#x65F6;&#x9700;&#x8981;&#x8865;&#x9F50;</strong>)</li>
+<li>&#x5C06;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x5199;&#x8FDB; <code>list.json</code> &#x6587;&#x4EF6;</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> http <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;http&quot;</span>)
+<span class="kw">var</span> fs <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;fs&quot;</span>)
+<span class="kw">var</span> cheerio <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;cheerio&quot;</span>)
+<span class="kw">var</span> iconv <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;iconv-lite&quot;</span>)
+<span class="kw">var</span> url <span class="op">=</span> <span class="st">&apos;http://www.17fa.com/files/article/html/90/90747/index.html&apos;</span>
+<span class="va">http</span>.<span class="at">get</span>(url<span class="op">,</span> <span class="kw">function</span>(res) <span class="op">{</span>  <span class="co">//&#x8D44;&#x6E90;&#x8BF7;&#x6C42;</span>
+    <span class="kw">var</span> chunks <span class="op">=</span> []
+    <span class="va">res</span>.<span class="at">on</span>(<span class="st">&apos;data&apos;</span><span class="op">,</span> <span class="kw">function</span>(chunk) <span class="op">{</span>
+        <span class="va">chunks</span>.<span class="at">push</span>(chunk)
+    <span class="op">}</span>)
+    <span class="va">res</span>.<span class="at">on</span>(<span class="st">&apos;end&apos;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span>
+        <span class="kw">var</span> html <span class="op">=</span> <span class="va">iconv</span>.<span class="at">decode</span>(<span class="va">Buffer</span>.<span class="at">concat</span>(chunks)<span class="op">,</span> <span class="st">&apos;gb2312&apos;</span>) <span class="co">//&#x8F6C;&#x7801;&#x64CD;&#x4F5C;</span>
+        <span class="kw">var</span> $ <span class="op">=</span> <span class="va">cheerio</span>.<span class="at">load</span>(html<span class="op">,</span> <span class="op">{</span>
+            <span class="dt">decodeEntities</span><span class="op">:</span> <span class="kw">false</span>
+        <span class="op">}</span>)
+        <span class="kw">var</span> content <span class="op">=</span> <span class="at">$</span>(<span class="st">&quot;tbody&quot;</span>)
+        <span class="kw">var</span> links <span class="op">=</span> []
+        <span class="at">$</span>(<span class="st">&apos;div&apos;</span>).<span class="at">children</span>(<span class="st">&apos;a&apos;</span>).<span class="at">each</span>(<span class="kw">function</span>(i<span class="op">,</span> elem) <span class="op">{</span>
+            <span class="kw">var</span> link <span class="op">=</span> <span class="kw">new</span> <span class="at">Object</span>()
+            <span class="va">link</span>.<span class="at">title</span> <span class="op">=</span> <span class="at">$</span>(<span class="kw">this</span>).<span class="at">text</span>()
+            <span class="va">link</span>.<span class="at">link</span> <span class="op">=</span> <span class="st">&apos;http://www.17fa.com/files/article/html/90/90747/&apos;</span> <span class="op">+</span> <span class="at">$</span>(<span class="kw">this</span>).<span class="at">attr</span>(<span class="st">&apos;href&apos;</span>) <span class="co">//&#x8865;&#x9F50; URL &#x4FE1;&#x606F;</span>
+            <span class="cf">if</span> (i <span class="op">&gt;</span> <span class="dv">5</span>) <span class="op">{</span>
+                <span class="va">links</span>.<span class="at">push</span>(link)
+            <span class="op">}</span>
+        <span class="op">}</span>)
+        <span class="va">fs</span>.<span class="at">writeFile</span>(<span class="st">&quot;list.json&quot;</span><span class="op">,</span> <span class="va">JSON</span>.<span class="at">stringify</span>(links)<span class="op">,</span> <span class="kw">function</span>(err) <span class="op">{</span>
+            <span class="cf">if</span> (<span class="op">!</span>err) <span class="op">{</span>
+                <span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;&#x5199;&#x6587;&#x4EF6;&#x6210;&#x529F;&quot;</span>)
+            <span class="op">}</span>
+        <span class="op">}</span>)
+    <span class="op">}</span>).<span class="at">on</span>(<span class="st">&apos;error&apos;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span>
+        <span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;&#x7F51;&#x9875;&#x8BBF;&#x95EE;&#x51FA;&#x9519;&quot;</span>)
+    <span class="op">}</span>)
+<span class="op">}</span>)</code></pre></div>
+<p>&#x83B7;&#x53D6;&#x7684;&#x5217;&#x8868;&#x793A;&#x4F8B;</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="ot">[</span><span class="fu">{</span>
+    <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;3 &#x6CD5;&#x533B;&#x53F8;&#x767D;&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;link&quot;</span><span class="fu">:</span> <span class="st">&quot;http://www.17fa.com/files/article/html/90/90747/16548771.html&quot;</span>
+<span class="fu">}</span><span class="ot">,</span> <span class="fu">{</span>
+    <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;4 &#x7B2C;1&#x4E2A;&#x68A6; &quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;link&quot;</span><span class="fu">:</span> <span class="st">&quot;http://www.17fa.com/files/article/html/90/90747/16548772.html&quot;</span>
+<span class="fu">}</span><span class="ot">,</span> <span class="fu">{</span>
+    <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;5 &#x5211;&#x8B66;&#x97E9;&#x6C89; &quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;link&quot;</span><span class="fu">:</span> <span class="st">&quot;http://www.17fa.com/files/article/html/90/90747/16548773.html&quot;</span>
+<span class="fu">}</span><span class="ot">,</span> <span class="fu">{</span>
+    <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;6 &#x6700;&#x521D;&#x4E4B;&#x6218;&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;link&quot;</span><span class="fu">:</span> <span class="st">&quot;http://www.17fa.com/files/article/html/90/90747/16548774.html &quot;</span>
+<span class="fu">}</span><span class="ot">]</span></code></pre></div>
+<h3 id="&#x83B7;&#x53D6;&#x6570;&#x636E;">&#x83B7;&#x53D6;&#x6570;&#x636E;</h3>
+<p>&#x6709;&#x4E86; URLs &#x5217;&#x8868;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x5F88;&#x673A;&#x68B0;&#x4E86;&#xFF0C;&#x904D;&#x5386; URLs &#x5217;&#x8868;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#xFF0C;&#x83B7;&#x53D6;&#x6E90;&#x7801;&#xFF0C;&#x89E3;&#x6790;&#x6E90;&#x7801;&#xFF0C;&#x83B7;&#x53D6;&#x5C0F;&#x8BF4;&#xFF0C;&#x5199;&#x6587;&#x4EF6;&#xFF0C;<strong>&#x4F46;&#x662F;</strong>&#xFF0C;&#x56E0;&#x4E3A;&#x6700;&#x7EC8;&#x5C06;&#x6240;&#x6709;&#x7684;&#x7AE0;&#x8282;&#x4FDD;&#x5B58;&#x5165;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x8981;&#x4FDD;&#x8BC1;&#x7AE0;&#x8282;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x56E0;&#x6B64;&#x5199;&#x6587;&#x4EF6;&#x9700;&#x8981; <strong>&#x540C;&#x6B65;&#x64CD;&#x4F5C;</strong>&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x6211;&#x5728;&#x7F16;&#x7801;&#x7684;&#x65F6;&#x5019;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x6539;&#x6210;&#x4E86;&#x540C;&#x6B65;&#x65B9;&#x5F0F;</p>
+<h4 id="&#x83B7;&#x53D6;&#x6E90;&#x7801;">&#x83B7;&#x53D6;&#x6E90;&#x7801;</h4>
+<p>&#x901A;&#x8FC7;&#x89E3;&#x6790;&#x8BFB;&#x53D6;&#x7684; <code>list.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x83B7;&#x53D6;&#x5230; URLs &#x5217;&#x8868;&#xFF0C;&#x904D;&#x5386;&#x5217;&#x8868;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x786E;&#x4FDD;&#x7AE0;&#x8282;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5F15;&#x8FDB; <code>sync-request</code> &#x6A21;&#x5757;&#x8FDB;&#x884C;&#x540C;&#x6B65; request &#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#xFF0C;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x540E;&#x7167;&#x4F8B;&#x8F6C;&#x7801;</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> http <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;http&quot;</span>)
+<span class="kw">var</span> fs <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;fs&quot;</span>)
+<span class="kw">var</span> cheerio <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;cheerio&quot;</span>)
+<span class="kw">var</span> iconv <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;iconv-lite&quot;</span>)
+<span class="kw">var</span> request <span class="op">=</span> <span class="at">require</span>(<span class="st">&apos;sync-request&apos;</span>)
+<span class="kw">var</span> urlList <span class="op">=</span> <span class="va">JSON</span>.<span class="at">parse</span>(<span class="va">fs</span>.<span class="at">readFileSync</span>(<span class="st">&apos;list.json&apos;</span><span class="op">,</span> <span class="st">&apos;utf8&apos;</span>))
+<span class="kw">function</span> <span class="at">getContent</span>(chapter) <span class="op">{</span>
+    <span class="kw">var</span> res <span class="op">=</span> <span class="at">request</span>(<span class="st">&apos;GET&apos;</span><span class="op">,</span><span class="va">chapter</span>.<span class="at">link</span>)
+    <span class="kw">var</span> html <span class="op">=</span> <span class="va">iconv</span>.<span class="at">decode</span>(<span class="va">res</span>.<span class="at">body</span><span class="op">,</span> <span class="st">&apos;gb2312&apos;</span>) <span class="co">//&#x83B7;&#x53D6;&#x6E90;&#x7801;</span>
+<span class="op">}</span>
+<span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="va">urlList</span>.<span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) <span class="op">{</span>
+    <span class="at">getContent</span>(urlList[i])
+<span class="op">}</span></code></pre></div>
+<h4 id="&#x89E3;&#x6790;&#x6E90;&#x7801;&#x83B7;&#x53D6;&#x5C0F;&#x8BF4;">&#x89E3;&#x6790;&#x6E90;&#x7801;&#xFF0C;&#x83B7;&#x53D6;&#x5C0F;&#x8BF4;</h4>
+<p>&#x8FD8;&#x662F;&#x901A;&#x8FC7; <code>cheerio</code> &#x6A21;&#x5757;&#x83B7;&#x53D6;&#x5C0F;&#x8BF4;&#x5185;&#x5BB9;&#xFF0C;&#x907F;&#x514D;&#x5F71;&#x54CD;&#x89C2;&#x611F;&#xFF0C;&#x5199;&#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#x53BB;&#x9664;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x7684; html &#x6807;&#x7B7E;</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">getContent</span>(chapter) <span class="op">{</span>
+    <span class="kw">var</span> res <span class="op">=</span> <span class="at">request</span>(<span class="st">&apos;GET&apos;</span><span class="op">,</span><span class="va">chapter</span>.<span class="at">link</span>)
+    <span class="kw">var</span> html <span class="op">=</span> <span class="va">iconv</span>.<span class="at">decode</span>(<span class="va">res</span>.<span class="at">body</span><span class="op">,</span> <span class="st">&apos;gb2312&apos;</span>)
+    <span class="kw">var</span> $ <span class="op">=</span> <span class="va">cheerio</span>.<span class="at">load</span>(html<span class="op">,</span> <span class="op">{</span>
+        <span class="dt">decodeEntities</span><span class="op">:</span> <span class="kw">false</span>
+    <span class="op">}</span>)
+    <span class="kw">var</span> content <span class="op">=</span> (<span class="at">$</span>(<span class="st">&quot;div#r1c&quot;</span>).<span class="at">text</span>()).<span class="at">replace</span>(<span class="ss">/</span><span class="sc">\&amp;</span><span class="ss">nbsp;/g</span><span class="op">,</span> <span class="st">&apos;&apos;</span>)
+<span class="op">}</span></code></pre></div>
+<h4 id="&#x4FDD;&#x5B58;&#x5C0F;&#x8BF4;">&#x4FDD;&#x5B58;&#x5C0F;&#x8BF4;</h4>
+<p>&#x5199;&#x64CD;&#x4F5C;&#x4E5F;&#x9700;&#x8981;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x6B64;&#x4F7F;&#x7528;&#x4E86;&#x540C;&#x6B65;&#x5199;&#x51FD;&#x6570; <code>fs.writeFileSync()</code> &#x548C; &#x540C;&#x6B65;&#x6DFB;&#x52A0;&#x51FD;&#x6570; <code>fs.appendFileSync()</code>&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x5199;&#x4F7F;&#x7528;&#x5199;&#x51FD;&#x6570;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x662F;&#x8FDB;&#x884C; append &#x64CD;&#x4F5C;&#xFF0C;<strong>&#x4E3A;&#x4E86;&#x6539;&#x5584;&#x9605;&#x8BFB;&#x4F53;&#x9A8C;&#xFF0C;&#x6BCF;&#x4E2A;&#x7AE0;&#x8282;&#x524D;&#x6DFB;&#x52A0;&#x6807;&#x9898;</strong><br>
+<strong>&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x5185;&#x5BB9;&#x524D;&#x6DFB;&#x52A0; &#x62CD; [TOC]&#xFF0C;&#x4F5C;&#x4E3A;&#x5BFC;&#x822A;&#x94FE;&#x63A5;</strong></p>
+<p><img src="http://7xlkdt.com1.z0.glb.clouddn.com/public/16-11-18/1946587.jpg" style="border: 0"></p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> http <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;http&quot;</span>)
+<span class="kw">var</span> fs <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;fs&quot;</span>)
+<span class="kw">var</span> cheerio <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;cheerio&quot;</span>)
+<span class="kw">var</span> iconv <span class="op">=</span> <span class="at">require</span>(<span class="st">&quot;iconv-lite&quot;</span>)
+<span class="kw">var</span> path <span class="op">=</span> <span class="at">require</span>(<span class="st">&apos;path&apos;</span>)
+<span class="kw">var</span> urlList <span class="op">=</span> <span class="va">JSON</span>.<span class="at">parse</span>(<span class="va">fs</span>.<span class="at">readFileSync</span>(<span class="st">&apos;list.json&apos;</span><span class="op">,</span> <span class="st">&apos;utf8&apos;</span>))
+<span class="kw">function</span> <span class="at">getContent</span>(chapter) <span class="op">{</span>
+    <span class="va">console</span>.<span class="at">log</span>(<span class="va">chapter</span>.<span class="at">link</span>)
+    <span class="va">http</span>.<span class="at">get</span>(<span class="va">chapter</span>.<span class="at">link</span><span class="op">,</span> <span class="kw">function</span>(res) <span class="op">{</span>
+        <span class="kw">var</span> chunks <span class="op">=</span> []
+        <span class="va">res</span>.<span class="at">on</span>(<span class="st">&apos;data&apos;</span><span class="op">,</span> <span class="kw">function</span>(chunk) <span class="op">{</span>
+            <span class="va">chunks</span>.<span class="at">push</span>(chunk)
+        <span class="op">}</span>)
+        <span class="va">res</span>.<span class="at">on</span>(<span class="st">&apos;end&apos;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span>
+            <span class="kw">var</span> html <span class="op">=</span> <span class="va">iconv</span>.<span class="at">decode</span>(<span class="va">Buffer</span>.<span class="at">concat</span>(chunks)<span class="op">,</span> <span class="st">&apos;gb2312&apos;</span>)
+            <span class="kw">var</span> $ <span class="op">=</span> <span class="va">cheerio</span>.<span class="at">load</span>(html<span class="op">,</span> <span class="op">{</span>
+                <span class="dt">decodeEntities</span><span class="op">:</span> <span class="kw">false</span>
+            <span class="op">}</span>)
+            <span class="kw">var</span> content <span class="op">=</span> (<span class="at">$</span>(<span class="st">&quot;div#r1c&quot;</span>).<span class="at">text</span>()).<span class="at">replace</span>(<span class="ss">/</span><span class="sc">\&amp;</span><span class="ss">nbsp;/g</span><span class="op">,</span> <span class="st">&apos;&apos;</span>)
+            <span class="cf">if</span> (<span class="va">fs</span>.<span class="at">existsSync</span>(<span class="st">&apos;&#x7F8E;&#x4EBA;&#x4E3A;&#x9985;.md&apos;</span>)) <span class="op">{</span>
+                <span class="va">fs</span>.<span class="at">appendFileSync</span>(<span class="st">&apos;&#x7F8E;&#x4EBA;&#x4E3A;&#x9985;.md&apos;</span><span class="op">,</span> <span class="st">&apos;### &apos;</span> <span class="op">+</span> <span class="va">chapter</span>.<span class="at">title</span>)
+                <span class="va">fs</span>.<span class="at">appendFileSync</span>(<span class="st">&apos;&#x7F8E;&#x4EBA;&#x4E3A;&#x9985;.md&apos;</span><span class="op">,</span> content)
+            <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span>
+                <span class="va">fs</span>.<span class="at">writeFileSync</span>(<span class="st">&apos;&#x7F8E;&#x4EBA;&#x4E3A;&#x9985;.md&apos;</span><span class="op">,</span> <span class="st">&apos;### &apos;</span> <span class="op">+</span> <span class="va">chapter</span>.<span class="at">title</span>)
+                <span class="va">fs</span>.<span class="at">appendFileSync</span>(<span class="st">&apos;&#x7F8E;&#x4EBA;&#x4E3A;&#x9985;.md&apos;</span><span class="op">,</span> content)
+            <span class="op">}</span>
+        <span class="op">}</span>)
+    <span class="op">}</span>).<span class="at">on</span>(<span class="st">&apos;error&apos;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span>
+        <span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;&#x722C;&#x53D6;&quot;</span> <span class="op">+</span> <span class="va">chapter</span>.<span class="at">link</span> <span class="op">+</span> <span class="st">&quot;&#x94FE;&#x63A5;&#x51FA;&#x9519;&#xFF01;&quot;</span>)
+    <span class="op">}</span>)
+<span class="op">}</span>
+<span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="va">urlList</span>.<span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) <span class="op">{</span>
+    <span class="va">console</span>.<span class="at">log</span>(urlList[i])
+    <span class="at">getContent</span>(urlList[i])
+<span class="op">}</span></code></pre></div>
+<h3 id="markdown-&#x8F6C;-pdf">Markdown &#x8F6C; PDF</h3>
+<p>&#x6211;&#x5C06;&#x5C0F;&#x8BF4;&#x4FDD;&#x5B58;&#x5728; Markdown &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x5347;&#x9605;&#x8BFB;&#x4F53;&#x9A8C;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06; Markdown &#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x6210; PDF &#x6587;&#x4EF6;&#xFF0C;&#x76EE;&#x524D;&#x6211;&#x8F83;&#x4E3A;&#x559C;&#x6B22;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7; Chrome &#x7684;&#x6253;&#x5370;&#x529F;&#x80FD; &#x4EE5;&#x53CA; pandoc &#x8F6C;&#x6362;</p>
+<h4 id="chrome-&#x6253;&#x5370;">Chrome &#x6253;&#x5370;</h4>
+<p>SublimeText &#x6709;&#x4E2A;&#x63D2;&#x4EF6; <code>markdown preview</code> &#xFF0C;&#x53EF;&#x901A;&#x8FC7; <code>Alt + m</code> &#x5FEB;&#x6377;&#x952E;&#x5728; Chrome &#x4E2D;&#x9884;&#x89C8; Markdown&#xFF0C;&#x5728; Chrome &#x9875;&#x9762;&#x4E2D;&#x53F3;&#x952E;&#xFF0C;&#x9009;&#x62E9;&#x6253;&#x5370;&#xFF0C;&#x8C03;&#x6574;&#x597D;&#x53C2;&#x6570;&#x540E;&#xFF0C;&#x9009;&#x62E9;&#x53E6;&#x5B58;&#x4E3A; PDF&#xFF0C;&#x7B80;&#x5355;&#xFF0C;&#x7C97;&#x66B4;&#xFF0C;&#x6DF1;&#x5F97;&#x6211;&#x5FC3;<br>
+<strong>&#x6253;&#x5370;&#x6548;&#x679C;&#xFF1A;</strong><br>
+<img src="http://7xlkdt.com1.z0.glb.clouddn.com/public/16-11-18/97144351.jpg"></p>
+<h4 id="pandoc-&#x8F6C;&#x6362;">pandoc &#x8F6C;&#x6362;</h4>
+<p>pandoc &#x662F;&#x5341;&#x5206;&#x5F3A;&#x5927;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06; Markdown &#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x6210;&#x591A;&#x79CD;&#x683C;&#x5F0F;&#xFF0C;&#x4ECA;&#x665A;&#x5728; windows10 &#x4E0B;&#x6298;&#x817E;&#x4E86;&#x534A;&#x5929;&#xFF0C;&#x59CB;&#x7EC8;&#x68C0;&#x7D22;&#x4E0D;&#x5230; pdflatex&#xFF0C;&#x5173;&#x4E8E; pandoc&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x4E13;&#x95E8;&#x5199;&#x4E00;&#x7BC7;&#x603B;&#x7ED3;&#x3002;</p>
+<p>PDF &#x5DF2;&#x7ECF;&#x53D1;&#x7ED9;&#x8001;&#x5927;&#x4E86;&#xFF0C;&#x73B0;&#x5728;&#x6B63;&#x5728;&#x770B;</p>
+<h3 id="&#x5173;&#x4E8E;pythonnode&#x722C;&#x866B;">&#x5173;&#x4E8E;python&#x3001;node&#x3001;&#x722C;&#x866B;</h3>
+<p>&#x5728;&#x4E4B;&#x524D;&#x5F88;&#x957F;&#x7684;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x91CC;&#xFF0C;&#x5F88;&#x60F3;&#x7528; Python&#xFF0C;&#x5F88;&#x60F3;&#x5199;&#x722C;&#x866B;&#xFF0C;&#x66F4;&#x60F3;&#x7528; Python &#x5199;&#x722C;&#x866B;&#xFF0C;&#x751A;&#x81F3;&#x6210;&#x4E3A;&#x4E86;&#x5FC3;&#x91CC;&#x7684;&#x4E00;&#x5757;&#x6267;&#x5FF5;&#xFF0C;&#x968F;&#x7740;&#x63A5;&#x89E6;&#x7684;&#x77E5;&#x8BC6;&#x66F4;&#x5168;&#x9762;&#xFF0C;&#x6267;&#x5FF5;&#x4E5F;&#x9010;&#x6E10;&#x6DE1;&#x53BB;&#xFF0C;&#x5C11;&#x4E86;&#x5F88;&#x591A;&#x201C;&#x60F3;&#x201D;&#xFF0C;&#x9047;&#x4E8B;&#x60F3;&#x7740;&#x591A;&#x53BB;&#x52A8;&#x624B;&#xFF0C;&#x5B9E;&#x8DF5;&#x51FA;&#x771F;&#x77E5;&#x3002;</p>
+<hr>
+<p><em>talk is cheap, show me your code</em></p>
+<p><strong>&#x8F6C;&#x81EA;&#x4E2A;&#x4EBA;&#x7AD9;&#x70B9;&#xFF1A;<a href="http://jundong.coding.me/2016/11/17/novel-crawler-by-Nodejs/" class="uri">http://jundong.coding.me/2016/11/17/novel-crawler-by-Nodejs/</a></strong></p>
+</div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-11-18 10:37</span> <a href="http://www.cnblogs.com/coderleon/">leeonway</a> &#x9605;&#x8BFB;(<span id="post_view_count">...</span>) &#x8BC4;&#x8BBA;(<span id="post_comment_count">...</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6076701" rel="nofollow">&#x7F16;&#x8F91;</a> <a href="#" onclick="AddToWz(6076701);return false;">&#x6536;&#x85CF;</a></div>
+	</div>
+	<script src="//common.cnblogs.com/highlight/9.1.0/highlight.min.js?id=20160127"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=232274,cb_entryId=6076701,cb_blogApp=currentBlogApp,cb_blogUserGuid='b0f8bd61-2916-e511-b908-9dcfd8948a71',cb_entryCreatedDate='2016/11/18 10:37:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">&#x5237;&#x65B0;&#x8BC4;&#x8BBA;</a><a href="#" onclick="return RefreshPage();">&#x5237;&#x65B0;&#x9875;&#x9762;</a><a href="#top">&#x8FD4;&#x56DE;&#x9876;&#x90E8;</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">&#x516C;&#x544A;</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	

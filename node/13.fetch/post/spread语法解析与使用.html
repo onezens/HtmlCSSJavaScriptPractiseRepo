@@ -1,0 +1,167 @@
+
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/soaringEveryday/p/6078371.html">spread&#x8BED;&#x6CD5;&#x89E3;&#x6790;&#x4E0E;&#x4F7F;&#x7528;</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="cnblogs-markdown"><p>@[spread, javavscript, es6, react]</p>
+<blockquote>
+<p>Spread&#x8BED;&#x6CD5;&#x662F;ES6&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x5728;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x53C2;&#x6570;&#xFF08;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF09;&#x3001;&#x591A;&#x5143;&#x7D20;&#xFF08;&#x6570;&#x7EC4;&#x8FED;&#x4EE3;&#xFF09;&#x6216;&#x8005;&#x591A;&#x53D8;&#x91CF;&#xFF08;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#xFF09;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;spread&#x8BED;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x5E73;&#x94FA;&#x5316;</p>
+</blockquote>
+<h3 id="java&#x4E2D;&#x7684;&#x53EF;&#x53D8;&#x53C2;&#x6570;">java&#x4E2D;&#x7684;&#x53EF;&#x53D8;&#x53C2;&#x6570;</h3>
+<p>&#x719F;&#x6089;java&#x7684;&#x670B;&#x53CB;&#x5BF9;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x5E94;&#x8BE5;&#x6BD4;&#x8F83;&#x719F;&#x6089;&#x4E86;&#xFF0C;&#x4ED6;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E0D;&#x5B9A;&#x4E2A;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x88AB;&#x4F20;&#x8FDB;&#x6765;&#x540E;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x53EF;&#x4F9B;&#x4F60;&#x8FED;&#x4EE3;&#x4F7F;&#x7528;&#x5206;&#x522B;&#x53D6;&#x51FA;&#x4F20;&#x8FDB;&#x6765;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="dt">int</span> <span class="fu">sum</span>(<span class="dt">int</span><span class="kw">... </span>input){
+    <span class="dt">int</span> result;
+    <span class="kw">for</span>(<span class="dt">int</span> i: input){
+        result+=i;
+    }
+    <span class="kw">return</span> result;
+}</code></pre></div>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x5C31;&#x662F;&#x7528;&#x6765;&#x6C42;&#x548C;&#x7684;&#xFF0C;&#x8F93;&#x5165;&#x7684;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x662F;&#x4E0D;&#x5B9A;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8FDB;&#x5165;&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x53C2;&#x6570;&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x53EF;&#x4EE5;&#x4F9B;&#x4F60;&#x8FED;&#x4EE3;&#x3002;&#x4E8E;&#x662F;&#x8FD9;&#x4E2A;sum&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B50;&#x8C03;&#x7528;&#xFF1A;</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="dt">int</span>[] array = [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>];
+<span class="dt">int</span> result = <span class="fu">sum</span>(array);<span class="co">// result is 15</span></code></pre></div>
+<h3 id="&#x5F53;&#x505A;&#x53C2;&#x6570;&#x4F20;&#x9012;">&#x5F53;&#x505A;&#x53C2;&#x6570;&#x4F20;&#x9012;</h3>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">myFunction</span>(x<span class="op">,</span> y<span class="op">,</span> z) <span class="op">{</span> <span class="op">}</span>
+<span class="kw">var</span> args <span class="op">=</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">;</span>
+<span class="at">myFunction</span>(...<span class="at">args</span>)<span class="op">;</span></code></pre></div>
+<p>&#x8FD9;&#x91CC;&#x5C31;&#x548C;java&#x7684;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#xFF0C;...&#xFF08;spread&#x64CD;&#x4F5C;&#x7B26;&#xFF1F;spread&#x8BED;&#x6CD5;&#xFF09;&#x7528;&#x6765;&#x5C06;args&#x6570;&#x7EC4;&#x5C55;&#x5F00;&#xFF0C;&#x5206;&#x522B;&#x5F53;&#x505A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x4E86;myFunction&#x7684;x&#xFF0C;y&#xFF0C;z</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">function <span class="fu">myFunction</span>(v, w, x, y, z) { }
+var args = [<span class="dv">0</span>, <span class="dv">1</span>];
+<span class="fu">myFunction</span>(-<span class="dv">1</span>, ...<span class="fu">args</span>, <span class="dv">2</span>, ...[<span class="dv">3</span>]);</code></pre></div>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;spread&#x64CD;&#x4F5C;&#x7B26;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x4F7F;&#x7528;&#x3002;0&#x548C;1&#x5206;&#x522B;&#x5F53;&#x505A;&#x53C2;&#x6570;&#x8D4B;&#x503C;&#x7ED9;&#x4E86;w&#x548C;x&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;[3]&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x88AB;spread&#x64CD;&#x4F5C;&#x7B26;&#x5C55;&#x5F00;&#x540E;&#x5F53;&#x7136;&#x5C31;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x5373;3&#x88AB;&#x8D4B;&#x503C;&#x7ED9;&#x4E86;z</p>
+<h3 id="&#x7528;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x7EC4;&#x5408;">&#x7528;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x7EC4;&#x5408;</h3>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> parts <span class="op">=</span> [<span class="st">&apos;shoulders&apos;</span><span class="op">,</span> <span class="st">&apos;knees&apos;</span>]<span class="op">;</span>
+<span class="kw">var</span> lyrics <span class="op">=</span> [<span class="st">&apos;head&apos;</span><span class="op">,</span> ...<span class="at">parts</span><span class="op">,</span> <span class="st">&apos;and&apos;</span><span class="op">,</span> <span class="st">&apos;toes&apos;</span>]<span class="op">;</span> <span class="co">// [&quot;head&quot;, &quot;shoulders&quot;, &quot;knees&quot;, &quot;and&quot;, &quot;toes&quot;]</span></code></pre></div>
+<p>&#x4EE5;&#x4E0A;&#x7684;&#x4F8B;&#x5B50;&#x662F;parts&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;lyrics&#x7684;&#x4E00;&#x90E8;&#x5206;&#x7ED9;&#x8D4B;&#x503C;&#x8FDB;&#x53BB;&#x4E86;</p>
+<p>&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;push&#x51FD;&#x6570;&#xFF1A;</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> arr <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span>]<span class="op">;</span>
+<span class="kw">var</span> arr2 <span class="op">=</span> [...<span class="at">arr</span>]<span class="op">;</span> <span class="co">// like arr.slice()</span>
+<span class="va">arr2</span>.<span class="at">push</span>(<span class="dv">4</span>)<span class="op">;</span> </code></pre></div>
+<p>arr2&#x7684;&#x7ED3;&#x679C;&#x662F;[1,2,3,4]&#xFF0C;&#x800C;arr&#x5E76;&#x4E0D;&#x53D7;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x4F9D;&#x7136;&#x5B58;&#x5728;</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> arr1 <span class="op">=</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">;</span>
+<span class="kw">var</span> arr2 <span class="op">=</span> [<span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">;</span>
+<span class="va">arr1</span>.<span class="at">push</span>(...<span class="at">arr2</span>)<span class="op">;</span><span class="co">// arr1 is [0,1,2,3,4,5]</span></code></pre></div>
+<p>arr2&#x88AB;&#x8D4B;&#x503C;&#x7ED9;&#x4E86;arr1&#x7684;&#x672B;&#x5C3E;</p>
+<h3 id="spread&#x53EA;&#x53EF;&#x7528;&#x4E8E;&#x53EF;&#x679A;&#x4E3E;&#x7C7B;&#x578B;">spread&#x53EA;&#x53EF;&#x7528;&#x4E8E;&#x53EF;&#x679A;&#x4E3E;&#x7C7B;&#x578B;</h3>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> obj <span class="op">=</span> <span class="op">{</span><span class="st">&quot;key1&quot;</span><span class="op">:</span><span class="st">&quot;value1&quot;</span><span class="op">};</span>
+<span class="kw">var</span> array <span class="op">=</span> [...<span class="at">obj</span>]<span class="op">;</span> <span class="co">// TypeError: obj is not iterable</span></code></pre></div>
+<p>&#x4EE5;&#x4E0A;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;obj&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x679A;&#x4E3E;&#xFF0C;spread&#x5E76;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;</p>
+<h3 id="rest&#x64CD;&#x4F5C;&#x7B26;">rest&#x64CD;&#x4F5C;&#x7B26;</h3>
+<p>rest&#x64CD;&#x4F5C;&#x7B26;&#x4E5F;&#x662F;&#x4E09;&#x4E2A;&#x70B9;&#xFF08;...&#xFF09;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4ED6;&#x548C;spread&#x64CD;&#x4F5C;&#x7B26;&#x76F8;&#x53CD;&#xFF0C;&#x4ED6;&#x662F;&#x5C06;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD9;&#x91CC;&#x5176;&#x5B9E;&#x5C31;&#x662F;java&#x7684;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5728;js&#x4E2D;&#x53EB;&#x505A;rest&#x53C2;&#x6570;</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">function <span class="fu">fun1</span>(...<span class="fu">theArgs</span>) {
+  console.<span class="fu">log</span>(theArgs.<span class="fu">length</span>);
+}
+
+<span class="fu">fun1</span>();  <span class="co">// 0</span>
+<span class="fu">fun1</span>(<span class="dv">5</span>); <span class="co">// 1</span>
+<span class="fu">fun1</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>); <span class="co">// 3</span></code></pre></div>
+<p>&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5C31;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#xFF0C;&#x548C;java&#x4E00;&#x6837;</p>
+<h3 id="spread-attributes&#x5EF6;&#x5C55;&#x5C5E;&#x6027;">spread attributes&#x5EF6;&#x5C55;&#x5C5E;&#x6027;</h3>
+<p>&#x5728;&#x5199;React&#x7684;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;spread attributes&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5230;&#x5199;&#x6CD5;&#xFF0C;&#x7528;&#x6765;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7ED9;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;props&#xFF0C;&#x7136;&#x540E;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x6709;&#x54EA;&#x4E9B;props&#x4F60;&#x5374;&#x5E76;&#x4E0D;&#x5B8C;&#x5168;&#x6E05;&#x695A;&#x3002;&#x8FD9;&#x91CC;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">class</span> Student <span class="kw">extends</span> <span class="va">React</span>.<span class="at">Component</span> <span class="op">{</span>
+
+    <span class="at">constructor</span>(props)<span class="op">{</span>
+        <span class="kw">super</span>(props)
+        <span class="kw">this</span>.<span class="at">state</span> <span class="op">=</span> <span class="op">{</span>
+            <span class="dt">name</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span>
+            <span class="dt">age</span><span class="op">:</span> <span class="dv">0</span>
+        <span class="op">}</span>
+    <span class="op">}</span>
+
+    <span class="at">render</span>()<span class="op">{</span>
+        <span class="cf">return</span>(
+            <span class="op">&lt;</span>div<span class="op">&gt;</span>name <span class="dt">is </span><span class="op">:</span> <span class="op">{</span><span class="kw">this</span>.<span class="va">props</span>.<span class="at">name</span><span class="op">},</span> <span class="dt">age </span><span class="op">:</span> <span class="op">{</span><span class="kw">this</span>.<span class="va">props</span>.<span class="at">age</span><span class="op">}&lt;</span><span class="ss">/div&gt;</span>
+<span class="ss">        </span><span class="sc">)</span>
+<span class="ss">    }</span>
+<span class="ss">}</span>
+
+<span class="ss">ReactDOM.render</span><span class="sc">((</span>
+<span class="ss">    &lt;Student name=&quot;xiaoming&quot; age=</span><span class="sc">{10}</span><span class="ss">/</span><span class="op">&gt;</span>
+)<span class="op">,</span> <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;main&quot;</span>))<span class="op">;</span></code></pre></div>
+<p>&#x8FD9;&#x91CC;&#x5199;&#x4E86;&#x800C;&#x4E00;&#x4E2A;Student&#x7EC4;&#x4EF6;&#xFF0C;&#x4ED6;&#x542B;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027; &#xFF0C;&#x4E00;&#x4E2A;&#x662F;name&#x4E00;&#x4E2A;&#x662F;age&#x3002;&#x6211;&#x4EEC;&#x6E32;&#x67D3;&#x4ED6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;name=&quot;xiaoming&quot; age={10}&#x8FD9;&#x79CD;key-value&#x65B9;&#x5F0F;&#x4F20;&#x5165;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x4E86;&#x5B9A;&#x5236;&#x7EC4;&#x4EF6;&#x7684;&#x76EE;&#x7684;&#x3002;&#x60F3;&#x8C61;&#x4E00;&#x4E0B;&#x5982;&#x679C;Student&#x5C5E;&#x6027;&#x7279;&#x522B;&#x591A;&#xFF0C;&#x90A3;&#x4E48;&#x96BE;&#x9053;&#x8981;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x5728;&#x8FD9;&#x91CC;&#x5199;&#x4E0A;&#x5417;&#xFF1F;&#x4F55;&#x51B5;&#x5F53;&#x8FD9;&#x4E2A;Student&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x4F3C;&#x4F60;&#x5199;&#x7684;&#xFF0C;&#x91CC;&#x9762;&#x6709;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;&#x4F60;&#x4E5F;&#x5E76;&#x4E0D;&#x6E05;&#x695A;&#x3002;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x7528;&#x5230;spread&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> args <span class="op">=</span> <span class="op">{</span>
+    <span class="dt">name</span><span class="op">:</span> <span class="st">&quot;xiaoming&quot;</span><span class="op">,</span>
+    <span class="dt">age</span><span class="op">:</span> <span class="dv">10</span>
+<span class="op">}</span>
+
+<span class="va">ReactDOM</span>.<span class="at">render</span>((
+    <span class="op">&lt;</span>Student <span class="op">{</span>...<span class="at">args</span><span class="op">}</span><span class="ss">/&gt;</span>
+<span class="sc">)</span><span class="ss">, document.getElementById</span><span class="sc">(</span><span class="ss">&quot;main&quot;</span><span class="sc">))</span><span class="ss">;</span></code></pre></div>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x662F;&#x7B49;&#x4EF7;&#x7684;</p>
+</div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-11-18 16:58</span> <a href="http://www.cnblogs.com/soaringEveryday/">soaringEveryday</a> &#x9605;&#x8BFB;(<span id="post_view_count">...</span>) &#x8BC4;&#x8BBA;(<span id="post_comment_count">...</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6078371" rel="nofollow">&#x7F16;&#x8F91;</a> <a href="#" onclick="AddToWz(6078371);return false;">&#x6536;&#x85CF;</a></div>
+	</div>
+	<script src="//common.cnblogs.com/highlight/9.1.0/highlight.min.js?id=20160127"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=174330,cb_entryId=6078371,cb_blogApp=currentBlogApp,cb_blogUserGuid='f7f424b2-c67c-e311-8d02-90b11c0b17d6',cb_entryCreatedDate='2016/11/18 16:58:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">&#x5237;&#x65B0;&#x8BC4;&#x8BBA;</a><a href="#" onclick="return RefreshPage();">&#x5237;&#x65B0;&#x9875;&#x9762;</a><a href="#top">&#x8FD4;&#x56DE;&#x9876;&#x90E8;</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">&#x516C;&#x544A;</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	

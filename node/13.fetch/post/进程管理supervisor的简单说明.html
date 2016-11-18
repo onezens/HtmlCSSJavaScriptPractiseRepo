@@ -1,0 +1,317 @@
+
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/zhoujinyi/p/6073705.html">&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;supervisor&#x7684;&#x7B80;&#x5355;&#x8BF4;&#x660E;</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><h2>&#x80CC;&#x666F;&#xFF1A;</h2>
+<p><span style="font-size: 15px;">&#xA0; &#xA0; &#xA0; &#x9879;&#x76EE;&#x4E2D;&#x9047;&#x5230;&#x6709;&#x4E9B;&#x811A;&#x672C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x540E;&#x53F0;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E0D;&#x88AB;&#x5F02;&#x5E38;&#x4E2D;&#x65AD;&#xFF0C;&#x4E4B;&#x524D;&#x90FD;&#x662F;&#x901A;&#x8FC7;nohup&#x3001;&amp;&#x3001;screen&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x5E26;&#x7740;&#x80FD;&#x5426;&#x505A;&#x4E00;&#x4E2A;start/stop/restart/reload&#x7684;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x7684;&#x60F3;&#x6CD5;&#x627E;&#x5230;&#x91CC;<a href="http://supervisord.org/" target="_blank">Supervisor</a>&#x3002;&#x5173;&#x4E8E;<a href="http://supervisord.org/introduction.html" target="_blank">supervisor&#x7684;&#x4ECB;&#x7ECD;</a>&#x5728;&#x7F51;&#x4E0A;&#x5927;&#x81F4;&#x641C;&#x7D22;&#x603B;&#x7ED3;&#x5982;&#x4E0B;&#xFF1A;<br></span></p>
+<p><span style="font-size: 15px;">&#xA0; &#xA0; &#xA0; Supervisor&#x662F;&#x7528;Python&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x5957;&#x901A;&#x7528;&#x7684;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x80FD;&#x5C06;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x8FDB;&#x7A0B;&#x53D8;&#x4E3A;&#x540E;&#x53F0;daemon&#xFF0C;&#x5E76;&#x76D1;&#x63A7;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#xFF0C;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#x65F6;&#x80FD;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x3002;&#x5B83;&#x662F;&#x901A;&#x8FC7;fork/exec&#x7684;&#x65B9;&#x5F0F;&#x628A;&#x8FD9;&#x4E9B;&#x88AB;&#x7BA1;&#x7406;&#x7684;&#x8FDB;&#x7A0B;&#x5F53;&#x4F5C;supervisor&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x6765;&#x542F;&#x52A8;&#xFF0C;&#x8FD9;&#x6837;&#x53EA;&#x8981;&#x5728;supervisor&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x628A;&#x8981;&#x7BA1;&#x7406;&#x7684;&#x8FDB;&#x7A0B;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x5199;&#x8FDB;&#x53BB;&#x5373;&#x53EF;&#x3002;&#x4E5F;&#x5B9E;&#x73B0;&#x5F53;&#x5B50;&#x8FDB;&#x7A0B;&#x6302;&#x6389;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7236;&#x8FDB;&#x7A0B;&#x53EF;&#x4EE5;&#x51C6;&#x786E;&#x83B7;&#x53D6;&#x5B50;&#x8FDB;&#x7A0B;&#x6302;&#x6389;&#x7684;&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x5426;&#x81EA;&#x5DF1;&#x542F;&#x52A8;&#x548C;&#x62A5;&#x8B66;&#x3002;supervisor&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;supervisord&#x6216;&#x8005;&#x6BCF;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x975E;root&#x7684;user&#xFF0C;&#x8FD9;&#x4E2A;user&#x5C31;&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x5B83;&#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</span></p>
+<h2>&#x8BF4;&#x660E;&#xFF1A;</h2>
+<p><strong><span style="font-size: 15px;"><a href="http://supervisord.org/installing.html" target="_blank">1&#xFF0C;&#x5B89;&#x88C5;</a></span></strong></p>
+<div class="cnblogs_code">
+<pre>1<span style="color: #000000;">&#xFF1A;easy_install &#x5B89;&#x88C5;&#xFF1A;
+easy_install supervisor
+
+</span>2&#xFF1A;<span style="color: #000000;">pip &#x5B89;&#x88C5;&#xFF1A;
+pip install supervisor
+
+</span>3&#xFF1A;Debian /<span style="color: #000000;"> Ubuntu&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;apt&#x5B89;&#x88C5;&#xFF1A;
+apt</span>-get install supervisor</pre>
+</div>
+<p><strong><span style="font-size: 15px;"><a href="http://supervisord.org/configuration.html" target="_blank">2&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></span></strong></p>
+<p><span style="font-size: 15px;"><strong>1&#xFF09;</strong>&#x901A;&#x8FC7;apt-get install&#x5B89;&#x88C5;&#x540E;&#xFF0C;supervisor&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;&#xFF1A;</span></p>
+<p class="p1"><span class="s1" style="font-size: 15px;">/etc/supervisor/supervisord.conf&#xA0;</span></p>
+<p><span style="font-size: 15px;">supervisor&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x662F;&#x4E0D;&#x5168;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x5927;&#x90E8;&#x5206;&#x9ED8;&#x8BA4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0A;&#x9762;&#x8BF4;&#x7684;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x5DF2;&#x7ECF;&#x6EE1;&#x8DB3;&#x3002;</span><span style="font-size: 15px;">&#x800C;&#x5176;&#x7BA1;&#x7406;&#x7684;<a href="http://supervisord.org/subprocess.html" target="_blank">&#x5B50;&#x8FDB;&#x7A0B;&#x914D;&#x7F6E;</a>&#x6587;&#x4EF6;&#x5728;&#xFF1A;</span></p>
+<style><!--
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Monaco; color: #f5f5f5; background-color: #000000}
+span.s1 {font-variant-ligatures: no-common-ligatures}
+--></style>
+<p class="p1"><span class="s1" style="font-size: 15px;">/etc/supervisor/conf.d/*.conf</span></p>
+<p><span style="font-size: 15px;">&#x7136;&#x540E;&#xFF0C;&#x5F00;&#x59CB;&#x7ED9;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x7684;&#x811A;&#x672C;&#x7A0B;&#x5E8F;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8BA9;supervisor&#x6765;&#x7BA1;&#x7406;&#x5B83;&#xFF0C;&#x653E;&#x5728;/etc/supervisor/conf.d/&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4EE5;.conf&#x4F5C;&#x4E3A;&#x6269;&#x5C55;&#x540D;&#xFF08;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x5206;&#x62C6;&#x4E5F;&#x53EF;&#x4EE5;&#x628A;&#x76F8;&#x5173;&#x7684;&#x811A;&#x672C;&#x653E;&#x4E00;&#x8D77;&#xFF09;&#x3002;&#x5982;&#x4EFB;&#x610F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x548C;&#x811A;&#x672C;&#x76F8;&#x5173;&#x7684;&#x9879;&#x76EE;&#x540D;&#x79F0;&#x7684;&#x9009;&#x9879;&#x7EC4;&#xFF08;/etc/supervisor/conf.d/test.conf&#xFF09;&#xFF1A;</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;"><strong>#&#x9879;&#x76EE;&#x540D;<br>[program:blog]</strong>
+#&#x811A;&#x672C;&#x76EE;&#x5F55;
+directory</span>=/opt/<span style="color: #000000;">bin
+#&#x811A;&#x672C;&#x6267;&#x884C;&#x547D;&#x4EE4;
+command</span>=/usr/bin/python /opt/bin/<span style="color: #000000;">test.py
+#supervisor&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFFFD;&#xFFFD;&#xFFFD;&#x5426;&#x968F;&#x7740;&#x540C;&#x65F6;&#x542F;&#x52A8;&#xFF0C;&#x9ED8;&#x8BA4;<strong>True</strong>
+autostart</span>=<span style="color: #0000ff;">true</span><span style="color: #000000;">
+#&#x5F53;&#x7A0B;&#x5E8F;exit&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;program&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x91CD;&#x542F;,&#x9ED8;&#x8BA4;<strong>unexpected</strong><br>#&#x8BBE;&#x7F6E;&#x5B50;&#x8FDB;&#x7A0B;&#x6302;&#x6389;&#x540E;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6709;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#xFF0C;false,unexpected&#x548C;true&#x3002;&#x5982;&#x679C;&#x4E3A;false&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x65E0;&#x8BBA;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#xFF0C;&#x5982;&#x679C;&#x4E3A;unexpected&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x8FDB;&#x7A0B;&#x7684;&#x9000;&#x51FA;&#x7801;&#x4E0D;&#x5728;&#x4E0B;&#x9762;&#x7684;exitcodes&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x7684;
+autorestart</span>=<span style="color: #0000ff;">false<br><span style="color: #000000;">#&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x662F;&#x5B50;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x591A;&#x5C11;&#x79D2;&#x4E4B;&#x540E;&#xFF0C;&#x6B64;&#x65F6;&#x72B6;&#x6001;&#x5982;&#x679C;&#x662F;running&#xFF0C;&#x5219;&#x6211;&#x4EEC;&#x8BA4;&#x4E3A;&#x542F;&#x52A8;&#x6210;&#x529F;&#x4E86;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1<br></span></span>startsecs=1<br><span>#&#x65E5;&#x5FD7;&#x8F93;&#x51FA; stderr_logfile</span>=/tmp/<span>blog_stderr.log stdout_logfile</span>=/tmp/<span>blog_stdout.log #&#x811A;&#x672C;&#x8FD0;&#x884C;&#x7684;&#x7528;&#x6237;&#x8EAB;&#x4EFD; #user </span>=<span> zhoujy <br><br><strong>[program:zhoujy]</strong> <strong>#&#x8BF4;&#x660E;&#x540C;&#x4E0A;</strong><br>directory</span>=/opt/<span>bin <br>command</span>=/usr/bin/python /opt/bin/<span>zhoujy.py <br>autostart</span>=<span style="color: #0000ff;">true</span><span> <br>autorestart</span>=<span style="color: #0000ff;">false</span><span> <br>stderr_logfile</span>=/tmp/<span>zhoujy_stderr.log <br>stdout_logfile</span>=/tmp/<span>zhoujy_stdout.log <br>#user </span>= zhoujy&#xA0;</pre>
+</div>
+<p><span style="font-size: 15px;"><strong>2&#xFF09;</strong>&#x901A;&#x8FC7;easy_install&#x5B89;&#x88C5;&#x540E;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5BFC;&#x5165;&#x3002;</span></p>
+<p><span style="font-size: 15px;">&#x2460;&#xFF1A;&#x8FD0;&#x884C;<a href="http://supervisord.org/installing.html" target="_blank">echo_supervisord_conf</a>&#x6253;&#x5370;&#x51FA;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x6837;&#x672C;&#xFF0C;&#x6837;&#x672C;&#x8BF4;&#x660E;&#x53EF;&#x4EE5;&#x770B;<a href="http://lixcto.blog.51cto.com/4834175/1539136" target="_blank">supervisor(&#x4E00;)&#x57FA;&#x7840;&#x7BC7;</a>&#x7684;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#xFF0C;&#x8981;&#x662F;&#x8BBE;&#x7F6E;&#x6837;&#x672C;&#x4E3A;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5219;&#xFF1A;</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #800080;">1</span><span style="color: #000000;">&#xFF1A;&#x8FD0;&#x884C; echo_supervisord_conf&#xFF0C;&#x67E5;&#x770B;&#x914D;&#x7F6E;&#x6837;&#x672C;&#xFF1A;
+echo_supervisord_conf
+
+</span><span style="color: #800080;">2</span><span style="color: #000000;">&#xFF1A;&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;
+echo_supervisord_conf </span>&gt; /etc/supervisord.conf</pre>
+</div>
+<p><span style="font-size: 15px;">&#x2461;&#xFF1A;&#x914D;&#x7F6E;&#x5B50;&#x8FDB;&#x7A0B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;supervisor&#x4E2D;&#x7684;</span><span style="font-size: 15px;"><strong><span class="s1">;[program:theprogramname]</span></strong><span class="s1">&#x91CC;&#x8BBE;&#x7F6E;&#x3002;</span></span></p>
+<p><span class="s1" style="font-size: 15px;">&#x8BE6;&#x7EC6;&#x7684;<a href="http://supervisord.org/subprocess.html" target="_blank">&#x5B50;&#x8FDB;&#x7A0B;&#x914D;&#x7F6E;</a>&#x6587;&#x4EF6;&#xFF1A;</span></p>
+<p><span class="s1" style="font-size: 15px;">&#x6837;&#x672C;&#xFF1A;</span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&apos;6004f9a0-fc66-4991-a1f7-0cfb16d2ca47&apos;)"><img id="code_img_closed_6004f9a0-fc66-4991-a1f7-0cfb16d2ca47" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_6004f9a0-fc66-4991-a1f7-0cfb16d2ca47" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide(&apos;6004f9a0-fc66-4991-a1f7-0cfb16d2ca47&apos;,event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_6004f9a0-fc66-4991-a1f7-0cfb16d2ca47" class="cnblogs_code_hide">
+<pre><span style="color: #000000;">;[program:theprogramname]
+;command</span>=/bin/<span style="color: #0000ff;">cat</span><span style="color: #000000;">              ; the program (relative uses PATH, can take args)
+;process_name</span>=%(program_name)s ; process_name <span style="color: #0000ff;">expr</span> (default %<span style="color: #000000;">(program_name)s)
+;numprocs</span>=<span style="color: #800080;">1</span>                    ; number of processes copies to start (def <span style="color: #800080;">1</span><span style="color: #000000;">)
+;directory</span>=/<span style="color: #000000;">tmp                ; directory to cwd to before exec (def no cwd)
+;umask</span>=<span style="color: #800080;">022</span>                     ; umask <span style="color: #0000ff;">for</span><span style="color: #000000;"> process (default None)
+;priority</span>=<span style="color: #800080;">999</span>                  ; the relative start priority (default <span style="color: #800080;">999</span><span style="color: #000000;">)
+;autostart</span>=<span style="color: #0000ff;">true</span>                ; start at supervisord start (default: <span style="color: #0000ff;">true</span><span style="color: #000000;">)
+;startsecs</span>=<span style="color: #800080;">1</span>                   ; # of secs prog must stay up to be running (def. <span style="color: #800080;">1</span><span style="color: #000000;">)
+;startretries</span>=<span style="color: #800080;">3</span>                ; max # of serial start failures when starting (default <span style="color: #800080;">3</span><span style="color: #000000;">)
+;autorestart</span>=unexpected        ; when to restart <span style="color: #0000ff;">if</span><span style="color: #000000;"> exited after running (def: unexpected)
+;exitcodes</span>=<span style="color: #800080;">0</span>,<span style="color: #800080;">2</span>                 ; <span style="color: #800000;">&apos;</span><span style="color: #800000;">expected</span><span style="color: #800000;">&apos;</span> exit codes used with autorestart (default <span style="color: #800080;">0</span>,<span style="color: #800080;">2</span><span style="color: #000000;">)
+;stopsignal</span>=QUIT               ; signal used to <span style="color: #0000ff;">kill</span><span style="color: #000000;"> process (default TERM)
+;stopwaitsecs</span>=<span style="color: #800080;">10</span>               ; max num secs to <span style="color: #0000ff;">wait</span> b4 SIGKILL (default <span style="color: #800080;">10</span><span style="color: #000000;">)
+;stopasgroup</span>=<span style="color: #0000ff;">false</span>             ; send stop signal to the UNIX process group (default <span style="color: #0000ff;">false</span><span style="color: #000000;">)
+;killasgroup</span>=<span style="color: #0000ff;">false</span>             ; SIGKILL the UNIX process group (def <span style="color: #0000ff;">false</span><span style="color: #000000;">)
+;user</span>=<span style="color: #000000;">chrism                   ; setuid to this UNIX account to run the program
+;redirect_stderr</span>=<span style="color: #0000ff;">true</span>          ; redirect proc stderr to stdout (default <span style="color: #0000ff;">false</span><span style="color: #000000;">)
+;stdout_logfile</span>=/a/path        ; stdout log path, NONE <span style="color: #0000ff;">for</span><span style="color: #000000;"> none; default AUTO
+;stdout_logfile_maxbytes</span>=<span style="color: #000000;">1MB   ; max # logfile bytes b4 rotation (default 50MB)
+;stdout_logfile_backups</span>=<span style="color: #800080;">10</span>     ; # of stdout logfile backups (default <span style="color: #800080;">10</span><span style="color: #000000;">)
+;stdout_capture_maxbytes</span>=1MB   ; number of bytes <span style="color: #0000ff;">in</span> <span style="color: #800000;">&apos;</span><span style="color: #800000;">capturemode</span><span style="color: #800000;">&apos;</span> (default <span style="color: #800080;">0</span><span style="color: #000000;">)
+;stdout_events_enabled</span>=<span style="color: #0000ff;">false</span>   ; emit events on stdout writes (default <span style="color: #0000ff;">false</span><span style="color: #000000;">)
+;stderr_logfile</span>=/a/path        ; stderr log path, NONE <span style="color: #0000ff;">for</span><span style="color: #000000;"> none; default AUTO
+;stderr_logfile_maxbytes</span>=<span style="color: #000000;">1MB   ; max # logfile bytes b4 rotation (default 50MB)
+;stderr_logfile_backups</span>=<span style="color: #800080;">10</span>     ; # of stderr logfile backups (default <span style="color: #800080;">10</span><span style="color: #000000;">)
+;stderr_capture_maxbytes</span>=1MB   ; number of bytes <span style="color: #0000ff;">in</span> <span style="color: #800000;">&apos;</span><span style="color: #800000;">capturemode</span><span style="color: #800000;">&apos;</span> (default <span style="color: #800080;">0</span><span style="color: #000000;">)
+;stderr_events_enabled</span>=<span style="color: #0000ff;">false</span>   ; emit events on stderr writes (default <span style="color: #0000ff;">false</span><span style="color: #000000;">)
+;environment</span>=A=<span style="color: #800000;">&quot;</span><span style="color: #800000;">1</span><span style="color: #800000;">&quot;</span>,B=<span style="color: #800000;">&quot;</span><span style="color: #800000;">2</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">       ; process environment additions (def no adds)
+;serverurl</span>=AUTO                ; override serverurl computation (childutils)</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><span style="font-size: 15px;">&#x8BF4;&#x660E;&#xFF1A;</span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&apos;d2187784-552f-482f-8b91-1cb74f0b9553&apos;)"><img id="code_img_closed_d2187784-552f-482f-8b91-1cb74f0b9553" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_d2187784-552f-482f-8b91-1cb74f0b9553" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide(&apos;d2187784-552f-482f-8b91-1cb74f0b9553&apos;,event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_d2187784-552f-482f-8b91-1cb74f0b9553" class="cnblogs_code_hide">
+<pre>;[program:theprogramname]      ;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x54B1;&#x4EEC;&#x8981;&#x7BA1;&#x7406;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x4E86;&#xFF0C;<span style="color: #800000;">&quot;</span><span style="color: #800000;">:</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">&#x540E;&#x9762;&#x7684;&#x662F;&#x540D;&#x5B57;&#xFF0C;&#x6700;&#x597D;&#x522B;&#x4E71;&#x5199;&#x548C;&#x5B9E;&#x9645;&#x8FDB;&#x7A0B;
+                                &#x6709;&#x70B9;&#x5173;&#x8054;&#x6700;&#x597D;&#x3002;&#x8FD9;&#x6837;&#x7684;program&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#xFF0C;&#x4E00;&#x4E2A;program&#x5C31;&#x662F;
+                                &#x8981;&#x88AB;&#x7BA1;&#x7406;&#x7684;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;
+;command</span>=/bin/<span style="color: #0000ff;">cat</span><span style="color: #000000;">              ; &#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x8981;&#x542F;&#x52A8;&#x8FDB;&#x7A0B;&#x7684;&#x547D;&#x4EE4;&#x8DEF;&#x5F84;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;
+                                &#x4F8B;&#x5B50;&#xFF1A;</span>/home/test.py -a <span style="color: #800000;">&apos;</span><span style="color: #800000;">hehe</span><span style="color: #800000;">&apos;</span><span style="color: #000000;">
+                                &#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x7684;command&#x53EA;&#x80FD;&#x662F;&#x90A3;&#x79CD;&#x5728;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E0D;&#x80FD;&#x662F;
+                                &#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x3002;&#x8FD9;&#x4E2A;&#x60F3;&#x60F3;&#x4E5F;&#x77E5;&#x9053;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;command</span>=<span style="color: #000000;">service httpd start&#x3002;
+                                httpd&#x8FD9;&#x4E2A;&#x8FDB;&#x7A0B;&#x88AB;linux&#x7684;service&#x7BA1;&#x7406;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x7684;supervisor&#x518D;&#x53BB;&#x542F;&#x52A8;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;
+                                &#x8FD9;&#x5DF2;&#x7ECF;&#x4E0D;&#x662F;&#x4E25;&#x683C;&#x610F;&#x4E49;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x4E86;&#x3002;
+                                &#x8FD9;&#x4E2A;&#x662F;&#x4E2A;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x7684;&#x9879;
+;process_name</span>=%<span style="color: #000000;">(program_name)s ; &#x8FD9;&#x4E2A;&#x662F;&#x8FDB;&#x7A0B;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0B;&#x9762;&#x7684;numprocs&#x53C2;&#x6570;&#x4E3A;1&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x7BA1;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;
+                                 &#x4E86;&#xFF0C;&#x5B83;&#x9ED8;&#x8BA4;&#x503C;</span>%<span style="color: #000000;">(program_name)s&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x7684;&#x90A3;&#x4E2A;program&#x5192;&#x53F7;&#x540E;&#x9762;&#x7684;&#x540D;&#x5B57;&#xFF0C;
+                                 &#x4F46;&#x662F;&#x5982;&#x679C;numprocs&#x4E3A;&#x591A;&#x4E2A;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x5C31;&#x4E0D;&#x80FD;&#x8FD9;&#x4E48;&#x5E72;&#x4E86;&#x3002;&#x60F3;&#x60F3;&#x4E5F;&#x77E5;&#x9053;&#xFF0C;&#x4E0D;&#x53EF;&#x80FD;&#x6BCF;&#x4E2A;
+                                 &#x8FDB;&#x7A0B;&#x90FD;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x540D;&#x5427;&#x3002;
+
+                                
+;numprocs</span>=<span style="color: #800080;">1</span><span style="color: #000000;">                    ; &#x542F;&#x52A8;&#x8FDB;&#x7A0B;&#x7684;&#x6570;&#x76EE;&#x3002;&#x5F53;&#x4E0D;&#x4E3A;1&#x65F6;&#xFF0C;&#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x6C60;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6CE8;&#x610F;process_name&#x7684;&#x8BBE;&#x7F6E;
+                                 &#x9ED8;&#x8BA4;&#x4E3A;1    &#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;directory</span>=/<span style="color: #000000;">tmp                ; &#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x524D;&#xFF0C;&#x4F1A;&#x524D;&#x5207;&#x6362;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;
+                                 &#x9ED8;&#x8BA4;&#x4E0D;&#x8BBE;&#x7F6E;&#x3002;&#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;umask</span>=<span style="color: #800080;">022</span><span style="color: #000000;">                     ; &#x8FDB;&#x7A0B;&#x63A9;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;none&#xFF0C;&#x975E;&#x5FC5;&#x987B;
+;priority</span>=<span style="color: #800080;">999</span><span style="color: #000000;">                  ; &#x5B50;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x5173;&#x95ED;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x4F4E;&#x7684;&#xFF0C;&#x6700;&#x5148;&#x542F;&#x52A8;&#xFF0C;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x6700;&#x540E;&#x5173;&#x95ED;
+                                 &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;999 &#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;autostart</span>=<span style="color: #0000ff;">true</span><span style="color: #000000;">                ; &#x5982;&#x679C;&#x662F;true&#x7684;&#x8BDD;&#xFF0C;&#x5B50;&#x8FDB;&#x7A0B;&#x5C06;&#x5728;supervisord&#x542F;&#x52A8;&#x540E;&#x88AB;&#x81EA;&#x52A8;&#x542F;&#x52A8;
+                                 &#x9ED8;&#x8BA4;&#x5C31;&#x662F;true   &#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;autorestart</span>=unexpected        ; &#x8FD9;&#x4E2A;&#x662F;&#x8BBE;&#x7F6E;&#x5B50;&#x8FDB;&#x7A0B;&#x6302;&#x6389;&#x540E;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6709;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#xFF0C;<span style="color: #0000ff;">false</span><span style="color: #000000;">,unexpected
+                                 &#x548C;true&#x3002;&#x5982;&#x679C;&#x4E3A;false&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x65E0;&#x8BBA;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#xFF0C;
+                                 &#x5982;&#x679C;&#x4E3A;unexpected&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x8FDB;&#x7A0B;&#x7684;&#x9000;&#x51FA;&#x7801;&#x4E0D;&#x5728;&#x4E0B;&#x9762;&#x7684;exitcodes&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x7684;&#x9000; 
+                                 &#x51FA;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x3002;&#x5F53;&#x4E3A;true&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x8981;&#x5B50;&#x8FDB;&#x7A0B;&#x6302;&#x6389;&#xFF0C;&#x5C06;&#x4F1A;&#x88AB;&#x65E0;
+                                 &#x6761;&#x4EF6;&#x7684;&#x91CD;&#x542F;
+;startsecs</span>=<span style="color: #800080;">1</span><span style="color: #000000;">                   ; &#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x662F;&#x5B50;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x591A;&#x5C11;&#x79D2;&#x4E4B;&#x540E;&#xFF0C;&#x6B64;&#x65F6;&#x72B6;&#x6001;&#x5982;&#x679C;&#x662F;running&#xFF0C;&#x5219;&#x6211;&#x4EEC;&#x8BA4;&#x4E3A;&#x542F;
+                                 &#x52A8;&#x6210;&#x529F;&#x4E86;
+                                 &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1 &#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;startretries</span>=<span style="color: #800080;">3</span><span style="color: #000000;">                ; &#x5F53;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x5931;&#x8D25;&#x540E;&#xFF0C;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x542F;&#x52A8;&#x7684;&#x6B21;&#x6570;&#x3002;&#x3002;&#x5F53;&#x8D85;&#x8FC7;3&#x6B21;&#x540E;&#xFF0C;supervisor&#x5C06;&#x628A;
+                                 &#x6B64;&#x8FDB;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x7F6E;&#x4E3A;FAIL
+                                 &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;3 &#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;exitcodes</span>=<span style="color: #800080;">0</span>,<span style="color: #800080;">2</span>                 ; &#x6CE8;&#x610F;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x7684;autorestart=<span style="color: #000000;">unexpected&#x5BF9;&#x5E94;&#x3002;&#x3002;exitcodes&#x91CC;&#x9762;&#x7684;&#x5B9A;&#x4E49;&#x7684;
+                                 &#x9000;&#x51FA;&#x7801;&#x662F;expected&#x7684;&#x3002;
+;stopsignal</span>=<span style="color: #000000;">QUIT               ; &#x8FDB;&#x7A0B;&#x505C;&#x6B62;&#x4FE1;&#x53F7;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;TERM, HUP, INT, QUIT, KILL, USR1, or USR2&#x7B49;&#x4FE1;&#x53F7;
+                                  &#x9ED8;&#x8BA4;&#x4E3A;TERM &#x3002;&#x3002;&#x5F53;&#x7528;&#x8BBE;&#x5B9A;&#x7684;&#x4FE1;&#x53F7;&#x53BB;&#x5E72;&#x6389;&#x8FDB;&#x7A0B;&#xFF0C;&#x9000;&#x51FA;&#x7801;&#x4F1A;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;expected
+                                  &#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;stopwaitsecs</span>=<span style="color: #800080;">10</span><span style="color: #000000;">               ; &#x8FD9;&#x4E2A;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x5411;&#x5B50;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;stopsignal&#x4FE1;&#x53F7;&#x540E;&#xFF0C;&#x5230;&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;
+                                 &#x7ED9;supervisord&#xFF0C;&#x6240;&#x7B49;&#x5F85;&#x7684;&#x6700;&#x5927;&#x65F6;&#x95F4;&#x3002; &#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#xFF0C;supervisord&#x4F1A;&#x5411;&#x8BE5;
+                                 &#x5B50;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5F3A;&#x5236;kill&#x7684;&#x4FE1;&#x53F7;&#x3002;
+                                 &#x9ED8;&#x8BA4;&#x4E3A;10&#x79D2;&#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;stopasgroup</span>=<span style="color: #0000ff;">false</span><span style="color: #000000;">             ; &#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#xFF0C;supervisord&#x7BA1;&#x7406;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x672C;&#x8EAB;&#x8FD8;&#x6709;
+                                 &#x5B50;&#x8FDB;&#x7A0B;&#x3002;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x5E72;&#x6389;supervisord&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x8BDD;&#xFF0C;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;
+                                 &#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x53D8;&#x6210;&#x5B64;&#x513F;&#x8FDB;&#x7A0B;&#x3002;&#x6240;&#x4EE5;&#x54B1;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x53EF;&#x4E2A;&#x9009;&#x9879;&#xFF0C;&#x628A;&#x6574;&#x4E2A;&#x8BE5;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;
+                                 &#x6574;&#x4E2A;&#x8FDB;&#x7A0B;&#x7EC4;&#x90FD;&#x5E72;&#x6389;&#x3002; &#x8BBE;&#x7F6E;&#x4E3A;true&#x7684;&#x8BDD;&#xFF0C;&#x4E00;&#x822C;killasgroup&#x4E5F;&#x4F1A;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;true&#x3002;
+                                 &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x53D1;&#x9001;&#x7684;&#x662F;stop&#x4FE1;&#x53F7;
+                                 &#x9ED8;&#x8BA4;&#x4E3A;false&#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x3002;&#x3002;
+;killasgroup</span>=<span style="color: #0000ff;">false</span><span style="color: #000000;">             ; &#x8FD9;&#x4E2A;&#x548C;&#x4E0A;&#x9762;&#x7684;stopasgroup&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x8FC7;&#x53D1;&#x9001;&#x7684;&#x662F;kill&#x4FE1;&#x53F7;
+;user</span>=<span style="color: #000000;">chrism                   ; &#x5982;&#x679C;supervisord&#x662F;root&#x542F;&#x52A8;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x975E;root&#x7528;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;
+                                 &#x7BA1;&#x7406;&#x8BE5;program
+                                 &#x9ED8;&#x8BA4;&#x4E0D;&#x8BBE;&#x7F6E;&#x3002;&#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x9879;
+;redirect_stderr</span>=<span style="color: #0000ff;">true</span><span style="color: #000000;">          ; &#x5982;&#x679C;&#x4E3A;true&#xFF0C;&#x5219;stderr&#x7684;&#x65E5;&#x5FD7;&#x4F1A;&#x88AB;&#x5199;&#x5165;stdout&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x4E2D;
+                                 &#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;stdout_logfile</span>=/a/<span style="color: #000000;">path        ; &#x5B50;&#x8FDB;&#x7A0B;&#x7684;stdout&#x7684;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#xFF0C;AUTO&#xFF0C;none&#x7B49;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#x3002;
+                                 &#x8BBE;&#x7F6E;&#x4E3A;none&#x7684;&#x8BDD;&#xFF0C;&#x5C06;&#x6CA1;&#x6709;&#x65E5;&#x5FD7;&#x4EA7;&#x751F;&#x3002;&#x8BBE;&#x7F6E;&#x4E3A;AUTO&#x7684;&#x8BDD;&#xFF0C;&#x5C06;&#x968F;&#x673A;&#x627E;&#x4E00;&#x4E2A;&#x5730;&#x65B9;
+                                 &#x751F;&#x6210;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E14;&#x5F53;supervisord&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4EE5;&#x524D;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;
+                                 &#x6E05;&#x7A7A;&#x3002;&#x5F53; redirect_stderr</span>=<span style="color: #000000;">true&#x7684;&#x65F6;&#x5019;&#xFF0C;sterr&#x4E5F;&#x4F1A;&#x5199;&#x8FDB;&#x8FD9;&#x4E2A;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+;stdout_logfile_maxbytes</span>=<span style="color: #000000;">1MB   ; &#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x6700;&#x5927;&#x5927;&#x5C0F;&#xFF0C;&#x548C;[supervisord]&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x6837;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;50
+;stdout_logfile_backups</span>=<span style="color: #800080;">10</span><span style="color: #000000;">     ; &#x548C;[supervisord]&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x6837;&#x3002;&#x9ED8;&#x8BA4;10
+;stdout_capture_maxbytes</span>=<span style="color: #000000;">1MB   ; &#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x662F;&#x8BBE;&#x5B9A;capture&#x7BA1;&#x9053;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5F53;&#x503C;&#x4E0D;&#x4E3A;0&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B50;&#x8FDB;&#x7A0B;&#x53EF;&#x4EE5;&#x4ECE;stdout
+                                 &#x53D1;&#x9001;&#x4FE1;&#x606F;&#xFF0C;&#x800C;supervisor&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4FE1;&#x606F;&#xFF0C;&#x53D1;&#x9001;&#x76F8;&#x5E94;&#x7684;event&#x3002;
+                                 &#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x4E3A;0&#x7684;&#x65F6;&#x5019;&#x8868;&#x8FBE;&#x5173;&#x95ED;&#x7BA1;&#x9053;&#x3002;&#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x9879;
+;stdout_events_enabled</span>=<span style="color: #0000ff;">false</span><span style="color: #000000;">   ; &#x5F53;&#x8BBE;&#x7F6E;&#x4E3A;ture&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x5B50;&#x8FDB;&#x7A0B;&#x7531;stdout&#x5411;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x4E2D;&#x5199;&#x65E5;&#x5FD7;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C06;
+                                 &#x89E6;&#x53D1;supervisord&#x53D1;&#x9001;PROCESS_LOG_STDOUT&#x7C7B;&#x578B;&#x7684;event
+                                 &#x9ED8;&#x8BA4;&#x4E3A;false&#x3002;&#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;stderr_logfile</span>=/a/path        ; &#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x662F;&#x8BBE;&#x7F6E;stderr&#x5199;&#x7684;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84;&#xFF0C;&#x5F53;redirect_stderr=<span style="color: #0000ff;">true</span><span style="color: #000000;">&#x3002;&#x8FD9;&#x4E2A;&#x5C31;&#x4E0D;&#x7528;
+                                 &#x8BBE;&#x7F6E;&#x4E86;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;&#x4E5F;&#x662F;&#x767D;&#x642D;&#x3002;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x88AB;&#x5199;&#x5165;stdout_logfile&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;
+                                 &#x9ED8;&#x8BA4;&#x4E3A;AUTO&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x968F;&#x4FBF;&#x627E;&#x4E2A;&#x5730;&#x5B58;&#xFF0C;supervisord&#x91CD;&#x542F;&#x88AB;&#x6E05;&#x7A7A;&#x3002;&#x3002;&#x975E;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;
+;stderr_logfile_maxbytes</span>=<span style="color: #000000;">1MB   ; &#x8FD9;&#x4E2A;&#x51FA;&#x73B0;&#x597D;&#x51E0;&#x6B21;&#x4E86;&#xFF0C;&#x5C31;&#x4E0D;&#x91CD;&#x590D;&#x4E86;
+;stderr_logfile_backups</span>=<span style="color: #800080;">10</span><span style="color: #000000;">     ; &#x8FD9;&#x4E2A;&#x4E5F;&#x662F;
+;stderr_capture_maxbytes</span>=<span style="color: #000000;">1MB   ; &#x8FD9;&#x4E2A;&#x4E00;&#x6837;&#xFF0C;&#x548C;stdout_capture&#x4E00;&#x6837;&#x3002; &#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x5173;&#x95ED;&#x72B6;&#x6001;
+;stderr_events_enabled</span>=<span style="color: #0000ff;">false</span><span style="color: #000000;">   ; &#x8FD9;&#x4E2A;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;false
+;environment</span>=A=<span style="color: #800000;">&quot;</span><span style="color: #800000;">1</span><span style="color: #800000;">&quot;</span>,B=<span style="color: #800000;">&quot;</span><span style="color: #800000;">2</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">       ; &#x8FD9;&#x4E2A;&#x662F;&#x8BE5;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x548C;&#x522B;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x662F;&#x4E0D;&#x5171;&#x4EAB;&#x7684;
+;serverurl</span>=AUTO                ; </pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><span style="font-size: 15px;">&#x6539;&#x6210;&#x81EA;&#x5DF1;&#x5B9E;&#x9645;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;&#x548C;&#x2460;&#x4E0A;&#x9762;&#x4E00;&#x6837;&#x3002;</span></p>
+<p><strong><span style="font-size: 15px;"><a href="http://supervisord.org/running.html" target="_blank">3&#xFF1A;&#x8FD0;&#x884C;</a></span></strong></p>
+<p>1&#xFF09;apt-get install &#x5B89;&#x88C5;&#x7684;supervisor&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#xA0;<span class="s1">/etc/init.d/supervisor &#x8FD0;&#x884C;&#xFF1A;</span></p>
+<div class="cnblogs_code">
+<pre>/etc/init.d/supervisor start</pre>
+</div>
+<p>2&#xFF09;&#x901A;&#x8FC7;easy_install &#x5B89;&#x88C5;&#x7684;supervisor&#x8FD0;&#x884C;supervisord &#x8FD0;&#x884C;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>supervisord </pre>
+</div>
+<p><span style="font-size: 15px;"><strong>4&#xFF1A;web&#x754C;&#x9762;&#x64CD;&#x4F5C;</strong></span></p>
+<p><span style="font-size: 15px;">&#x9700;&#x8981;&#x5728;supervisor&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x6DFB;&#x52A0;[inet_http_server]&#x9009;&#x9879;&#x7EC4;&#xFF1A;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;http://10.211.55.11:9001&#x6765;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x5B50;&#x7EBF;&#x7A0B;&#x7684;&#x7BA1;&#x7406;&#x3002;</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">[inet_http_server]
+port</span>=<span style="color: #800080;">10.211</span>.<span style="color: #800080;">55.11</span>:<span style="color: #800080;">9001</span><span style="color: #000000;">
+username</span>=<span style="color: #000000;">user
+password</span>=<span style="color: #800080;">123</span></pre>
+</div>
+<p><span style="font-size: 15px;">&#x6548;&#x679C;&#xFF1A;</span></p>
+<p><span style="font-size: 15px;"><img src="http://images2015.cnblogs.com/blog/163084/201611/163084-20161118021632920-889244058.png" alt="" width="691" height="187"></span></p>
+<p><span style="font-size: 15px;"><strong><a href="http://supervisord.org/running.html#running-supervisorctl" target="_blank">5&#xFF1A;&#x5B50;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;</a>(<span style="color: #ff0000;">supervisorctl</span>)<br></strong></span></p>
+<p><span style="font-size: 15px;">1) &#x67E5;&#x770B;&#x6240;&#x6709;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#xFF1A;</span>&#xA0;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;"># <strong>supervisorctl <span style="color: #ff0000;">status</span></strong>
+blog                             RUNNING    pid </span><span style="color: #800080;">2395</span>, <span style="color: #0000ff;">uptime</span> <span style="color: #800080;">0</span>:<span style="color: #800080;">08</span>:<span style="color: #800080;">41</span><span style="color: #000000;">
+zhoujy                           RUNNING    pid </span><span style="color: #800080;">2396</span>, <span style="color: #0000ff;">uptime</span> <span style="color: #800080;">0</span>:<span style="color: #800080;">08</span>:<span style="color: #800080;">41</span></pre>
+</div>
+<p><span style="font-size: 15px;">2&#xFF09;&#x5173;&#x95ED;&#x3001;&#x5F00;&#x542F;&#x6307;&#x5B9A;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#xFF1A;</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;"># <strong>supervisorctl <span style="color: #ff0000;">stop</span> zhoujy</strong>
+zhoujy: stopped
+
+# <strong>supervisorctl <span style="color: #ff0000;">start</span> zhoujy</strong>
+zhoujy: started</span></pre>
+</div>
+<p><span style="font-size: 15px;">3&#xFF09;&#x5173;&#x95ED;&#x3001;&#x5F00;&#x542F;&#x6240;&#x6709;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#xFF1A;</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;"># <strong>supervisorctl <span style="color: #ff0000;">stop all</span></strong>
+blog: stopped
+zhoujy: stopped
+# <strong>supervisorctl <span style="color: #ff0000;">start all</span></strong>
+blog: started
+zhoujy: started</span></pre>
+</div>
+<p><span style="font-size: 15px;">4&#xFF09;&#xFF1A;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#xFF1A;supervisor&#x5F00;&#x542F;&#x540E;&#x5B50;&#x8FDB;&#x7A0B;&#x81EA;&#x52A8;&#x5F00;&#x542F;&#xFF08;<strong>autostart=true</strong>&#xFF09;&#x548C;&#x5B50;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x540E;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#xFF08;<strong>autorestart=ture</strong>&#xFF09;</span></p>
+<p><span style="font-size: 15px;">&#x66F4;&#x591A;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x770B;<a href="http://supervisord.org/configuration.html" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x548C;<a href="http://lixcto.blog.51cto.com/4834175/1539136" target="_blank">supervisor(&#x4E00;)&#x57FA;&#x7840;&#x7BC7;</a>&#x7684;&#x8BF4;&#x660E;&#x3002;</span></p>
+<h2>&#x603B;&#x7ED3;&#xFF1A;</h2>
+<p>&#xA0; &#xA0; &#xA0; <span style="font-size: 15px;">&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x529F;&#x80FD;&#x5728;&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x7684;supervisor&#x7684;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#xFF0C;supervisor&#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#xFF1A;&#x5982;&#x8FDB;&#x7A0B;&#x7EC4;&#x3001;web&#x9875;&#x9762;&#x7BA1;&#x7406;&#x5B50;&#x8FDB;&#x7A0B;&#x3001;&#x76D1;&#x63A7;&#x5B50;&#x7EBF;&#x7A0B;&#x60C5;&#x51B5;&#x7B49;&#x7B49;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x53BB;<a href="http://supervisord.org/" target="_blank">&#x5B98;&#x7F51;</a>&#x4E0A;&#x67E5;&#x770B;&#x3002;</span></p>
+<h2>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</h2>
+<p><span style="font-size: 15px;"><a href="http://supervisord.org/" target="_blank">Supervisor&#x5B98;&#x65B9;&#x6587;&#x6863;</a></span></p>
+<p><a href="http://lixcto.blog.51cto.com/4834175/1539136" target="_blank"><span style="font-size: 15px;">Supervisor(&#x4E00;)&#x57FA;&#x7840;&#x7BC7;</span></a></p>
+<p><span style="font-size: 15px;"><a class="operlink" title="supervisor(&#x4E8C;)event" href="http://lixcto.blog.51cto.com/4834175/1540169">Supervisor(&#x4E8C;)event</a></span></p>
+<p><span style="font-size: 15px;"><a class="operlink" title="supervisor(&#x4E09;)xml_rpc" href="http://lixcto.blog.51cto.com/4834175/1540795">Supervisor(&#x4E09;)xml_rpc</a></span></p>
+<p>&#xA0;</p>
+<style><!--
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Monaco; color: #f5f5f5; background-color: #000000}
+span.s1 {font-variant-ligatures: no-common-ligatures}
+--></style>
+<style><!--
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Monaco; color: #f5f5f5; background-color: #000000}
+span.s1 {font-variant-ligatures: no-common-ligatures}
+--></style>
+<style><!--
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Monaco; color: #f5f5f5; background-color: #000000}
+span.s1 {font-variant-ligatures: no-common-ligatures}
+--></style>
+<style><!--
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Monaco; color: #f5f5f5; background-color: #000000}
+span.s1 {font-variant-ligatures: no-common-ligatures}
+--></style></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-11-18 11:01</span> <a href="http://www.cnblogs.com/zhoujinyi/">jyzhou</a> &#x9605;&#x8BFB;(<span id="post_view_count">...</span>) &#x8BC4;&#x8BBA;(<span id="post_comment_count">...</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6073705" rel="nofollow">&#x7F16;&#x8F91;</a> <a href="#" onclick="AddToWz(6073705);return false;">&#x6536;&#x85CF;</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=128350,cb_entryId=6073705,cb_blogApp=currentBlogApp,cb_blogUserGuid='b42b5097-a2d2-df11-ac81-842b2b196315',cb_entryCreatedDate='2016/11/18 11:01:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">&#x5237;&#x65B0;&#x8BC4;&#x8BBA;</a><a href="#" onclick="return RefreshPage();">&#x5237;&#x65B0;&#x9875;&#x9762;</a><a href="#top">&#x8FD4;&#x56DE;&#x9876;&#x90E8;</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">&#x516C;&#x544A;</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	

@@ -1,0 +1,171 @@
+
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/zmxmumu/p/6076613.html">H5 Notes&#xFF1A;PostMessage Cross-Origin Communication</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>Javascript&#x4E2D;&#x8981;&#x5B9E;&#x73B0;&#x8DE8;&#x57DF;&#x901A;&#x4FE1;&#xFF0C;&#x4E3B;&#x8981;&#x6709;window.name&#xFF0C;jsonp&#xFF0C;document.domain&#xFF0C;cors&#x7B49;&#x65B9;&#x6CD5;&#x3002;&#x4E0D;&#x8FC7;&#x5728;H5&#x4E2D;&#x6709;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x65B9;&#x6CD5;postMessage&#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x5B9E;&#x73B0;&#x8DE8;&#x57DF;&#x901A;&#x4FE1;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x3002;</p>
+<p>&#x8981;&#x4F7F;&#x7528;postMessage&#xFF0C;&#x9996;&#x5148;&#x5F97;&#x68C0;&#x67E5;&#x6D4F;&#x89C8;&#x5668;&#x662F;&#x5426;&#x652F;&#x6301;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;postMessage&#x5C5E;&#x4E8E;window&#x5BF9;&#x8C61;&#xFF0C;&#x68C0;&#x6D4B;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">if</span>(&apos;postMessage&apos; <span style="color: #0000ff;">in</span><span style="color: #000000;"> window){
+    
+}</span><span style="color: #0000ff;">else</span><span style="color: #000000;">{
+    console.log(</span>&apos;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301;postMessage&apos;<span style="color: #000000;">);
+}</span></pre>
+</div>
+<p>postMessage&#x4F7F;&#x7528;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">otherWindow.postMessage(message, targetOrigin, [transfer]);
+
+otherWindow&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;window&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x5982;iframe&#x7684;contentWindow&#xFF0C;window.open&#x7684;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#xFF0C;window.frames[index]&#x7B49;&#x3002;
+
+targetOrigin&#x6307;&#x5B9A;otherWindow&#x7684;&#x6E90;&#xFF0C;&#x5982;&#x679C;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x4E3B;&#x673A;&#x5730;&#x5740;&#xFF0C;&#x7AEF;&#x53E3;&#x53EA;&#x8981;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4FBF;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x4FE1;&#x606F;&#x53D1;&#x9001;</span></pre>
+</div>
+<p>&#x4E3A;&#x4E86;&#x80FD;&#x63A5;&#x6536;&#x5230;postMessage&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x5728;window&#x5BF9;&#x8C61;&#x4E0A;&#x76D1;&#x542C;message&#x4E8B;&#x4EF6;&#xFF0C;&#x8BE5;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x5305;&#x6DB5;&#x4E86;data&#xFF08;&#x6D88;&#x606F;&#xFF09;&#x3001;origin&#xFF08;&#x6765;&#x6E90;&#x5730;&#x5740;&#xFF09;&#x3001;source&#xFF08;&#x6765;&#x6E90;&#x7A97;&#x53E3;&#x4EE3;&#x7406;&#xFF09;&#x7B49;&#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x6240;&#x793A;</p>
+<div class="cnblogs_code">
+<pre>window.onmessage = <span style="color: #0000ff;">function</span><span style="color: #000000;">(e){
+    </span><span style="color: #0000ff;">if</span> (e.origin === &apos;http://www.test.zmx.com&apos;<span style="color: #000000;">) {
+        alert(e.data);
+    }
+}</span></pre>
+</div>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4F7F;&#x7528;postMessage&#x7684;&#x5C0F;&#x4F8B;&#x5B50;&#xFF0C;&#x5E2E;&#x52A9;&#x7406;&#x89E3;&#x3002;</p>
+<p>http://www.test.zmx.com/postmessage.html&#xFF0C;&#x7B80;&#x79F0;A&#x9875;&#x9762;</p>
+<div class="cnblogs_code">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;iframe frameborder=&quot;0&quot; src=&quot;http://www.select.zmx.com/select.html&quot;&gt;&lt;/iframe&gt;
+    &lt;input type=&quot;text&quot; id=&quot;kw&quot;&gt;&lt;button id=&quot;btn&quot;&gt;&#x53D1;&#x9001;&#x5230;&#x5B50;&#x7A97;&#x53E3;&lt;/button&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;<span style="color: #000000;">
+        
+        window.onload </span>= <span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+            window.onmessage </span>= <span style="color: #0000ff;">function</span><span style="color: #000000;">(e) {
+                </span><span style="color: #0000ff;">if</span> (e.origin === &apos;http://www.select.zmx.com&apos;<span style="color: #000000;">) {
+                    alert(</span>&quot;&#x6536;&#x5230;&#x6765;&#x81EA;&#x5B50;&#x7A97;&#x53E3;&#x7684;&#x6D88;&#x606F;&#xFF1A;&quot;+<span style="color: #000000;">e.data);
+                }
+            }
+            btn.onclick </span>= <span style="color: #0000ff;">function</span><span style="color: #000000;">(e) {
+                </span><span style="color: #0000ff;">var</span> val =<span style="color: #000000;"> kw.value;
+                window.frames[</span>0].postMessage(val, &apos;http://www.select.zmx.com&apos;<span style="color: #000000;">);
+            }
+        }
+    </span>&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<p>http://www.select.zmx.com/select.html&#xFF0C;&#x7B80;&#x79F0;B&#x9875;&#x9762;</p>
+<div class="cnblogs_code">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&#x7B80;&#x5355;&#x4E0B;&#x62C9;&#x6846;&#x63D2;&#x4EF6;&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;simpleSelect.css&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;<span style="color: #000000;">
+        body{ padding: 40px; }
+    </span>&lt;/style&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.9.1.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;simpleSelect.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type=&quot;text&quot; id=&quot;in1&quot;&gt;&lt;button id=&quot;btn1&quot;&gt;&#x53D1;&#x9001;&#x5230;&#x7236;&#x7A97;&#x53E3;&lt;/button&gt;
+    &lt;script&gt;<span style="color: #000000;">
+        window.onmessage </span>= <span style="color: #0000ff;">function</span><span style="color: #000000;">(e){
+            </span><span style="color: #0000ff;">if</span> (e.origin === &apos;http://www.test.zmx.com&apos;<span style="color: #000000;">) {
+                alert(</span>&quot;&#x6536;&#x5230;&#x6765;&#x81EA;&#x7236;&#x7A97;&#x53E3;&#x7684;&#x6D88;&#x606F;&#xFF1A;&quot;+<span style="color: #000000;">e.data);
+            }
+        }
+        btn1.onclick </span>= <span style="color: #0000ff;">function</span><span style="color: #000000;">(e) {
+            </span><span style="color: #0000ff;">var</span> val =<span style="color: #000000;"> in1.value;
+            window.top.postMessage(val, </span>&apos;http://www.test.zmx.com&apos;<span style="color: #000000;">);
+        }
+    </span>&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<p>&#x5728;A&#x9875;&#x9762;&#x4E2D;&#x53D1;&#x9001;&#x6D88;&#x606F;hello world&#x7ED9;B&#x9875;&#x9762;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<p><img src="http://images2015.cnblogs.com/blog/733581/201611/733581-20161118101227592-1509722516.png" alt=""></p>
+<p>&#x70B9;&#x51FB;&#x53D1;&#x9001;&#xFF0C;&#x5219;B&#x9875;&#x9762;&#x5219;&#x6536;&#x5230;&#x6D88;&#x606F;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<p><img src="http://images2015.cnblogs.com/blog/733581/201611/733581-20161118101315810-2143261364.png" alt=""></p>
+<p>B&#x9875;&#x9762;&#x5411;A&#x9875;&#x9762;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5C31;&#x4E0D;&#x53D9;&#x8FF0;&#x4E86;&#x3002;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-11-18 10:20</span> <a href="http://www.cnblogs.com/zmxmumu/">SniffRose</a> &#x9605;&#x8BFB;(<span id="post_view_count">...</span>) &#x8BC4;&#x8BBA;(<span id="post_comment_count">...</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6076613" rel="nofollow">&#x7F16;&#x8F91;</a> <a href="#" onclick="AddToWz(6076613);return false;">&#x6536;&#x85CF;</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=219008,cb_entryId=6076613,cb_blogApp=currentBlogApp,cb_blogUserGuid='637614e3-bece-e411-b908-9dcfd8948a71',cb_entryCreatedDate='2016/11/18 10:20:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">&#x5237;&#x65B0;&#x8BC4;&#x8BBA;</a><a href="#" onclick="return RefreshPage();">&#x5237;&#x65B0;&#x9875;&#x9762;</a><a href="#top">&#x8FD4;&#x56DE;&#x9876;&#x90E8;</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">&#x516C;&#x544A;</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	

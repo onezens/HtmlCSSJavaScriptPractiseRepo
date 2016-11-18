@@ -1,0 +1,182 @@
+
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/sharpall/p/6077401.html">&#x534A;&#x900F;&#x660E;&#x8FB9;&#x6846;&#x4E0E;&#x591A;&#x91CD;&#x8FB9;&#x6846;&#x7684;&#x5B9E;&#x73B0;</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>&#xA0;*&#x4EE5;&#x4E0B;&#x6280;&#x5DE7;&#x5747;&#x6E90;&#x81EA;&#x4E8E;Lea Verou&#x6240;&#x8457;&#x300A;CSS&#xA0;Secrets&#x300B;</p>
+<h2>&#x534A;&#x900F;&#x660E;&#x8FB9;&#x6846;</h2>
+<p>&#x3000;&#x3000;&#x6309;&#x7167;&#x5E38;&#x89C4;&#x7684;&#x601D;&#x7EF4;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x6DFB;&#x52A0;&#x534A;&#x900F;&#x660E;&#x7684;&#x8FB9;&#x6846;&#x65F6;&#x65E0;&#x975E;&#x662F;&#x5C06;&#x8FB9;&#x6846;&#x989C;&#x8272;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080"> 1</span> <span style="color: #0000ff">&lt;!</span><span style="color: #ff00ff">DOCTYPE html</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080"> 2</span> <span style="color: #0000ff">&lt;</span><span style="color: #800000">html </span><span style="color: #ff0000">lang</span><span style="color: #0000ff">=&quot;en&quot;</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080"> 3</span> <span style="color: #0000ff">&lt;</span><span style="color: #800000">head</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080"> 4</span>     <span style="color: #0000ff">&lt;</span><span style="color: #800000">meta </span><span style="color: #ff0000">charset</span><span style="color: #0000ff">=&quot;UTF-8&quot;</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080"> 5</span>     <span style="color: #0000ff">&lt;</span><span style="color: #800000">title</span><span style="color: #0000ff">&gt;</span>Title<span style="color: #0000ff">&lt;/</span><span style="color: #800000">title</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080"> 6</span>     <span style="color: #0000ff">&lt;</span><span style="color: #800000">style</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080"> 7</span> <span style="background-color: #f5f5f5; color: #800000">        .outerBox</span><span style="background-color: #f5f5f5; color: #000000">{</span>
+<span style="color: #008080"> 8</span> <span style="background-color: #f5f5f5; color: #ff0000">            position</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> relative</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080"> 9</span> <span style="background-color: #f5f5f5; color: #ff0000">            width</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 400px</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">10</span> <span style="background-color: #f5f5f5; color: #ff0000">            height</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 400px</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">11</span> <span style="background-color: #f5f5f5; color: #ff0000">            background-color</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> aqua</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">12</span>         <span style="background-color: #f5f5f5; color: #000000">}</span>
+<span style="color: #008080">13</span> <span style="background-color: #f5f5f5; color: #800000">        .innerBox</span><span style="background-color: #f5f5f5; color: #000000">{</span>
+<span style="color: #008080">14</span> <span style="background-color: #f5f5f5; color: #ff0000">            position</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> absolute</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">15</span> <span style="background-color: #f5f5f5; color: #ff0000">            top</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">16</span> <span style="background-color: #f5f5f5; color: #ff0000">            bottom</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">17</span> <span style="background-color: #f5f5f5; color: #ff0000">            left</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">18</span> <span style="background-color: #f5f5f5; color: #ff0000">            right</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">19</span> <span style="background-color: #f5f5f5; color: #ff0000">            width</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 200px</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">20</span> <span style="background-color: #f5f5f5; color: #ff0000">            height</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 100px</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">21</span> <span style="background-color: #f5f5f5; color: #ff0000">            margin</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> auto</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">22</span> <span style="background-color: #f5f5f5; color: #ff0000">            background-color</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> cadetblue</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">23</span> <span style="background-color: #f5f5f5; color: #ff0000">            border</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 10px dashed rgba(200,0,100,.2)</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+<span style="color: #008080">24</span>         <span style="background-color: #f5f5f5; color: #000000">}</span>
+<span style="color: #008080">25</span>     <span style="color: #0000ff">&lt;/</span><span style="color: #800000">style</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080">26</span> <span style="color: #0000ff">&lt;/</span><span style="color: #800000">head</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080">27</span> <span style="color: #0000ff">&lt;</span><span style="color: #800000">body</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080">28</span>     <span style="color: #0000ff">&lt;</span><span style="color: #800000">div </span><span style="color: #ff0000">class</span><span style="color: #0000ff">=&quot;outerBox&quot;</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080">29</span>         <span style="color: #0000ff">&lt;</span><span style="color: #800000">div </span><span style="color: #ff0000">class</span><span style="color: #0000ff">=&quot;innerBox&quot;</span><span style="color: #0000ff">&gt;&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080">30</span>     <span style="color: #0000ff">&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080">31</span> <span style="color: #0000ff">&lt;/</span><span style="color: #800000">body</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #008080">32</span> <span style="color: #0000ff">&lt;/</span><span style="color: #800000">html</span><span style="color: #0000ff">&gt;</span></pre>
+</div>
+<p>&#x7136;&#x800C;&#x663E;&#x793A;&#x7684;&#x6548;&#x679C;&#x5E76;&#x4E0D;&#x7406;&#x60F3;&#xFF0C;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x4FB5;&#x5165;&#x4E86;&#x900F;&#x660E;&#x7684;&#x8FB9;&#x6846;&#x4E2D;&#x3002;</p>
+<p><img src="http://images2015.cnblogs.com/blog/1038401/201611/1038401-20161118105824967-1652086707.png" alt=""></p>
+<p>&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x80CC;&#x666F;&#x5916;&#x5C42;&#x518D;&#x52A0;&#x4E00;&#x5C42;div&#xFF0C;&#x7136;&#x540E;&#x5C06;div&#x8BBE;&#x7F6E;&#x4E3A;&#x900F;&#x660E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x80CC;&#x666F;&#x5C45;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x900F;&#x660E;&#x8FB9;&#x6846;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x6BD4;&#x8F83;&#x7E41;&#x7410;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;innerBox&#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x5C5E;&#x6027;<span style="color: #ff0000">background-clip: padding-box;&#xFF08;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x521D;&#x59CB;&#x503C;&#x662F;border-box&#xFF09;&#xA0;<span style="color: #000000">&#x8868;&#x793A;&#x4FB5;&#x5165;&#x5230;padding&#x4E4B;&#x5916;&#x7684;background&#x5C06;&#x4F1A;&#x88AB;&#x622A;&#x53BB;&#x3002;&#x5B9E;&#x73B0;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</span></span></p>
+<p><span style="color: #ff0000"><span style="color: #000000"><img src="http://images2015.cnblogs.com/blog/1038401/201611/1038401-20161118110606763-828195745.png" alt=""></span></span></p>
+<h2>&#x591A;&#x91CD;&#x8FB9;&#x6846;</h2>
+<p>&#x3000;&#x3000;border&#x5C5E;&#x6027;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x8FB9;&#x6846;&#x7684;&#x8BBE;&#x5B9A;&#xFF0C;&#x6D89;&#x53CA;&#x5230;&#x591A;&#x91CD;&#x8FB9;&#x6846;&#x65F6;&#x6211;&#x4EEC;&#x5E38;&#x89C4;&#x7684;&#x601D;&#x8DEF;&#x8981;&#x4E48;&#x662F;&#x4F7F;&#x7528;&#x591A;&#x4E2A;div&#x5C42;&#x5C42;&#x5D4C;&#x5957;&#xFF0C;&#x5C42;&#x5C42;&#x5C45;&#x4E2D;&#x3002;&#x8981;&#x4E48;&#x662F;&#x4F7F;&#x7528;&#x80CC;&#x666F;&#x56FE;&#x6A21;&#x62DF;&#x591A;&#x91CD;&#x8FB9;&#x6846;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4EE5;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x89D2;&#x5EA6;&#x6765;&#x5B9E;&#x73B0;&#x591A;&#x91CD;&#x8FB9;&#x6846;&#x3002;</p>
+<ul>
+<li>box-shadow</li>
+</ul>
+<p>&#x3000;&#x3000;box-shadow&#x7684;&#x76F8;&#x5173;&#x8BED;&#x6CD5;&#x662F;box-shadow: <em>h-shadow</em> <em>v-shadow</em> <em>blur</em> <em>spread</em> <em>color</em> inset; &#x5F53;&#x6211;&#x4EEC;&#x5C06;<em>h-shadow</em>&#xA0;<em>v-shadow</em>&#xA0;<em>blur</em>&#x8BBE;&#x7F6E;&#x4E3A;0&#x3002;&#x518D;&#x52A0;&#x4E0A;&#x6B63;&#x503C;&#x7684;&#x62D3;&#x5F20;&#x534A;&#x5F84;<em>spread</em>&#xA0;&#x3002;&#x6211;&#x4EEC;&#x5C31;&#x80FD;&#x6A21;&#x62DF;&#x5B9E;&#x7EBF;&#x7684;&#x8FB9;&#x6846;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;box-shadow&#x652F;&#x6301;&#x9017;&#x53F7;&#x5206;&#x9694;&#x8BED;&#x6CD5;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x80FD;&#x52A0;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x6295;&#x5F71;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x4E4B;&#x524D;&#x7684;&#x8FB9;&#x6846;&#x53BB;&#x9664;&#xFF0C;&#x52A0;&#x4E0A;<span style="color: #ff0000">box-shadow: 0 0 0 5px deeppink, 0 0 0 10px darkred, 0 0 0 15px #4C608B;</span></p>
+<p><span style="color: #ff0000">&#x3000;&#x3000;<img src="http://images2015.cnblogs.com/blog/1038401/201611/1038401-20161118113639560-1894704106.png" alt=""></span></p>
+<p>&#x3000;&#x3000;<span style="color: #ff0000">&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x975E;&#x5E38;&#x4FBF;&#x6377;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x3002;&#x9634;&#x5F71;&#x4E0E;&#x8FB9;&#x6846;&#x5728;&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x884C;&#x4E3A;&#x5E76;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5B83;&#x4E0D;&#x5360;&#x636E;&#x5B9E;&#x9645;&#x7684;&#x201C;&#x4F4D;&#x7F6E;&#x201D;&#x4E5F;&#x65E0;&#x6CD5;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#x3002;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5916;&#x8FB9;&#x8DDD;&#x6A21;&#x62DF;&#x9634;&#x5F71;&#x6240;&#x5360;&#x636E;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6216;&#x8005;&#x5728;box-shadow&#x4E2D;&#x52A0;&#x5165;inset&#x5173;&#x952E;&#x5B57;&#x6539;&#x4E3A;&#x5185;&#x7F6E;&#x9634;&#x5F71;&#x518D;&#x4F7F;&#x7528;&#x5185;&#x8FB9;&#x8DDD;&#x6A21;&#x62DF;&#x6240;&#x5360;&#x636E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x65E2;&#x662F;&#x5B9E;&#x4F53;&#x5E03;&#x5C40;&#x53C8;&#x53EF;&#x4EE5;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#x3002;</span></p>
+<ul>
+<li>outline</li>
+</ul>
+<p>&#x3000;&#x3000;&#x5F53;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4E24;&#x5C42;&#x8FB9;&#x6846;&#x65F6;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x5728;border&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x52A0;&#x4E0A;outline&#xFF08;&#x63CF;&#x8FB9;&#xFF09;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x6709;&#x4E00;&#x4E2A;&#x4F18;&#x70B9;&#x5C31;&#x662F;outline&#x7684;&#x6837;&#x5F0F;&#x6BD4;&#x8F83;&#x7075;&#x6D3B;&#xFF0C;&#x800C;box-shadow&#x53EA;&#x80FD;&#x6A21;&#x62DF;&#x5B9E;&#x7EBF;&#x3002;&#x4E0E;outline-offset&#x914D;&#x5408;&#x4F7F;&#x7528;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x63CF;&#x8FB9;&#x4E0E;&#x8FB9;&#x7F18;&#x7684;&#x4F4D;&#x7F6E;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7F1D;&#x8FB9;&#x6548;&#x679C;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff">&lt;!</span><span style="color: #ff00ff">DOCTYPE html</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #0000ff">&lt;</span><span style="color: #800000">html </span><span style="color: #ff0000">lang</span><span style="color: #0000ff">=&quot;en&quot;</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #0000ff">&lt;</span><span style="color: #800000">head</span><span style="color: #0000ff">&gt;</span>
+    <span style="color: #0000ff">&lt;</span><span style="color: #800000">meta </span><span style="color: #ff0000">charset</span><span style="color: #0000ff">=&quot;UTF-8&quot;</span><span style="color: #0000ff">&gt;</span>
+    <span style="color: #0000ff">&lt;</span><span style="color: #800000">title</span><span style="color: #0000ff">&gt;</span>Title<span style="color: #0000ff">&lt;/</span><span style="color: #800000">title</span><span style="color: #0000ff">&gt;</span>
+    <span style="color: #0000ff">&lt;</span><span style="color: #800000">style</span><span style="color: #0000ff">&gt;</span><span style="background-color: #f5f5f5; color: #800000">
+        .outerBox</span><span style="background-color: #f5f5f5; color: #000000">{</span><span style="background-color: #f5f5f5; color: #ff0000">
+            position</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> relative</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            width</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 400px</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            height</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 400px</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            background-color</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> aqua</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+        <span style="background-color: #f5f5f5; color: #000000">}</span><span style="background-color: #f5f5f5; color: #800000">
+        .innerBox</span><span style="background-color: #f5f5f5; color: #000000">{</span><span style="background-color: #f5f5f5; color: #ff0000">
+            position</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> absolute</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            top</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            bottom</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            left</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            right</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 0</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            width</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 200px</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            height</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 100px</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            margin</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> auto</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            background-color</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> cadetblue</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            border</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 5px solid cadetblue</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            border-radius</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff">5px</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            outline</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> 1px dashed #fff</span><span style="background-color: #f5f5f5; color: #000000">;</span><span style="background-color: #f5f5f5; color: #ff0000">
+            outline-offset</span><span style="background-color: #f5f5f5; color: #000000">:</span><span style="background-color: #f5f5f5; color: #0000ff"> -5px</span><span style="background-color: #f5f5f5; color: #000000">;</span>
+        <span style="background-color: #f5f5f5; color: #000000">}</span>
+    <span style="color: #0000ff">&lt;/</span><span style="color: #800000">style</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #0000ff">&lt;/</span><span style="color: #800000">head</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #0000ff">&lt;</span><span style="color: #800000">body</span><span style="color: #0000ff">&gt;</span>
+    <span style="color: #0000ff">&lt;</span><span style="color: #800000">div </span><span style="color: #ff0000">class</span><span style="color: #0000ff">=&quot;outerBox&quot;</span><span style="color: #0000ff">&gt;</span>
+        <span style="color: #0000ff">&lt;</span><span style="color: #800000">div </span><span style="color: #ff0000">class</span><span style="color: #0000ff">=&quot;innerBox&quot;</span><span style="color: #0000ff">&gt;&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span>
+    <span style="color: #0000ff">&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #0000ff">&lt;/</span><span style="color: #800000">body</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #0000ff">&lt;/</span><span style="color: #800000">html</span><span style="color: #0000ff">&gt;</span></pre>
+</div>
+<p><img src="http://images2015.cnblogs.com/blog/1038401/201611/1038401-20161118131947248-1560387720.png" alt=""></p>
+<p><span style="color: #ff0000">&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x63CF;&#x8FB9;&#x5E76;&#x6CA1;&#x6709;&#x5706;&#x89D2;&#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x5706;&#x89D2;&#x5916;&#x63CF;&#x8FB9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x65E0;&#x6CD5;&#x8D34;&#x5408;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x6B64;&#x65F6;&#x4E0D;&#x8981;&#x91C7;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</span></p>
+<p><img src="http://images2015.cnblogs.com/blog/1038401/201611/1038401-20161118132425638-2123809764.png" alt=""></p>
+<p>&#xA0;</p>
+<p>&#xA0;</p>
+<p>&#xA0;</p>
+<p>&#x3000;&#x3000;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-11-18 13:29</span> <a href="http://www.cnblogs.com/sharpall/">&#x6C34;&#x4E0A;&#x4E66;</a> &#x9605;&#x8BFB;(<span id="post_view_count">...</span>) &#x8BC4;&#x8BBA;(<span id="post_comment_count">...</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6077401" rel="nofollow">&#x7F16;&#x8F91;</a> <a href="#" onclick="AddToWz(6077401);return false;">&#x6536;&#x85CF;</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=309868,cb_entryId=6077401,cb_blogApp=currentBlogApp,cb_blogUserGuid='41c7e387-c58d-e611-845c-ac853d9f53ac',cb_entryCreatedDate='2016/11/18 13:29:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">&#x5237;&#x65B0;&#x8BC4;&#x8BBA;</a><a href="#" onclick="return RefreshPage();">&#x5237;&#x65B0;&#x9875;&#x9762;</a><a href="#top">&#x8FD4;&#x56DE;&#x9876;&#x90E8;</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">&#x516C;&#x544A;</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	

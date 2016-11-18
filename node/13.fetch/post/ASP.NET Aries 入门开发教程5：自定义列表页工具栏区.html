@@ -1,0 +1,163 @@
+
+	<!-- left starts -->
+	<div id="left">
+		<div id="mystats">
+			<br>
+				<div id="blog_stats">
+<!--done-->
+<div class="blogStats">
+&#x968F;&#x7B14; - 483&#xA0;
+&#x6587;&#x7AE0; - 2&#xA0;
+&#x8BC4;&#x8BBA; - 10990&#xA0;
+
+</div></div>
+			
+		</div>
+		<div id="mylinks">
+<!--done-->
+<a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">&#x535A;&#x5BA2;&#x56ED;</a>&#xA0;&#xA0;<a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/cyq1162/">&#x9996;&#x9875;</a>&#xA0;&#xA0;<a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">&#x65B0;&#x968F;&#x7B14;</a>&#xA0;&#xA0;&#xA0;&#xA0;<a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">&#x7BA1;&#x7406;</a>&#xA0;&#xA0;<a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/cyq1162/rss">&#x8BA2;&#x9605;</a>&#xA0;<a id="blog_nav_rss_image" href="http://www.cnblogs.com/cyq1162/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="&#x8BA2;&#x9605;"></a></div>
+		<div id="topics">
+			
+<div id="post_detail">
+<div class="post">
+	<div class="postTitle">
+		<h1><a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/cyq1162/p/6077244.html">ASP.NET Aries &#x5165;&#x95E8;&#x5F00;&#x53D1;&#x6559;&#x7A0B;5&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x8868;&#x9875;&#x5DE5;&#x5177;&#x680F;&#x533A;</a></h1>
+	</div>
+	<div id="cnblogs_post_body"><h1>&#x524D;&#x8A00;&#xFF1A;</h1>
+<p>&#x6293;&#x7D27;&#x65F6;&#x95F4;&#xFF0C;&#x7EE7;&#x7EED;&#x5199;&#x6559;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x53D1;&#x73B0;&#x7528;&#x6237;&#x671F;&#x5F85;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x90FD;&#x5728;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#x90A3;&#x4E00;&#x5757;&#x3002;</p>
+<p>&#x4E0D;&#x5F97;&#x4E0D;&#x7EE7;&#x7EED;&#x52E4;&#x52B3;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x8282;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x5DE5;&#x5177;&#x680F;&#x533A;&#x7684;&#x73A9;&#x6CD5;&#x3002;</p>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118114820154-1289582116.png" alt=""></p>
+<h1>&#x5DE5;&#x5177;&#x680F;&#x7684;&#x9ED8;&#x8BA4;&#x4ECB;&#x7ECD;&#xFF1A;</h1>
+<p>&#x5DE5;&#x5177;&#x680F;&#x9ED8;&#x8BA4;&#x5305;&#x62EC;5&#x4E2A;&#x6309;&#x94AE;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6743;&#x9650;&#x51B3;&#x5B9A;&#x663E;&#x793A;&#xFF1A;</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:true;">&#x6DFB;&#x52A0;&#xFF1A;add
+&#x5220;&#x9664;&#xFF1A;del
+&#x5BFC;&#x51FA;&#x3001;export
+&#x5BFC;&#x5165;&#x548C;&#xFF08;&#x5BFC;&#x5165;&#x6A21;&#x677F;&#x4E0B;&#x8F7D;&#xFF0C;&#x7B80;&#x79F0;&#xFF09;&#x5BFC;&#x51FA;&#x6A21;&#x677F;&#xFF1A;import</pre>
+</div>
+<p>&#x5728;&#x9875;&#x9762;&#x7684;&#x6807;&#x51C6;4&#x8BF7;&#x6C42;&#x91CC;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;actionKeys&#x503C;&#xFF0C;&#x7528;&#x4E8E;&#x51B3;&#x5B9A;&#x6743;&#x9650;&#x7684;&#x5448;&#x73B0;&#xFF1A;</p>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118115330545-728086739.png" alt=""></p>
+<p>&#xA0;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;AR.Global.Variable.actionKeys&#x62FF;&#x5230;&#x8FD9;&#x4E2A;&#x503C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x5404;&#x79CD;&#x5E38;&#x7528;&#x64CD;&#x4F5C;&#x624B;&#x6CD5;&#xFF1A;</p>
+<h1>1&#xFF1A;&#x9690;&#x85CF;&#x5DE5;&#x5177;&#x680F;</h1>
+<div class="cnblogs_Highlighter">
+<pre class="brush:html;gutter:true;">  var dg = new AR.DataGrid(&quot;Article&quot;, &quot;Article&quot;, &quot;grid&quot;);
+  <span style="color: #ff0000;"><strong>dg.ToolBar.isHidden = true;</strong></span>
+  dg.bind();
+</pre>
+</div>
+<h1>2&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;&#x5DE5;&#x5177;&#x680F;</h1>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">var dg = new AR.DataGrid(&quot;Article&quot;, &quot;Article&quot;, &quot;grid&quot;);
+<span style="color: #ff0000;"><strong>dg.ToolBar.$target = $(&quot;#&#x8282;&#x70B9;ID&quot;);</strong></span>
+dg.bind();</span></pre>
+</div>
+<h1>3&#xFF1A;&#x9690;&#x85CF;&#x6216;&#x6539;&#x53D8;&#x6309;&#x94AE;&#xFF08;&#x867D;&#x7136;&#x5DF2;&#x7ECF;&#x6709;&#x6743;&#x9650;&#xFF09;</h1>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118120057607-735934054.png" alt=""></p>
+<p>&#x9690;&#x85CF;&#xFF1A;&#x8BBE;&#x7F6E;&#x5BF9;&#x8C61;&#x7684;isHidden&#x4E3A;false&#x3002;</p>
+<p>&#x64CD;&#x4F5C;&#xFF1A;&#x5BF9;&#x8C61;&#x7684;$target&#x4E3A;JQ&#x5BF9;&#x8C61;&#xFF0C;&#x64CD;&#x4F5C;JQ&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#xFF0C;&#x5982;&#xFF1A;</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:html;gutter:true;">dg.ToolBar.btnAdd.$target.hide();</pre>
+</div>
+<h1>4&#xFF1A;&#x65B0;&#x589E;&#x81EA;&#x5B9A;&#x4E49;&#x6309;&#x94AE;</h1>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118123408935-1143547836.png" alt=""></p>
+<p>lv2action&#x662F;&#x6307;&#x4E8C;&#x7EA7;&#x6743;&#x9650;&#xFF1A;&#x6839;&#x636E;&#x6743;&#x9650;actionKeys&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x663E;&#x793A;&#x3002;</p>
+<p><em id="__mceDel">&#x6548;&#x679C;&#xFF1A;</em></p>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118121144388-1782543360.png" alt=""></p>
+<h1>5&#xFF1A;&#x83B7;&#x53D6;&#x81EA;&#x5B9A;&#x4E49;&#x6309;&#x94AE;&#x5BF9;&#x8C61;</h1>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118124010201-1924337240.png" alt=""></p>
+<p>&#x8981;&#x62FF;&#x5230;&#x5BF9;&#x8C61;&#xFF0C;&#x81F3;&#x5C11;&#x662F;&#x5DE5;&#x5177;&#x680F;&#x521B;&#x5EFA;&#x5B8C;&#x540E;&#x624D;&#x80FD;&#x62FF;&#x5230;&#x3002;</p>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118124056295-623448375.png" alt=""></p>
+<h1>&#x5176;&#x5B83;1&#xFF1A;</h1>
+<p>&#x65B0;&#x589E;&#x52A0;&#x6309;&#x94AE;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A;winTitle&#x548C;winUrl</p>
+<p><img src="http://images2015.cnblogs.com/blog/17408/201611/17408-20161118163214451-1111320401.png" alt=""></p>
+<p>&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x8BBE;&#x7F6E;&#x6587;&#x5B57;&#x548C;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C;&#x7684;&#x94FE;&#x63A5;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x5176;&#x5B83;&#x6309;&#x94AE;&#x53EF;&#x6CA1;&#x8FD9;&#x5F85;&#x9047;&#x3002;</p>
+<h1>&#x5176;&#x5B83;2&#xFF1A;</h1>
+<p>&#x6BCF;&#x4E2A;&#x6309;&#x94AE;&#xFF0C;&#x90FD;&#x6709;&#x4E24;&#x4E2A;&#x62E6;&#x622A;&#x4E8B;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x62E6;&#x622A;&#x5904;&#x7406;&#x4E8B;&#x60C5;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x7528;&#x4E0A;&#xFF1A;</p>
+<p>onBeforeExecute</p>
+<p>onAfterExecute</p>
+<h1>&#x603B;&#x7ED3;&#xFF1A;</h1>
+<p>&#x76F8;&#x5BF9;&#x67E5;&#x8BE2;&#x6846;&#x6765;&#x8BF4;&#xFF0C;&#x5DE5;&#x5177;&#x680F;&#x7684;&#x4E8B;&#x60C5;&#x5C11;&#x4E00;&#x4E9B;&#xFF0C;&#x4E5F;&#x76F8;&#x5BF9;&#x7B80;&#x5355;&#x4E00;&#x4E9B;&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x7BC7;&#x4ECB;&#x7ECD;DataGrid&#x7684;&#x6570;&#x636E;&#x5448;&#x73B0;&#x65B9;&#x9762;&#x6559;&#x7A0B;&#x3002;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+	<div class="postDesc">posted on <span id="post-date">2016-11-18 16:37</span> <a href="http://www.cnblogs.com/cyq1162/">&#x8DEF;&#x8FC7;&#x79CB;&#x5929;</a> &#x9605;&#x8BFB;(<span id="post_view_count">...</span>) &#x8BC4;&#x8BBA;(<span id="post_comment_count">...</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6077244" rel="nofollow">&#x7F16;&#x8F91;</a> <a href="#" onclick="AddToWz(6077244);return false;">&#x6536;&#x85CF;</a></div>
+</div>
+<script type="text/javascript">var allowComments=true,cb_blogId=20967,cb_entryId=6077244,cb_blogApp=currentBlogApp,cb_blogUserGuid='2a5e360b-63cf-dd11-9e4d-001cf0cd104b',cb_entryCreatedDate='2016/11/18 16:37:00';loadViewCount(cb_entryId);</script>
+
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">&#x5237;&#x65B0;&#x8BC4;&#x8BBA;</a><a href="#" onclick="return RefreshPage();">&#x5237;&#x65B0;&#x9875;&#x9762;</a><a href="#top">&#x8FD4;&#x56DE;&#x9876;&#x90E8;</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+		</div>
+	</div>
+	<!-- left ends -->
+	<!-- right starts -->
+	<div id="right">
+		<!-- 右侧工具部分 -->
+		<div id="right_content">
+	
+			
+<!--done-->
+<h2 class="listtitle">&#x516C;&#x544A;</h2>
+<div class="newsItem">
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+	
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+				<div id="leftcontentcontainer">
+					<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+				</div>
+			
+		</div>
+		<!-- //右侧工具部分 -->
+		<div id="footer">
+			
+<!--done-->
+Copyright &#xA9;2016 &#x8DEF;&#x8FC7;&#x79CB;&#x5929;
+		</div>
+	</div>
+	<!-- right ends -->
+	<div class="clear"></div>
+	

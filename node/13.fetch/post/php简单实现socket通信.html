@@ -1,0 +1,164 @@
+
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/lingxin/p/6077671.html">php&#x7B80;&#x5355;&#x5B9E;&#x73B0;socket&#x901A;&#x4FE1;</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>socket&#x901A;&#x4FE1;&#x7684;&#x539F;&#x7406;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x8BF4;&#x4E86;&#xFF0C;&#x5B83;&#x7684;&#x7528;&#x9014;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x5E7F;&#x6CDB;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;socket&#x6765;&#x505A;&#x4E00;&#x4E2A;API&#x63A5;&#x53E3;&#x51FA;&#x6765;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;socket&#x6765;&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x5728;php&#x91CC;&#x9762;&#x5982;&#x4F55;&#x5B9E;&#x73B0;socket&#x901A;&#x4FE1;&#x3002;</p>
+<p>&#x7531;&#x4E8E;socket&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x4EE3;&#x7801;&#x8981;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x7B49;&#x5F85;&#x63A5;&#x6536;&#x8BF7;&#x6C42;&#xFF0C;&#x6240;&#x4EE5;php&#x5728;&#x505A;socket&#x670D;&#x52A1;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5C06;php&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x5728;CMD&#x91CC;&#x9762;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x4F7F;php&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5728;CMD&#x91CC;&#x9762;&#x8FD0;&#x884C;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<p>1.&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x540D;&#x5B57;&#x4E3A;PHP_HOME&#xFF0C;&#x503C;&#x4E3A;php&#x6587;&#x4EF6;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x7684;.exe&#x6587;&#x4EF6;&#x5730;&#x5740;&#xFF0C;&#x5982;&#xA0;D:\wamp\bin\php\php5.5.12\php.exe</p>
+<p><img src="http://images2015.cnblogs.com/blog/1040033/201611/1040033-20161118141303248-1023599758.png" alt=""></p>
+<p>2.&#x4FEE;&#x6539;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;path&#x7684;&#x503C;</p>
+<p>&#x5728;path&#x7684;&#x503C;&#x91CC;&#x9762;&#x6DFB;&#x52A0;php&#x5B89;&#x88C5;&#x7684;&#x76EE;&#x5F55;&#xFF1A;&#x5982;&#xA0;D:\wamp\bin\php\php5.5.12;</p>
+<p><img src="http://images2015.cnblogs.com/blog/1040033/201611/1040033-20161118141151326-960067503.png" alt=""></p>
+<p>&#x597D;&#x4E86;&#xFF0C;&#x5230;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5C31;&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x4E0B;&#x4E00;&#x6B65;&#x6211;&#x4EEC;&#x6253;&#x5F00;CMD&#xFF0C;&#x60F3;&#x8981;&#x5728;&#x91CC;&#x9762;&#x8FD0;&#x884C;php&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;aaa.php&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x6211;&#x4EEC;&#x5199;&#x4E0A;&#x8FD9;&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre>php d:\wamp\www\aaa.php</pre>
+</div>
+<p>&#x7136;&#x540E;&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#xFF0C;&#x597D;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x7684;php&#x6587;&#x4EF6;&#x5728;cmd&#x91CC;&#x9762;&#x8FD0;&#x884C;&#x4E86;&#xFF0C;&#x8F93;&#x51FA;&#x4E86;&#x4E00;&#x53E5;&#xFF1A;hello &#xA0;</p>
+<p><img src="http://images2015.cnblogs.com/blog/1040033/201611/1040033-20161118142036701-1233368107.png" alt=""></p>
+<p>&#xA0;</p>
+<p>&#x8FD9;&#x6837;&#x7684;&#x8BDD;php&#x6587;&#x4EF6;&#x80FD;&#x591F;&#x6210;&#x529F;&#x5728;cmd&#x91CC;&#x9762;&#x8FD0;&#x884C;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;php&#x600E;&#x4E48;&#x5B9E;&#x73B0;socket&#x901A;&#x4FE1;&#x3002;</p>
+<p>1.php&#x5236;&#x4F5C;&#x7684;socket&#x670D;&#x52A1;&#x7AEF;</p>
+<p>&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x8BBE;&#x7F6E;socket&#x901A;&#x4FE1;&#x7684;IP&#x5730;&#x5740;&#x53CA;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x6709;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x7684;&#x8BDD;&#xFF0C;&#x63A5;&#x6536;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x5904;&#x7406;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000">//</span><span style="color: #008000">&#x786E;&#x4FDD;&#x5728;&#x8FDE;&#x63A5;&#x5BA2;&#x6237;&#x7AEF;&#x65F6;&#x4E0D;&#x4F1A;&#x8D85;&#x65F6;</span>
+<span style="color: #008080">set_time_limit</span>(0<span style="color: #000000">);
+</span><span style="color: #008000">//</span><span style="color: #008000">&#x8BBE;&#x7F6E;IP&#x548C;&#x7AEF;&#x53E3;&#x53F7;</span>
+<span style="color: #800080">$address</span> = &quot;127.0.0.1&quot;<span style="color: #000000">;
+</span><span style="color: #800080">$port</span> = 2048; <span style="color: #008000">//</span><span style="color: #008000">&#x8C03;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x6362;&#x7AEF;&#x53E3;&#x6765;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#xFF01;</span><span style="color: #008000">
+/*</span><span style="color: #008000">*
+ * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;SOCKET 
+ * AF_INET=&#x662F;ipv4 &#x5982;&#x679C;&#x7528;ipv6&#xFF0C;&#x5219;&#x53C2;&#x6570;&#x4E3A; AF_INET6
+ * SOCK_STREAM&#x4E3A;socket&#x7684;tcp&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x662F;UDP&#x5219;&#x4F7F;&#x7528;SOCK_DGRAM
+</span><span style="color: #008000">*/</span>
+<span style="color: #800080">$sock</span> = socket_create(AF_INET, SOCK_STREAM, SOL_TCP) or <span style="color: #0000ff">die</span>(&quot;socket_create() &#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x662F;:&quot; . socket_strerror(socket_last_error()) . &quot;/n&quot;<span style="color: #000000">);
+</span><span style="color: #008000">//</span><span style="color: #008000">&#x963B;&#x585E;&#x6A21;&#x5F0F;</span>
+socket_set_block(<span style="color: #800080">$sock</span>) or <span style="color: #0000ff">die</span>(&quot;socket_set_block() &#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x662F;:&quot; . socket_strerror(socket_last_error()) . &quot;/n&quot;<span style="color: #000000">);
+</span><span style="color: #008000">//</span><span style="color: #008000">&#x7ED1;&#x5B9A;&#x5230;socket&#x7AEF;&#x53E3;</span>
+<span style="color: #800080">$result</span> = socket_bind(<span style="color: #800080">$sock</span>, <span style="color: #800080">$address</span>, <span style="color: #800080">$port</span>) or <span style="color: #0000ff">die</span>(&quot;socket_bind() &#x5931;&#x8D25;&#x7684;&#xFFFD;&#xFFFD;&#xFFFD;&#x56E0;&#x662F;:&quot; . socket_strerror(socket_last_error()) . &quot;/n&quot;<span style="color: #000000">);
+</span><span style="color: #008000">//</span><span style="color: #008000">&#x5F00;&#x59CB;&#x76D1;&#x542C;</span>
+<span style="color: #800080">$result</span> = socket_listen(<span style="color: #800080">$sock</span>, 4) or <span style="color: #0000ff">die</span>(&quot;socket_listen() &#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x662F;:&quot; . socket_strerror(socket_last_error()) . &quot;/n&quot;<span style="color: #000000">);
+</span><span style="color: #0000ff">echo</span> &quot;OK\nBinding the socket on <span style="color: #800080">$address</span>:<span style="color: #800080">$port</span> ... &quot;<span style="color: #000000">;
+</span><span style="color: #0000ff">echo</span> &quot;OK\nNow ready to accept connections.\nListening on the socket ... \n&quot;<span style="color: #000000">;
+</span><span style="color: #0000ff">do</span> { <span style="color: #008000">//</span><span style="color: #008000"> never stop the daemon
+    //&#x5B83;&#x63A5;&#x6536;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x5E76;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x5B50;&#x8FDE;&#x63A5;Socket&#x6765;&#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x95F4;&#x7684;&#x4FE1;&#x606F;</span>
+    <span style="color: #800080">$msgsock</span> = socket_accept(<span style="color: #800080">$sock</span>) or  <span style="color: #0000ff">die</span>(&quot;socket_accept() failed: reason: &quot; . socket_strerror(socket_last_error()) . &quot;/n&quot;<span style="color: #000000">);
+    
+    </span><span style="color: #008000">//</span><span style="color: #008000">&#x8BFB;&#x53D6;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;</span>
+    <span style="color: #0000ff">echo</span> &quot;Read client data \n&quot;<span style="color: #000000">;
+    </span><span style="color: #008000">//</span><span style="color: #008000">socket_read&#x51FD;&#x6570;&#x4F1A;&#x4E00;&#x76F4;&#x8BFB;&#x53D6;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;,&#x76F4;&#x5230;&#x9047;&#x89C1;\n,\t&#x6216;&#x8005;\0&#x5B57;&#x7B26;.PHP&#x811A;&#x672C;&#x628A;&#x8FD9;&#x5199;&#x5B57;&#x7B26;&#x770B;&#x505A;&#x662F;&#x8F93;&#x5165;&#x7684;&#x7ED3;&#x675F;&#x7B26;.</span>
+    <span style="color: #800080">$buf</span> = socket_read(<span style="color: #800080">$msgsock</span>, 8192<span style="color: #000000">);
+    </span><span style="color: #0000ff">echo</span> &quot;Received msg: <span style="color: #800080">$buf</span>   \n&quot;<span style="color: #000000">;
+    
+    </span><span style="color: #008000">//</span><span style="color: #008000">&#x6570;&#x636E;&#x4F20;&#x9001; &#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x5199;&#x5165;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</span>
+    <span style="color: #800080">$msg</span> = &quot;welcome \n&quot;<span style="color: #000000">;
+    socket_write(</span><span style="color: #800080">$msgsock</span>, <span style="color: #800080">$msg</span>, <span style="color: #008080">strlen</span>(<span style="color: #800080">$msg</span>)) or <span style="color: #0000ff">die</span>(&quot;socket_write() failed: reason: &quot; . socket_strerror(socket_last_error()) .&quot;/n&quot;<span style="color: #000000">);
+    </span><span style="color: #008000">//</span><span style="color: #008000">&#x4E00;&#x65E6;&#x8F93;&#x51FA;&#x88AB;&#x8FD4;&#x56DE;&#x5230;&#x5BA2;&#x6237;&#x7AEF;,&#x7236;/&#x5B50;socket&#x90FD;&#x5E94;&#x901A;&#x8FC7;socket_close($msgsock)&#x51FD;&#x6570;&#x6765;&#x7EC8;&#x6B62;</span>
+    socket_close(<span style="color: #800080">$msgsock</span><span style="color: #000000">);
+} </span><span style="color: #0000ff">while</span> (<span style="color: #0000ff">true</span><span style="color: #000000">);
+socket_close(</span><span style="color: #800080">$sock</span>);</pre>
+</div>
+<p>2.&#x8C03;&#x53D6;socket&#x670D;&#x52A1;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x6587;&#x4EF6;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x4F9D;&#x7136;&#x662F;&#x8981;&#x8BBE;&#x7F6E;&#x597D;&#x8981;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x7684;IP&#x5730;&#x5740;&#x53CA;&#x7AEF;&#x53E3;&#x53F7;&#xFF08;&#x5373;&#x4E0A;&#x4E00;&#x6B65;&#x9AA4;&#x4E2D;&#x7684;IP&#x53CA;&#x7AEF;&#x53E3;&#xFF09;&#xFF0C;&#x5B8C;&#x4E86;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;socket&#x8FDE;&#x63A5;&#xFF0C;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x63A5;&#x6536;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x3002;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">set_time_limit</span>(0<span style="color: #000000">);
+
+</span><span style="color: #800080">$host</span> = &quot;127.0.0.1&quot;<span style="color: #000000">;
+</span><span style="color: #800080">$port</span> = 2048<span style="color: #000000">;
+</span><span style="color: #800080">$socket</span> = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)or <span style="color: #0000ff">die</span>(&quot;Could not create    socket\n&quot;); <span style="color: #008000">//</span><span style="color: #008000"> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Socket</span>
+ 
+<span style="color: #800080">$connection</span> = socket_connect(<span style="color: #800080">$socket</span>, <span style="color: #800080">$host</span>, <span style="color: #800080">$port</span>) or <span style="color: #0000ff">die</span>(&quot;Could not connet server\n&quot;);    <span style="color: #008000">//</span><span style="color: #008000">  &#x8FDE;&#x63A5;</span>
+socket_write(<span style="color: #800080">$socket</span>, &quot;hello socket&quot;) or <span style="color: #0000ff">die</span>(&quot;Write failed\n&quot;); <span style="color: #008000">//</span><span style="color: #008000"> &#x6570;&#x636E;&#x4F20;&#x9001; &#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x6D88;&#x606F;</span>
+<span style="color: #0000ff">while</span> (<span style="color: #800080">$buff</span> = @socket_read(<span style="color: #800080">$socket</span>, 1024,<span style="color: #000000"> PHP_NORMAL_READ)) {
+    </span><span style="color: #0000ff">echo</span>(&quot;Response was:&quot; . <span style="color: #800080">$buff</span> . &quot;\n&quot;<span style="color: #000000">);
+}
+socket_close(</span><span style="color: #800080">$socket</span>);</pre>
+</div>
+<p>3.&#x5728;cmd&#x91CC;&#x9762;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x7AEF;&#x4EE3;&#x7801;</p>
+<p><img src="http://images2015.cnblogs.com/blog/1040033/201611/1040033-20161118142821029-650562627.png" alt=""></p>
+<p>&#x8FD0;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x5DF2;&#x7ECF;&#x5728;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x4E86;&#x3002;&#x3002;&#x3002;</p>
+<p>4.&#x5728;&#x7F51;&#x9875;&#x91CC;&#x9762;&#x8FD0;&#x884C;&#x6211;&#x4EEC;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x7F51;&#x9875;&#xFF0C;&#x6765;&#x5411;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x4E92;&#x6570;&#x636E;</p>
+<p>&#x8FD0;&#x884C;&#x8D77;&#x6765;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x663E;&#x793A;&#xFF1A;</p>
+<p><img src="http://images2015.cnblogs.com/blog/1040033/201611/1040033-20161118143153654-161720041.png" alt=""></p>
+<p>cmd&#x91CC;&#x9762;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x663E;&#x793A;&#xFF1A;</p>
+<p><img src="http://images2015.cnblogs.com/blog/1040033/201611/1040033-20161118143206123-1518428922.png" alt=""></p>
+<p>&#xA0;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;socket&#x901A;&#x4FE1;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x81F3;&#x4E8E;socket&#x63A5;&#x6536;&#x5230;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#xFF0C;&#x600E;&#x4E48;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x4F7F;&#x7528;php&#x6765;&#x505A;&#x903B;&#x8F91;&#x4E86;&#x3002;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-11-18 14:37</span> <a href="http://www.cnblogs.com/lingxin/">Alvin-&#x7075;&#x5FC3;</a> &#x9605;&#x8BFB;(<span id="post_view_count">...</span>) &#x8BC4;&#x8BBA;(<span id="post_comment_count">...</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6077671" rel="nofollow">&#x7F16;&#x8F91;</a> <a href="#" onclick="AddToWz(6077671);return false;">&#x6536;&#x85CF;</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=310346,cb_entryId=6077671,cb_blogApp=currentBlogApp,cb_blogUserGuid='ebd93616-678f-e611-845c-ac853d9f53ac',cb_entryCreatedDate='2016/11/18 14:37:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">&#x5237;&#x65B0;&#x8BC4;&#x8BBA;</a><a href="#" onclick="return RefreshPage();">&#x5237;&#x65B0;&#x9875;&#x9762;</a><a href="#top">&#x8FD4;&#x56DE;&#x9876;&#x90E8;</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">&#x516C;&#x544A;</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	
