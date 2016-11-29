@@ -32,10 +32,32 @@ app.use(session({
     })
 }));
 
+// 处理表单及文件上传的中间件
+app.use(require('express-formidable')({
+    uploadDir: path.join(__dirname, 'public/img'),// 上传文件目录
+    keepExtensions: true// 保留后缀
+}));
+
+
 //使用flash中间件
 app.use(flash());
 
+//全局变量
+app.locals.blog = {
+    title: pkg.name,
+    description: pkg.description
+};
+// 需要的变量
+app.use(function (req, res, next) {
+    res.locals.user = req.session.user;
+    res.locals.success = req.flash('success').toString();
+    res.locals.error = req.flash('error').toString();
+    next();
+});
+
 routers(app);
+
+
 
 //监听端口, 启动程序
 app.listen(config.port, function(){

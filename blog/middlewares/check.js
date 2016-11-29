@@ -10,8 +10,8 @@ module.exports = {
         next();
     },
     checkNotLogin: function(req, res, next) {
-        if(req.session.user){
-            res.flash('error', 'have login');
+        if(!req.session.user){
+            req.flash('error', 'have login');
             return res.redirect('back'); //back previous page
         }
         next();
