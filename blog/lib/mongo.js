@@ -4,9 +4,26 @@
 
 const config = require('config-lite');
 const Mongolass = require('mongolass');
+const moment = require('moment');
+const  objIdToTimestamp = require('objectid-to-timestamp');
 
 const mongolass = new  Mongolass();
 mongolass.connect(config.mongodb);
+
+mongolass.plugin('addCreatedAt', {
+    afterFind: function(results) {
+        results.forEach(function(result){
+            results.created_at = moment(objIdToTimestamp(result._id)).format('YYYY-MM-DD HH:mm');
+        });
+        return results;
+    },
+    afterFindOne: function(result) {
+        if(result){
+            result.created_at = moment(objIdToTimestamp(result._id)).format('YYYY-MM-DD HH:mm');
+        }
+        return result;
+    }
+})
 
 exports.User = mongolass.model('User', {
     name: {type: 'string'},
