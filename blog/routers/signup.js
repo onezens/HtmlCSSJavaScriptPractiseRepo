@@ -20,12 +20,12 @@ router.post('/', checkNotLogin, function(req, res, next){
     //res.send(req.flash());
     console.warn('register user');
     console.info(req.fields);
-    var name = req.fields.name;
+    var name = req.fields.name.trim();
     var gender = req.fields.gender;
     var bio = req.fields.bio;
     var avatar = req.files.avatar.path.split(path.sep).pop();
-    var password = req.fields.password;
-    var repassword = req.fields.repassword;
+    var password = req.fields.password.trim();
+    var repassword = req.fields.repassword.trim();
     try {
         //名字请限制在 2-10 个字符
         if(name.length < 2 || name.length > 10 ){

@@ -7,7 +7,7 @@ const checkLogin = require('../middlewares/check.js').checkLogin;
 
 //GET 注销
 router.get('/', checkLogin, function(req, res, next){
-    req.session = null;
+    req.session.user = null;
     req.flash('success', '注销成功!');
     res.redirect('/posts');
 });

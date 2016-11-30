@@ -15,8 +15,8 @@ router.get('/', checkNotLogin, function(req, res, next){
 
 //POST 提交登录信息
 router.post('/', checkNotLogin, function(req, res, next){
-    var name = req.fields.name;
-    var password = req.fields.password;
+    var name = req.fields.name.trim();
+    var password = req.fields.password.trim();
 
     users.getUserByName(name).then(function(user){
         if(!user){

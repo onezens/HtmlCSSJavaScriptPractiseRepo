@@ -10,8 +10,6 @@ const checkLogin = require('../middlewares/check.js').checkLogin;
 
 //GET posts 获取所有的文章以及获取用户特定的文章页  eg: posts?auth=xxxx
 router.get('/', function(req, res, next){
-    //res.send(req.flash());
-    //res.render('posts');
     var author = req.query.author;
     postModel.getPosts(author).then(function(posts){
         res.render('posts', {
