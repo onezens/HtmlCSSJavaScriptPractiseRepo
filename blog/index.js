@@ -57,7 +57,12 @@ app.use(function (req, res, next) {
 
 routers(app);
 
-
+// error page
+app.use(function (err, req, res, next) {
+    res.render('error', {
+        error: err
+    });
+});
 
 //监听端口, 启动程序
 app.listen(config.port, function(){
