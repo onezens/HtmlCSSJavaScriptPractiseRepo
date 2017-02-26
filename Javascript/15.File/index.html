@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #test-file-preview {
+            height: 200px;
+            border: 1px #00cc99 solid;
+        }
+        #test-file-info{
+            height: 20px;
+        }
+        #test-file-preview {
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+<input id="test-file-upload" type="file">
+<div id="test-file-preview"></div>
+<div id="test-file-info"></div>
+<script>
+    var fileInput = document.getElementById('test-file-upload');
+    var preview = document.getElementById('test-file-preview');
+    var info = document.getElementById('test-file-info');
+    fileInput.addEventListener('change', function(){
+
+        preview.style.backgroundImage = '';
+        info.innerHTML = ' ';
+        var fileName = fileInput.value;
+        if(!fileName){
+            info.innerHTML = 'no file input';
+            return;
+        }
+        console.log(fileName);
+        var file = fileInput.files[0];
+        console.log(file.type);
+        if(file.type.indexOf('image') == -1){
+            info.innerHTML = 'Can only upload image!';
+            console.log('file type error');
+            return;
+        }
+        //读取文件
+        var reader = new FileReader();
+        reader.onload = function(e){
+            var data = e.target.result;
+            preview.style.backgroundImage = "url('" + data + "') ";
+        };
+        reader.readAsDataURL(file);
+
+    });
+
+
+
+
+</script>
+</body>
+</html>
