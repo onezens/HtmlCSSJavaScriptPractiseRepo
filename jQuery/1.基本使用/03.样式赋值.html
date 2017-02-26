@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../src/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function(){
+//            $('li').css('fontSize', '20px');
+            $('ul').css('color', 'orange');
+            $('ul').css({
+                "listStyle" : "none",
+                "font-size" : "16px"
+            });
+
+            //index 索引 value 属性的值
+            $('li').css('font-size', function(index, value){
+                console.log('index: '+ index + ' value: ' + value);
+                if(index % 2 == 0){
+                    return "20px";
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>This is a li element 01.</li>
+    <li>This is a li element 02.</li>
+    <li>This is a li element 03.</li>
+    <li>This is a li element 04.</li>
+    <li>This is a li element 05.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../src/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('li').css('font-size', '17px');
+
+            //后代选择
+            $('.box li ul').css('color','red');
+
+            //子代选择
+            $('.box > ul > li ').css('font-size', '20px');
+            $('.box > ul > li > p > ul > li').css('font-size', '30px');
+
+            // 紧邻选择器
+            $(".box + div").css("color","orange");
+
+            // 兄弟选择器
+            $(".liItem ~ li").css("font-size","35px");
+        });
+    </script>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>这是第01个li标签
+            <p>
+            <ul>
+                <li>这是孩子01标签</li>
+                <li>这是孩子02标签</li>
+                <li>这是孩子03标签</li>
+                <li>这是孩子04标签</li>
+                <li>这是孩子05标签</li>
+            </ul>
+            </p>
+        </li>
+        <li>这是第02个li标签</li>
+        <li>这是第03个li标签</li>
+        <li>这是第04个li标签</li>
+        <li class="liItem">这是第05个li标签</li>
+        <li>这是第06个li标签</li>
+        <li>这是第07个li标签</li>
+        <li>这是第08个li标签</li>
+    </ul>
+</div>
+<div>第二个div标签</div>
+<p>这是一个段落标签</p>
+
+<div>第三个div标签</div>
+</body>
+</html>

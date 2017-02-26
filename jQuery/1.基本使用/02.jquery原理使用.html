@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../src/jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            //可以调用
+            $("#btn2").click(function(){
+                console.log('button click 2');
+            });
+        });
+        //不可以调用
+        $("#btn").click(function(){
+            console.log('button click 1');
+        });
+
+        //原理分析 模拟jquery调用
+        var iQuery = function(dom){
+            var obj = {
+                ready : function(func){
+                    if(typeof dom.onload === 'function'){
+                        var oldFunc = dom.onload;
+                        dom.onload = function() {
+                            //调用新的
+                            func();
+                            //调用旧的
+                            oldFunc();
+                        }
+                    }else {
+                        dom.onload = func;
+                    }
+                }
+            };
+            return obj;
+        };
+        window.onload = function(){
+          alert('3');
+        };
+
+        iQuery(window).ready(function(){
+            alert('1');
+        });
+        iQuery(window).ready(function(){
+            alert('2');
+        });
+
+    </script>
+</head>
+<body>
+<div>
+    <input type="button" value="button1" id="btn">
+    <input type="button" value="button2" id="btn2">
+</div>
+<div>
+    <input type="button" value="button3" id="btn3">
+    <input type="button" value="button4" id="btn4">
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                console.log('btn click');
+                $("div").fadeToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="button" id="btn"/>
+<div id="box"></div>
+</body>
+</html>
