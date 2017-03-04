@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="divItem">
+    <a href="www.baidu.com" title="baidu 一下就知道">baidu</a>
+    <a href="www.sina.com.cn" title="这是一个title">新浪网</a>
+    <a href="www.apple.com/cn">苹果官方中文网站</a>
+    <a>没有href</a>
+</div>
+<script>
+    $(document).ready(function(){
+        //选择所有包含href属性的元素
+        $('a[href]').css('background', 'cyan');
+
+        //选择指定href的元素
+        $('a[href="www.baidu.com"]').css('fontSize', 23);
+
+        //选择不是指定href的元素
+        $('a[href!="www.baidu.com"]').css('fontSize', 27);
+
+        //选择所有以指定关键字开头的元素
+        $('a[href^="www"').css('color', 'red');
+
+        //选择以cn结尾的元素
+        $('a[href$="cn"]').css('fontWeight', 'bold');
+
+        //选择包含某个关键字的元素
+        $('a[href*="i"]').css('textDecoration', 'none')
+
+        //多个条件同时满足
+        $('a[href$="cn"][href*="sina"]').css('fontSize', 33);
+    });
+</script>
+</body>
+</html>

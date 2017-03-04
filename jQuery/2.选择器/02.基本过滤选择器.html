@@ -32,7 +32,26 @@
 </ul>
 <script>
     $(document).ready(function(){
+        //选择第一个匹配的元素eq(index) index 从0开始, 所有的页面元素里面开始找
+        $('li:eq(1)').css('background', 'red');
 
+        //选择序号大于的元素
+        $('li:gt(5)').css('color', 'blue');
+
+        //选择小于的元素
+        $('li:lt(5)').css('color', 'green');
+
+        //选择序号为奇数的元素
+        $('li:odd').css('fontSize', 20);
+
+        //选择偶数
+        $('li:even').css('fontSize', 26);
+
+        //选择匹配的第一个元素
+        $('li:first').css('background', 'cyan');
+
+        //选择匹配的最后一个元素
+        $('li:last').css('background', 'yellowGreen');
     });
 </script>
 

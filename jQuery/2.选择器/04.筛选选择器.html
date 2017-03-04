@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="divItem1">
+    <span>This is 1 span</span>
+    <span id="span2">This is 2 span</span>
+    <span>This is 3 span</span>
+    <span>This is 4 span</span>
+</div>
+
+<div class="divItem2">
+    <p>Hello</p>
+</div>
+
+<div class="divItem3">
+    <p>Hello again</p>
+</div>
+
+<div>
+    <ul>
+        <li>This is 1 li item.</li>
+        <li>This is 2 li item.</li>
+        <li>This is 3 li item.</li>
+        <li id="li04">This is 4 li item.</li>
+        <li>This is 5 li item.</li>
+        <li class="liItem">This is 6 li item.</li>
+        <li>This is 7 li item.</li>
+        <li>This is 8 li item.</li>
+    </ul>
+</div>
+
+<script>
+    //类比选择器
+    $('span').eq(1).css('fontSize', 30);
+    $('span').first().css('fontSize', 26);
+
+    //parent
+    $('#span2').parent().css('background', 'cyan');
+    $('p').parent('.divItem3').css('background', 'gold');
+
+    //选择所有的兄弟元素
+    $('#li04').siblings('.liItem').css('color', 'skyBlue');
+
+    // 查找所有后代元素
+    $('div').find('#li04').css('color', 'gold');
+</script>
+</body>
+</html>

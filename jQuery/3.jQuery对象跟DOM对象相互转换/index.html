@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            height: 160px;
+            background-color: cyan;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // DOM对象转换成jQuery对象
+            var btn = document.getElementById('btn1');
+            $(btn).click(function(){
+                $('div').hide();
+            });
+            // jQuery对象转换成DOM对象 $("button")[1].onclick
+            $('button').get(1).onclick = function(){
+                alert('Query对象转换成DOM对象');
+            };
+        });
+    </script>
+</head>
+<body>
+<button id="btn1">button1</button>
+<button>button2</button>
+<div></div>
+</body>
+</html>

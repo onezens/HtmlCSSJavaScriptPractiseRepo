@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .divItem {
+            background-color: lightgray;
+            width: 500px;
+            height: 100px;
+            padding: 40px;
+        }
+
+        .divItem h2 {
+            background-color: white;
+            /*margin: 0 auto;*/
+        }
+
+         #over {
+            float: left;
+        }
+
+         #enter {
+            float: right;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        a=0; b=0;
+        $(document).ready(function(){
+            $("div#over").mouseover(function(){
+                $("#over span").text(a++);
+            });
+
+            $("div#enter").mouseenter(function(){
+                $("#enter span").text(b++);
+            });
+        });
+    </script>
+</head>
+<body>
+<p> 鼠标穿过被选元素和其子元素,都会触发事件, 子元素和父元素之间切换也会调用</p>
+<p>鼠标只有穿过被选元素的时候才会调用, 和子元素无关</p>
+<div class="divItem" id="over">
+    <h2>被触发的事件 MouseOver <span></span></h2>
+</div>
+
+<div class="divItem" id="enter">
+    <h2>被触发的事件 MouseEnter <span></span> </h2>
+</div>
+</body>
+</html>
