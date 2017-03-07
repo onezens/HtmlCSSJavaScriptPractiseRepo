@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #ad {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 260px;
+            height: 223px;
+            background-image: url(../../images/fengjing_thumb.png);
+            display: none;
+        }
+        #ad span {
+            position: absolute;
+            background-image: url(../images/close.jpg);
+            width: 40px;
+            height: 18px;
+            right: 0;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //动画1
+            //$('#ad').fadeIn(1000).children('span').click(function(){
+            //    $(this).parent().fadeOut(1000);
+            //});
+
+            //动画2
+            $('#ad').slideDown('slow').children('span').click(function(){
+                $(this).parent().slideUp('slow');
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="ad"><span></span></div>
+</body>
+</html>

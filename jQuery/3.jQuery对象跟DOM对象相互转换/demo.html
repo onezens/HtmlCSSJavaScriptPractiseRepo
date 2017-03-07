@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #menu {
+            width: 330px;
+            height: 30px;
+            margin: 100px auto 0;
+            background-image: url(../images/bg.jpg);
+            padding-left: 10px;
+        }
+        #menu li {
+            float: left;
+            width: 100px;
+            height: 30px;
+            margin-right: 10px;
+
+        }
+        #menu a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            background-image: url(../images/libg.jpg);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 30px;
+        }
+        #menu ul ul {
+            display: none;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#menu li').hover(function(){
+                $(this).children('ul').slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </li>
+        <li><a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </li>
+        <li><a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
