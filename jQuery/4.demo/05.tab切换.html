@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        #menu {
+            width: 1000px;
+            margin: 100px auto 0;
+        }
+        #menu #nav {
+            border: 1px solid #CCCCCC;
+            height: 43px;
+            width: 324px;
+        }
+        #menu #nav li {
+            width: 80px;
+            height: 38px;
+            line-height: 38px;
+            float: left;
+            text-align: center;
+            border-right: 1px solid #CCCCCC;
+            border-top: 3px solid transparent;
+            border-bottom: 0px;
+        }
+        #menu #nav li.active {
+            border-top: 3px solid red;
+        }
+        #menu #nav li:hover {
+            cursor: pointer;
+        }
+
+        #menu #content {
+            border: 1px solid #CCCCCC;
+            overflow: hidden;
+            height: 473px;
+            float: left;
+            /*display: none;*/
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#menu #nav li').mouseenter(function(){
+                $(this).addClass('active').siblings('li').removeClass('active');
+                $('#menu #content li').eq($(this).index()).show().siblings('li').hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="menu">
+    <ul id="nav">
+        <li class="active">国际大牌</li>
+        <li>国妆名品</li>
+        <li>男士精品</li>
+        <li>清洁用品</li>
+    </ul>
+    <ul id="content">
+        <li><img src="../images/tab/guojidapai.jpg" alt=""></li>
+        <li><img src="../images/tab/guozhuangmingpin.jpg" alt=""></li>
+        <li><img src="../images/tab/nanshijingpin.jpg" alt=""></li>
+        <li><img src="../images/tab/qingjieyongpin.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>
