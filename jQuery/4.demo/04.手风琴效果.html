@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul {
+            list-style: none;
+        }
+        #sfq {
+            width: 1010px;
+            margin: 100px auto 0;
+        }
+        #sfq li {
+            width: 200px;
+            height: 400px;
+            float: left;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#sfq li').each(function(i, element){
+                $(element).css('background-image', 'url(../images/sfq/' + (i+1) + '.jpg');
+            }).mouseenter(function(){
+                $(this).stop().animate({'width': 600}, 500).siblings('li').stop().animate({width: 100}, 500);
+            }).mouseleave(function(){
+                $('#sfq li').stop().animate({'width':200}, 500);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="sfq">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

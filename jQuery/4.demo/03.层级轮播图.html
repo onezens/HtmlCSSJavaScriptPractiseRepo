@@ -3,8 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul ,ol{
+            list-style: none;
+        }
+
+        #lunBo {
+            width: 650px;
+            height: 250px;
+            margin: 100px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #lunBo img {
+            display: block;
+        }
+
+        #lunBo ul {
+            position: relative;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #lunBo > ul > li{
+            position: absolute;
+        }
+
+        #lunBo ol {
+            position: absolute;
+            z-index: 2;
+            right: 0px;
+            bottom: 10px;
+            height: 30px;
+        }
+
+        #lunBo > ol > li {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            float: left;
+            background-color: grey;
+            text-align: center;
+            margin-right: 10px;
+            border: 1px solid #fff;
+            margin-top: 8px;
+        }
+        #lunBo > ol > li:hover {
+            cursor: pointer;
+        }
+        #lunBo > ol > li.active {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid orange;
+            color: orange;
+            margin-top: 0px;
+        }
+
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var zIndex = 1;
+            $('#lunBo > ol > li').mouseenter(function(){
+                zIndex ++ ;
+                $(this).addClass('active').siblings('li').removeClass('active');
+                $('#lunBo > ul > li').eq($(this).index()).css({
+                    'z-index' : zIndex,
+                    left : 650
+                }).animate({
+                    'left' : 0
+                }, 1000);
+            });
+        });
+    </script>
 </head>
 <body>
-
+    <div id="lunBo">
+        <ul>
+            <li style="z-index: 1"><img src="../images/lunbo/01.jpg" alt=""></li>
+            <li><img src="../images/lunbo/02.jpg" alt=""></li>
+            <li><img src="../images/lunbo/03.jpg" alt=""></li>
+            <li><img src="../images/lunbo/04.jpg" alt=""></li>
+            <li><img src="../images/lunbo/05.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
 </body>
 </html>
