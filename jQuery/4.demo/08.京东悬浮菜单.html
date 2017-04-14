@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .content {
+            margin: 0px auto;
+            width: 1210px;
+        }
+        .leftMenu {
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            margin-left: 605px;
+            width: 36px;
+        }
+        .leftMenu ul {
+            list-style: none;
+        }
+
+        .leftMenu ul li, .back {
+            height: 36px;
+            border: 1px solid #DEDEDE;
+            font-size: 0px;
+            margin-bottom: 6px;
+            /*margin-top: 16px;;*/
+            background-image: url(../images/jd/bg.png);
+        }
+
+        .leftMenu li:hover, .leftMenu li.current, .back:hover {
+            cursor: pointer;
+            border: 1px solid #ED5759;
+            font-size: 12px;
+            line-height: 12px;
+            background: #FDEEEE;
+            text-align: center;
+            color: #ED5759;
+            height: 30px;
+            padding-top: 6px;
+        }
+        .back {
+            background: url(../images/jd/bg.png)  no-repeat -2px -552px;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function(){
+            var barMenuItems = $('.leftMenu li'), barMenu = $('.leftMenu'), contents = $('.content').children();
+            barMenuItems.each(function(idx, ele){
+               var top = idx * 55;
+                $(ele).css('background-position', '0 -' + top + "px");
+            });
+
+            $(window).scroll(function(){
+                var top = $(document).scrollTop();
+                console.log(top);
+                if (top >= $('.bottom').offset().top){
+                    barMenuItems.eq(4).addClass('current').siblings().removeClass();
+                }else if(top >= $('.mei').offset().top){
+                    barMenuItems.eq(3).addClass('current').siblings().removeClass();
+                }else if(top >= $('.fu').offset().top){
+                    barMenuItems.eq(2).addClass('current').siblings().removeClass();
+                }else if(top >= $('.dian').offset().top){
+                    barMenuItems.eq(1).addClass('current').siblings().removeClass();
+                }else if(top >= $('.jia').offset().top){
+                    barMenuItems.eq(0).addClass('current').siblings().removeClass();
+                }else if (top >0){
+                    barMenu.fadeIn();
+                }else{
+                    barMenu.fadeOut();
+                }
+            });
+
+            barMenuItems.click(function(){
+                $('html, body').stop().animate({
+                    'scrollTop': contents.eq($(this).index()).offset().top
+                },500);
+            });
+            $('.back').click(function(){
+                $('html, body').stop().animate({
+                    'scrollTop':0
+                }, 500);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="top"><img src="../images/jd/top.png" alt=""></div>
+        <div class="jia"><img src="../images/jd/jia.png" alt=""></div>
+        <div class="dian"><img src="../images/jd/dian.png" alt=""></div>
+        <div class="fu"><img src="../images/jd/fu.png" alt=""></div>
+        <div class="mei"><img src="../images/jd/mei.png" alt=""></div>
+        <div class="bottom"><img src="../images/jd/bottom.png" alt=""></div>
+    </div>
+    <div class="leftMenu">
+        <ul>
+            <li>家电通讯</li>
+            <li>电脑数码</li>
+            <li>服饰鞋包</li>
+            <li>美容珠宝</li>
+            <li>居家生活</li>
+        </ul>
+        <div class="back">返回顶部</div>
+    </div>
+</body>
+</html>
