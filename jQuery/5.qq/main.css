@@ -1,0 +1,71 @@
+body {
+    background:url(img/wrapBg.jpg) no-repeat #F2F2F2;
+}
+
+.logo {
+    margin: 30px 0 0 280px;
+}
+
+.text {
+    width: 800px;
+    height: 200px;
+    border: 1px solid #000000;
+    margin: 0px auto 0;
+}
+
+.textRight {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #CCEBF4;
+}
+
+.textLeft {
+    width: 600px;
+    height: 100%;
+    float: left;
+    background-color: #ffffff;
+    /*padding-left: 30px;*/
+}
+
+.textLeft p {
+    margin-left: 30px;
+}
+.textLeft textarea {
+    margin-left: 30px;
+}
+.textLeft .talkBox {
+    margin-left: 30px;
+}
+
+.textLeft .talkBox a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #000000;
+    font-size: 14px;
+}
+.textLeft input {
+    width: 112px;
+    height: 30px;
+    background: url(img/bg1.png) no-repeat -117px -165px;
+    float: right;
+    /*margin-right: 30px;*/
+    cursor: pointer;
+    margin: 0 30px 0 20px;
+    border: 0px;
+}
+.textLeft input:hover {
+    background: url(img/bg1.png) no-repeat 0px -195px;
+}
+
+.textLeft span {
+    float: right;
+    color: #999;
+    line-height: 25px;
+    margin-bottom: 14px;
+}
+
+.textLeft span em {
+    font-family: Georgia, Tahoma, Arial;
+    font-size: 26px;
+}
