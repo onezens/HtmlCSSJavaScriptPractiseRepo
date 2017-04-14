@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .lunBo {
+            margin: 100px auto;
+            height: 240px;
+            width: 670px;
+            position: relative;
+            overflow: hidden;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        .lunBo ul li {
+            height: 240px;
+        }
+        .lunBo ol {
+            position: absolute;
+            top: 210px;
+            right: 8px;
+        }
+        ol li {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background-color: #abc;
+            text-align: center;
+            margin-left: 4px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        ol li.current {
+            background-color: pink;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function(){
+            var items = $('.lunBo ul li'), idxItems = $('.lunBo ol li');
+            idxItems.mouseenter(function(){
+                $(this).addClass('current').siblings().removeClass('current');
+                items.eq($(this).index()).fadeIn('fast').siblings().fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="lunBo">
+    <ul>
+        <li><img src="../images/jdlunbo/1.jpg" alt=""></li>
+        <li><img src="../images/jdlunbo/2.jpg" alt=""></li>
+        <li><img src="../images/jdlunbo/3.jpg" alt=""></li>
+        <li><img src="../images/jdlunbo/4.jpg" alt=""></li>
+        <li><img src="../images/jdlunbo/5.jpg" alt=""></li>
+        <li><img src="../images/jdlunbo/6.jpg" alt=""></li>
+    </ul>
+    <ol>
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ol>
+</div>
+</body>
+</html>

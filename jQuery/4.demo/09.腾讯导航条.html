@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .top , .nav{
+            margin: 0px auto;
+            width: 1423px;
+        }
+        .main {
+            width: 1423px;
+            margin: 0px auto;
+            text-align: center;
+        }
+    </style>
+    <script src="../src/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function(){
+            var top =  $('.top').height();
+            var navTop = $('.nav').height();
+            $(window).scroll(function(){
+                var contentTop = $(document).scrollTop();
+                if (contentTop > top){
+                    $('.nav').css({
+                        'position' : 'fixed',
+                        'top' : 0
+                    });
+                    $('.main').css({
+                        'margin-top' : navTop
+                    });
+                }else{
+                    $('.nav').css({
+                        'position' : 'static'
+                    });
+                    $('.main').css({
+                        'margin-top' : 0
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="top"><img src="../images/tencent/top.png" alt=""></div>
+    <div class="nav"><img src="../images/tencent/nav.png" alt=""></div>
+    <div class="main"><img src="../images/tencent/main.png" alt=""></div>
+</body>
+</html>
