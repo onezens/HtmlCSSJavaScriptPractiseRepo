@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .music {
+            width: 200px;
+            height: 50px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+
+    <video controls="controls" id="video" poster="../images/fengjing.png">
+        <source src="./src/fun.mp4" type="video/mp4">
+        <object type="application/x-shockwave-flash" data="http://static.youku.com/v1.0.0557/v/swf/loader.swf" width="100%" height="100%" id="movie_player">
+            <param name="allowFullScreen" value="true">
+            <param name="allowscriptaccess" value="always">
+            <param name="allowFullScreenInteractive" value="true">
+        </object>
+    </video>
+    <div id="music">
+        paly music <br>
+        <audio id="audio" src="./src/music.mp3"></audio>
+        <button id="play">play</button>
+        <button id="pause">pause</button>
+    </div>
+</body>
+<script>
+    var playBtn = document.getElementById('play');
+    var pauseBtn = document.getElementById('pause');
+    var audio = document.getElementById('audio');
+    playBtn.addEventListener('click', function () {
+        audio.play();
+    });
+    pauseBtn.addEventListener('click', function () {
+       audio.pause();
+    });
+</script>
+</html>

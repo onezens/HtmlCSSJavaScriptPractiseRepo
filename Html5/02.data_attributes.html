@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <ul id="list"></ul>
+</div>
+<script>
+    var data = [
+        {
+            name: 'xiaoming',
+            age: 20
+        },
+        {
+            name: 'xiaohua',
+            age: 21
+        },
+        {
+            name: 'xiaoli',
+            age: 22
+        },
+        {
+            name: 'xiaozhang',
+            age: 18
+        }
+    ]
+
+    var listElement = document.getElementById('list');
+    for(var i=0,length=data.length; i<length; i++){
+        var item = data[i];
+        var liElement = document.createElement('li');
+        liElement.appendChild(document.createTextNode(item.name));
+        liElement.setAttribute('data-age', String(item.age));
+        liElement.setAttribute('data-id', String(i));
+        listElement.appendChild(liElement);
+        liElement.addEventListener('click', function () {
+           console.log(this.dataset['age']);
+        });
+    }
+</script>
+</body>
+</html>
