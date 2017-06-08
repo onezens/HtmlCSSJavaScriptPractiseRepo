@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul>
+    <li class="item">item1</li>
+    <li class="item">item2</li>
+    <li class="item">item3</li>
+    <li class="item">item4</li>
+    <li class="item">item5</li>
+    <li class="item">item6</li>
+    <li class="item">item7</li>
+    <li class="item">item8</li>
+    <li class="item">item9</li>
+    <li class="item">item10</li>
+</ul>
+<script>
+    (function () {
+
+        var items = document.querySelectorAll('ul > .item');
+        console.log(items);
+        for (var i=0, length=items.length; i<length; i++){
+            var item = items[i];
+            item.addEventListener('click', function () {
+                console.log('click');
+            });
+        }
+        var firstItem = document.querySelector('.item');
+        console.log(firstItem);
+
+    })();
+</script>
+</body>
+</html>

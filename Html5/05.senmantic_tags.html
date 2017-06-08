@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>语义化标签</title>
+    <style>
+        body {
+            width: 1024px;
+            margin: 0 auto;
+            padding: 0;
+            font: 12px/1.5 tahoma, arial, 宋体;
+        }
+
+        a:link, a:visited {
+            color: #3e3e3e;
+            text-decoration: none;
+        }
+        a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+        a:active{
+            color: silver;
+        }
+        a:focus{
+            outline: none;
+        }
+
+        header {
+            padding: 20px 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            background-color: #c0c0c0;
+            margin: 0px auto;
+            height: 45px;
+            border-radius: 5px;
+            padding: 0px 10px;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a:link, nav li  a:visited {
+            color: white;
+            font-size: 16px;
+            line-height: 45px;
+            width: 80px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-family: 微软雅黑;
+            font-weight: lighter;
+        }
+        nav li a:hover {
+            background-color: #e0e0e0;
+            font-weight: bold;
+        }
+        main {
+            position: relative;
+        }
+
+        main > section {
+            margin-right: 220px;
+            padding: 15px;
+        }
+        main section article {
+            border-bottom: 1px solid #c0c0c0;
+            margin-bottom: 20px;
+        }
+
+        main aside {
+            position: absolute;
+            width: 220px;
+            top: 0;
+            right: 0;
+        }
+
+        footer {
+            border-top: 1px solid #d1d7dc;
+            float: left;
+            width: 100%;
+            padding: 0px 10px;
+            color: #b0b0b0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0px;
+            border-bottom: 1px solid #d1d7dc;
+            height: 18px;
+            padding-bottom: 10px;
+        }
+        footer ul li {
+            float: left;
+            height: 18px;
+        }
+        footer a {
+            text-align: center;
+        }
+
+        .links > li + li::before {
+            content: '| '
+        }
+        .links > li {
+            display: inline-block;
+        }
+        .cl{
+            clear: both;
+        }
+        .copyright {
+            line-height: 20px;
+            margin-top: 8px;
+        }
+
+        .copyright span {
+            margin: 0 0 0 50px;
+        }
+
+        .copyright i {
+            font-style: normal;
+            color: #3e3e3e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>小明的自留地</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">散文</a></li>
+            <li><a href="#">诗歌</a></li>
+            <li><a href="#">小小说</a></li>
+            <li><a href="#">日记</a></li>
+            <li><a href="#">随笔</a></li>
+            <li><a href="#">杂文</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <h3>一念在茶，一念在心</h3>
+                    <p>在这样晴朗的日子里，静静地沏一杯茶。在云淡风轻的心境里，喝出茶芽的喜悦、回味的深沉，喝出来自土地的亲切味道，也喝出漫漫人生里，那些发酵的往事与看似沉重的负担。一一文：篱落疏疏</p>
+                    <p>一直以为，茶是最经典的植物，生于青山，长于幽谷，结庐林间，饮尽山灵水秀，蕴满人间风情。也一直以为，女人如茶，每个女人都是不同的茶，都有着各自不同的故事和不同的茶的味道。</p>
+                    <p>品味不同的茶，就像品味不同的女人，让人在拥有天下秀色一览无余的潇洒与愉悦的同时，也拥有顿悟之后的无奈与伤感。永远保持一份不变的美丽，犹如经过千锤百炼依然美丽诱人的精品女人，惯看秋月春风，炼就“宠辱不惊，闲看庭前花开花落；去留无意，漫随天外云卷云舒”的从容与淡定。</p>
+
+            </article>
+
+            <article>
+                <h3>一念在茶，一念在心</h3>
+                <p>在这样晴朗的日子里，静静地沏一杯茶。在云淡风轻的心境里，喝出茶芽的喜悦、回味的深沉，喝出来自土地的亲切味道，也喝出漫漫人生里，那些发酵的往事与看似沉重的负担。一一文：篱落疏疏</p>
+                <p>一直以为，茶是最经典的植物，生于青山，长于幽谷，结庐林间，饮尽山灵水秀，蕴满人间风情。也一直以为，女人如茶，每个女人都是不同的茶，都有着各自不同的故事和不同的茶的味道。</p>
+                <p>品味不同的茶，就像品味不同的女人，让人在拥有天下秀色一览无余的潇洒与愉悦的同时，也拥有顿悟之后的无奈与伤感。永远保持一份不变的美丽，犹如经过千锤百炼依然美丽诱人的精品女人，惯看秋月春风，炼就“宠辱不惊，闲看庭前花开花落；去留无意，漫随天外云卷云舒”的从容与淡定。</p>
+
+            </article>
+
+            <article>
+                <h3>一念在茶，一念在心</h3>
+                <p>在这样晴朗的日子里，静静地沏一杯茶。在云淡风轻的心境里，喝出茶芽的喜悦、回味的深沉，喝出来自土地的亲切味道，也喝出漫漫人生里，那些发酵的往事与看似沉重的负担。一一文：篱落疏疏</p>
+                <p>一直以为，茶是最经典的植物，生于青山，长于幽谷，结庐林间，饮尽山灵水秀，蕴满人间风情。也一直以为，女人如茶，每个女人都是不同的茶，都有着各自不同的故事和不同的茶的味道。</p>
+                <p>品味不同的茶，就像品味不同的女人，让人在拥有天下秀色一览无余的潇洒与愉悦的同时，也拥有顿悟之后的无奈与伤感。永远保持一份不变的美丽，犹如经过千锤百炼依然美丽诱人的精品女人，惯看秋月春风，炼就“宠辱不惊，闲看庭前花开花落；去留无意，漫随天外云卷云舒”的从容与淡定。</p>
+
+            </article>
+        </section>
+        <aside>
+            <section>
+                <h3>你可能也喜欢这些文章</h3>
+                <ul>
+                    <li><a href="#">乌篷船上的月光</a></li>
+                    <li><a href="#">一念在茶，一念在心</a></li>
+                    <li><a href="#">一茶一世界，一壶一人生</a></li>
+                    <li><a href="#">只有心静了，才能抵达梦想的彼岸</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>网友推荐的文章</h3>
+                <ul>
+                    <li><a href="#">只有心静了，才能抵达梦想的彼岸</a></li>
+                    <li><a href="#">生命的波长</a></li>
+                    <li><a href="#">达州，唱京剧的小姑娘</a></li>
+                    <li><a href="#">海青服与油焖茉莉</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        <ul class="links">
+            <li><a href="#">爱情散文</a></li>
+            <li><a href="#">伤感散文</a></li>
+            <li><a href="#">哲理散文</a></li>
+            <li><a href="#">优美</a></li>
+            <li><a href="#">生活随笔</a></li>
+            <li><a href="#">亲情</a></li>
+            <li><a href="#">爱情散文</a></li>
+            <li><a href="#">伤感散文</a></li>
+            <li><a href="#">哲理散文</a></li>
+            <li><a href="#">优美</a></li>
+            <li><a href="#">生活随笔</a></li>
+            <li><a href="#">亲情</a></li>
+        </ul>
+        <div class="cl"></div>
+        <div class="copyright">
+            <i>京ICP备1234567号</i><span>Copyright ©️ 2017 onezen.cc 版权所有</span>
+        </div>
+    </footer>
+</body>
+</html>
