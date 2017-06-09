@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history</title>
+    <script src="data.js"></script>
+    <style>
+
+        html,body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            padding: 0
+        }
+        aside {
+            background-color: #e0e0e0;
+            float: left;
+            height: 100%;
+            width: 220px;
+        }
+
+        .list {
+            list-style: none;
+        }
+        article {
+            background-color: #f5f5f5;
+            height: 100%;
+            margin-left: 220px;
+            /*padding: 20px;*/
+            overflow: scroll;
+            padding-left: 20px;
+        }
+        article p {
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        .list li {
+            font-size: 20px;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <ul class="list"></ul>
+    </aside>
+    <article>
+        <p id="content"></p>
+    </article>
+    <script>
+        (function () {
+
+            var list = document.querySelector('.list');
+            var content = document.querySelector('#content');
+
+            for (var title in data){
+                var liElement = document.createElement('li');
+                liElement.setAttribute('data-title', title);
+                liElement.innerHTML = title;
+                list.appendChild(liElement);
+                liElement.addEventListener('click', function (e) {
+                    content.innerHTML = data[this.dataset.title];
+                    if (window.history && history.pushState) {
+                        // 支持历史状态操作
+                        history.pushState(this.dataset.title, 'title useless', '?t=' + this.dataset.title);
+                    }
+                });
+            }
+
+            // 在历史状态中前进后退触发该事件
+            window.addEventListener('popstate', function(e) {
+                console.log(e.state);
+                content.innerHTML = data[e.state];
+            });
+            list.children[0].click();
+        })();
+    </script>
+</body>
+</html>

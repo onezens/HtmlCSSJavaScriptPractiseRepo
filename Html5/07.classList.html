@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class list</title>
+    <link rel="stylesheet" href="../src/bootstrap/css/bootstrap.css">
+</head>
+<body>
+<header class="container">
+    <h1 class="page-header">Element class list</h1>
+</header>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <a href="#" class="navbar-brand">Navigation</a>
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">BBS</a></li>
+        </ul>
+    </nav>
+</div>
+<script>
+    var liElements = document.querySelectorAll('nav li');
+    for(var i=0,length=liElements.length; i<length; i++){
+        var liItem = liElements[i];
+        liItem.addEventListener('mouseover', function (e) {
+            for (var j=0; j<length; j++){
+                var item = liElements[j];
+                item.classList.remove('active');
+            }
+            this.classList.add('active');
+            //终止事件在传播过程的捕获、目标处理或起泡阶段进一步传播。调用该方法后，该节点上处理该事件的处理程序将被调用，事件不再被分派到其他节点。
+            e.stopPropagation();
+            //该方法将通知 Web 浏览器不要执行与事件关联的默认动作（如果存在这样的动作）。例如，如果 type 属性是 "submit"，在事件传播的任意阶段可以调用任意的事件句柄，通过调用该方法，可以阻止提交表单。注意，如果 Event 对象的 cancelable 属性是 fasle，那么就没有默认动作，或者不能阻止默认动作。无论哪种情况，调用该方法都没有作用。
+            e.preventDefault();
+        })
+    }
+</script>
+</body>
+</html>
