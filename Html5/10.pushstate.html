@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>push state</title>
+</head>
+<body>
+<input type="button" onclick="add()" value="add history">
+<script>
+    function add() {
+        // 判断浏览器是否支持这个API
+        if (window.history && history.pushState) {
+            // 支持
+            history.pushState(new Date(), '设置历史状态显示的标题，但是浏览器不支持', '?demo=' + new Date().toLocaleTimeString());
+        }
+
+        window.addEventListener('popstate', function(e) {
+            // 后退或前进操作
+            console.log('11111' + e.state);
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fullscreen</title>
+</head>
+<body>
+<input type="button" value="fullscreen" onclick="fullscreen()">
+<div id="content">
+    <p>在这样晴朗的日子里，静静地沏一杯茶。在云淡风轻的心境里，喝出茶芽的喜悦、回味的深沉，喝出来自土地的亲切味道，也喝出漫漫人生里，那些发酵的往事与看似沉重的负担。一一文：篱落疏疏<</p>
+</div>
+<script>
+    var content = document.getElementById('content');
+    function fullscreen() {
+        if(content.webkitRequestFullScreen){
+            content.webkitRequestFullScreen();
+        }else{
+            alert('no support fullscreen!');
+        }
+    }
+</script>
+</body>
+</html>
