@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框-圆角</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #F7F7F7;
+        }
+        .wrapper {
+            width: 1000px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .wrapper > header {
+            font-size: 26px;
+            text-align: center;
+            padding: 20px;
+        }
+        .main {
+            padding-left: 30px;
+        }
+
+        .main .item {
+            width: 210px;
+            height: 210px;
+            box-shadow: 2px 2px 5px #CCC;
+            margin: 0 30px 30px 0;
+            float: left;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+        }
+
+        .item div {
+            width: 180px;
+            height: 180px;
+            margin: auto;
+            border: 1px solid red;
+        }
+
+        .item:after{
+            content: attr(data-brief);
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            line-height: 210px;
+            background-color: rgba(170, 170, 170, 0);
+            transition: all 0.3s ease-in;
+            z-index: -1;
+
+        }
+
+        .item:hover:after {
+            z-index: 100;
+            background-color: rgba(170, 170, 170, 0.6);
+        }
+        .cl {
+            clear: both;
+        }
+
+        .item:nth-of-type(1) div {
+            border-radius: 90px;
+        }
+
+        .item:nth-of-type(2) div {
+            border-radius: 90px 90px 0 0;
+        }
+
+        .item:nth-of-type(3) div {
+            height: 90px;
+            border-radius: 90px 90px 0 0;
+        }
+        .item:nth-of-type(4) div {
+            border-radius: 90px 0 0 0;
+        }
+
+        .item:nth-of-type(5) div {
+            width: 90px;
+            height: 90px;
+            border-radius: 90px 0 0 0 ;
+        }
+
+        .item:nth-of-type(6) div {
+            /*border-radius: 90px 90px 90px 90px / 45px 45px 45px 45px;*/
+            /*border-radius: 50%;*/
+            border-radius: 90px / 45px;
+            height: 90px;
+        }
+
+        .item:nth-of-type(7) div {
+            border-radius: 45px / 90px;
+            width: 90px;
+        }
+
+        .item:nth-of-type(8) div {
+            border-radius: 90px 90px 0 0 / 45px 45px 0px 0px;
+            height: 45px;
+        }
+
+        .item:nth-of-type(9) div {
+            border-radius: 45px  0 0 45px/ 90px 0 0 90px;
+            width: 45px;
+        }
+
+        .item:nth-of-type(10) div {
+            border-radius: 90px 0px 0 0 / 45px 0px 0px 0px;
+            height: 45px;
+            width: 90px;
+        }
+        .item:nth-of-type(11) div {
+            width: 40px;
+            height: 40px;
+            border: 70px solid red;
+            border-radius: 90px;
+        }
+
+        .item:nth-of-type(12) div {
+            width: 40px;
+            height: 40px;
+            border: 70px solid red;
+            border-radius: 40px;
+        }
+
+        .item:nth-of-type(13) div {
+            width: 40px;
+            height: 40px;
+            border: 70px solid red;
+            border-radius: 100px 0px 0px 0px;
+        }
+        .item:nth-of-type(14) div {
+            width: 40px;
+            height: 40px;
+            border: 70px solid red;
+            border-radius: 100px 0px 100px 0px;
+        }
+
+        .item:nth-of-type(15) div {
+            width: 0px;
+            height: 0px;
+            border-width: 90px;
+            border-style: solid;
+            border-color: cyan cornflowerblue skyblue lightgreen;
+        }
+
+        .item:nth-of-type(16) div {
+            width: 0px;
+            height: 0px;
+            border-width: 90px;
+            border-style: solid;
+            border-color: cyan transparent skyblue lightgreen;
+        }
+
+        .item:nth-of-type(17) div {
+            width: 0px;
+            height: 0px;
+            border-width: 90px;
+            border-radius: 90px;
+            border-style: solid;
+            border-color: red transparent red red;
+        }
+        .item:nth-of-type(18) div {
+            width: 0px;
+            height: 0px;
+            border-width: 90px;
+            border-radius: 90px;
+            border-style: solid;
+            border-color: transparent red transparent transparent;
+        }
+        .item:nth-of-type(19) div {
+            width: 180px;
+            height: 0px;
+            border-top-width: 90px;
+            border-bottom-width: 90px;
+            border-radius: 90px;
+            border-style: solid;
+            border-bottom-color: red;
+            border-top-color: brown;
+        }
+
+        .item:nth-of-type(20) div {
+            width: 180px;
+            height: 90px;
+            border-bottom-width: 90px;
+            border-radius: 90px;
+            border-style: solid;
+            border-bottom-color: red;
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>边框-圆角</header>
+    <div class="main">
+        <div class="item" data-brief="整圆">
+            <div></div>
+        </div>
+        <div class="item" data-brief="拱形">
+            <div></div>
+        </div>
+        <div class="item" data-brief="半圆">
+            <div></div>
+        </div>
+        <div class="item" data-brief="左上角">
+            <div></div>
+        </div>
+        <div class="item" data-brief="四分之一">
+            <div></div>
+        </div>
+        <div class="item" data-brief="横着椭圆">
+            <div></div>
+        </div>
+        <div class="item" data-brief="竖着椭圆">
+            <div></div>
+        </div>
+        <div class="item" data-brief="半个横着椭圆">
+            <div></div>
+        </div>
+        <div class="item" data-brief="半个竖着椭圆">
+            <div></div>
+        </div>
+        <div class="item" data-brief="四分之一横着椭圆">
+            <div></div>
+        </div>
+        <div class="item" data-brief="饼环">
+            <div></div>
+        </div>
+        <div class="item" data-brief="圆饼">
+            <div></div>
+        </div>
+        <div class="item" data-brief="左上角圆饼">
+            <div></div>
+        </div>
+        <div class="item" data-brief="对角圆饼">
+            <div></div>
+        </div>
+        <div class="item" data-brief="四边不同着色">
+            <div></div>
+        </div>
+        <div class="item" data-brief="右边透明色">
+            <div></div>
+        </div>
+        <div class="item" data-brief="圆右透明色">
+            <div></div>
+        </div>
+        <div class="item" data-brief="圆右红色其余透明">
+            <div></div>
+        </div>
+        <div class="item" data-brief="阴阳前世图1">
+            <div></div>
+        </div>
+        <div class="item" data-brief="阴阳前视图2">
+            <div></div>
+        </div>
+
+        <div class="cl"></div>
+    </div>
+</div>
+</body>
+</html>
