@@ -49,6 +49,37 @@
         form input[type='text'] {
             height: 30px;
         }
+
+        .attr1 a[href='./1.mp4'] {
+            color: red;
+        }
+
+        .attr1 a[href='./2.mp4'] {
+            color: pink;
+        }
+
+        /* 表示单独download的属性，使用空格分隔开 */
+        .attr2 a[class~='download'] {
+            color: red;
+        }
+
+        /* 表示单独的download属性，或者用-隔开'download'的单独属性 */
+        .attr3 a[class|='download'] {
+            color: red;
+        }
+
+        /* 表示包含download任意属性， 可以在任意位置*/
+        .attr4 a[class*='download'] {
+            color: red;
+        }
+        /* 表示包含download任意属性， 并且只能'download'只能在前面*/
+        .attr5 a[class^='download'] {
+            color: red;
+        }
+        /* 表示包含download任意属性， 并且只能'download'只能在后面*/
+        .attr6 a[class$='download'] {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -73,29 +104,58 @@
             </form>
         </div>
     </section>
-    <section>
-        <header>E[attr~=attr]</header>
+    <section class="attr1">
+        <header>E[attr]</header>
         <div class="wrapper_box">
-            <a href="#" class="download download-demo1">download</a>
-            <a href="#" class="download download-demo2">download</a>
-            <a href="#" class="download download-demo3">download</a>
+            <a href="./1.mp4" class="download download-demo1">download</a>
+            <a href="./2.mp4" class="download download-demo2">download</a>
+            <a href="./3.mp4" class="download download-demo3">download</a>
         </div>
     </section>
-    <section>
-        <header>E[attr|=attr]</header>
-        <div class="wrapper_box"></div>
+    <section class="attr2">
+        <header>E[attr~=attr]</header>
+        <div class="wrapper_box">
+            <a href="./1.mp4" class="download download-demo1">download</a>
+            <a href="./2.mp4" class="download1 download">download</a>
+            <a href="./3.mp4" class="download1 download-demo3">download</a>
+        </div>
     </section>
-    <section>
+    <section class="attr3">
+        <header>E[attr|=val]</header>
+        <div class="wrapper_box">
+            <a href="./1.mp4" class="download-demo1">download</a>
+            <a href="./2.mp4" class="download1 download">download</a>
+            <a href="./2.mp4" class="download">download</a>
+            <a href="./3.mp4" class="download download-demo3">download</a>
+        </div>
+    </section>
+    <section class="attr4">
         <header>E[attr*=val]</header>
-        <div class="wrapper_box"></div>
+        <div class="wrapper_box">
+            <a href="./1.mp4" class="download-demo1">download</a>
+            <a href="./2.mp4" class="download1 download">download</a>
+            <a href="./2.mp4" class="22download">download</a>
+            <a href="./3.mp4" class="121download12 download-demo3">download</a>
+        </div>
     </section>
-    <section>
+    <section class="attr5">
         <header>E[attr^=val]</header>
-        <div class="wrapper_box"></div>
+        <div class="wrapper_box">
+            <a href="./1.mp4" class="download-demo1">download</a>
+            <a href="./2.mp4" class="download1 download">download</a>
+            <a href="./2.mp4" class="32download">download</a>
+            <a href="./3.mp4" class="2download download-demo3">download</a>
+        </div>
     </section>
-    <section>
+    <section class="attr6">
         <header>E[attr$=val]</header>
-        <div class="wrapper_box"></div>
+        <div class="wrapper_box">
+            <a href="./1.mp4" class="download-demo1">download</a>
+            <a href="./2.mp4" class="download1 download">download</a>
+            <a href="./2.mp4" class="32download">download</a>
+            <a href="./3.mp4" class="2download download-demo3">download</a>
+            <a href="./3.mp4" class="2download demo3">download</a>
+        </div>
     </section>
 </div>
 </body>

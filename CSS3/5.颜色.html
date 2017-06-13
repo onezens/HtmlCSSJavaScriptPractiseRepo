@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颜色</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+
+        .wrapper {
+            width: 1024px;
+            margin: 0px auto;
+
+        }
+
+        .wrapper > section {
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 1px 1px 4px #DDD;
+            min-height: 300px;
+            background-color: #FFF;
+        }
+
+        .wrapper > header {
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .wrapper > section > header {
+            padding: 10px;
+            background-color: #EEE;
+            font-size: 24px;
+        }
+
+        .wrapper > section > div {
+            padding: 20px;
+        }
+
+        .box1 {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            opacity: 0.5;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+        }
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(164, 99, 225, 0.3);
+        }
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: hsla(248, 100%, 54%, 0.18);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>颜色-透明</header>
+    <section>
+        <header>opacity</header>
+        <div>
+            <div class="box1"></div>
+        </div>
+    </section>
+    <section>
+        <header>transparent</header>
+        <div>
+            <div class="box2">
+                <div class="box3"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <header>颜色透明rgba</header>
+        <div>
+            <div class="box4"></div>
+        </div>
+    </section>
+    <section>
+        <header>颜色透明hsla</header>
+        <div>
+            <div class="box5"></div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+
+        .wrapper {
+            width: 1024px;
+            margin: 0px auto;
+
+        }
+
+        .wrapper > section {
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 1px 1px 4px #DDD;
+            min-height: 300px;
+            background-color: #FFF;
+        }
+
+        .wrapper > header {
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .wrapper > section > header {
+            padding: 10px;
+            background-color: #EEE;
+            font-size: 24px;
+        }
+
+        .wrapper > section > div {
+            padding: 20px;
+        }
+
+        section:nth-of-type(1) > div > p {
+            font-size: 40px;
+            text-shadow: 1px 2px 4px #c54b92;
+        }
+
+        section:nth-of-type(2) > div > .box {
+            width: 100px;
+            height: 200px;
+            border: 1px solid #ccc;
+            word-wrap: break-word;
+        }
+
+        section:nth-of-type(2) > div > .white-space {
+            width: 100px;
+            height: 200px;
+            border: 1px solid #ccc;
+            white-space: pre;
+        }
+
+        section:nth-of-type(2) > div > .preWrap {
+            width: 100px;
+            height: 200px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+        }
+
+        section:nth-of-type(2) > div > .preLine {
+            width: 100px;
+            height: 200px;
+            border: 1px solid #ccc;
+            white-space: pre-line;
+        }
+
+        section:nth-of-type(2) > div > .nowrap {
+            width: 100px;
+            height: 200px;
+            border: 1px solid #ccc;
+            white-space: nowrap;
+        }
+
+        section:nth-of-type(2) > div > .breakAll {
+            width: 100px;
+            height: 200px;
+            border: 1px solid #ccc;
+            word-break: break-all;
+        }
+
+        section:nth-of-type(3) > div > p {
+            width: 200px;
+            border: 1px solid #ccc;
+            text-overflow: ellipsis;
+            /*white-space: nowrap;*/
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>文本</header>
+    <section>
+        <header>shadow</header>
+        <div>
+            <p>大河向东流</p>
+        </div>
+    </section>
+    <section>
+        <header>wrap</header>
+        <div>
+            <p class="box">
+                这是一个文字测试  http://www.baidu.com
+            </p>
+
+            <p class="white-space">
+                这是一个文字测试  http://www.baidu.com
+            </p>
+            <p class="preWrap">
+                这是一个文字测试  http://www.baidu.com
+            </p>
+            <p class="preLine">
+                这是一个文字测试  http://www.baidu.com
+            </p>
+            <p class="nowrap">
+                这是一个文字测试  http://www.baidu.com
+            </p>
+            <p class="breakAll">
+                这是一个文字测试  http://www.baidu.com
+            </p>
+        </div>
+    </section>
+    <section>
+        <header>overflow</header>
+        <div>
+            <p>
+                文字阴影文字阴影文字阴影
+                文字阴影文字阴影文字阴影
+                文字阴影文字阴影文字阴影
+                文字阴影文字阴影文字阴影
+                文字阴影文字阴影文字阴影
+            </p>
+        </div>
+    </section>
+</div>
+</body>
+</html>
