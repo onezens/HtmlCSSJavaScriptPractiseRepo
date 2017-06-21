@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>expressage</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            background-color: cyan;
+            border: 1px solid #CCCCCC;
+            padding: 20px;
+            min-height: 300px;
+        }
+        .inputBox {
+            text-align: center;
+        }
+    </style>
+    <script src="../../jQuery/src/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="inputBox">
+        <input type="text" id="orderId">
+        <input type="button" value="查询" id="searchBtn">
+    </div>
+    <div id="info">
+
+    </div>
+</div>
+<script>
+    
+    $(function () {
+        var inputField = document.querySelector('#orderId');
+        var searchBtn = document.querySelector('#searchBtn');
+        var info = document.querySelector('#info');
+
+        searchBtn.addEventListener('click', function () {
+            var orderId = inputField.value;
+            var url = 'http://localhost/5/ems/ems.php?code='+orderId;
+            $.ajax( {
+                url:url,
+                type:'get',
+                async: true,
+                dataType:'jsonp',
+                jsonp:'cb',
+                success: function (data) {
+                    console.log(data);
+
+                    if (data.status == 0){
+                        var dataInfo = data.data.info.context;
+                        var ulEle = document.createElement('ul');
+                        for (var i = 0; i < dataInfo.length; i++) {
+                            var liEle = document.createElement('li');
+                            liEle.innerHTML = dataInfo[i].desc;
+                            ulEle.appendChild(liEle);
+                        }
+                        info.appendChild(ulEle);
+                    }else{
+                        info.innerHTML = data.msg;
+                    }
+
+                },
+                error: function () {
+                    console.log('get data failed!');
+                }
+            });
+        });
+    });
+
+
+</script>
+</body>
+</html>
