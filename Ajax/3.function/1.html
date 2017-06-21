@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+<script>
+
+    //1. 函数作为对象的属性
+    var obj = {
+        name: 'xiaoming',
+        say: function () {
+            console.log('Say Hello!');
+        }
+    }
+    obj.say();
+
+    //2.函数作为回调
+    function myCb(cb) {
+        if (typeof cb == 'function'){
+            cb();
+        }else{
+            console.log(cb);
+        }
+    }
+    myCb(obj.say);
+
+    //3.函数作为返回值
+    function myFunc() {
+        return function () {
+            console.log('this is a return function!');
+        }
+    }
+    var result = myFunc();
+    result();
+
+    //eg1：函数的值
+    var arrFunc1 = [];
+    for (var i=0; i<3; i++){
+        function func() {
+            console.log(i);
+        }
+        arrFunc1.push(func);
+    }
+    for (var j=0; j<3; j++){
+        arrFunc1[j](); // 结果： 3 3 3 i成为全局变量，并且值为3
+    }
+
+    //eg2
+    var arrFunc2 = [];
+    for(var i=0; i<3; i++){
+        arrFunc2.push((function (val) {
+            return function () {
+                console.log(val)
+            }
+        })(i));
+    }
+    for (var j=0; j<3; j++){
+        arrFunc2[j](); // 结果：0 1 2 函数执行了
+    }
+
+
+</script>
+</body>
+</html>

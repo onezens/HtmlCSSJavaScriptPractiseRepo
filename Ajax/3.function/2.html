@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+<script>
+    function person(name) {
+        this.name = name;
+        this.sing = function () {
+            console.log(this.name + '在唱：周杰伦-稻花香');
+        }
+    }
+    //function 作为构造函数, 只有作为构造函数，才能使用this关键字
+    var xiaoming = new person('小明');
+    xiaoming.sing();
+
+    person.age = 20;
+    console.log(person.age);
+
+    //function有双重身份： 1、对象  2、构造函数
+</script>
+</body>
+</html>

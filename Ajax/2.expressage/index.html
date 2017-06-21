@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>expressage</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            background-color: cyan;
+            border: 1px solid #CCCCCC;
+            padding: 20px;
+            min-height: 300px;
+        }
+        .inputBox {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="inputBox">
+        <input type="text" id="orderId">
+        <input type="button" value="查询" id="searchBtn">
+    </div>
+    <div id="info">
+
+    </div>
+</div>
+<script>
+
+
+    window.onload = function () {
+        var inputField = document.querySelector('#orderId');
+        var searchBtn = document.querySelector('#searchBtn');
+        var info = document.querySelector('#info');
+
+        searchBtn.addEventListener('click', function () {
+            var orderId = inputField.value;
+            ajax(orderId, function (data) {
+                data = JSON.parse(data);
+                var dataInfo = data.data.info.context;
+                var ulEle = document.createElement('ul');
+                for (var i = 0; i < dataInfo.length; i++) {
+                    var liEle = document.createElement('li');
+                    liEle.innerHTML = dataInfo[i].desc;
+                    ulEle.appendChild(liEle);
+                }
+                info.appendChild(ulEle);
+            });
+        });
+    }
+
+    function ajax(orderId, cb) {
+        var xhr = null;
+        if(window.ActiveXObject){
+            xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        }else if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }
+        xhr.open('get', './index.php?order_id='+orderId);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4){
+                if (xhr.status == 200){
+                    cb(xhr.responseText);
+                }else{
+                    alert('请求失败！');
+                }
+            }
+        };
+
+        xhr.send(null);
+    }
+</script>
+</body>
+</html>
