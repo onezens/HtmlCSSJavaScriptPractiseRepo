@@ -5,33 +5,46 @@
     <title>demo</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
+<div id="home_slide" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active" >
+            <div class="item-image" data-lg-image="img/slide_01_2000x410.jpg" data-sm-image="img/slide_01_640x340.jpg"></div>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav nav-tabs">
-                <li role="presentation"><a href="#">我要投资</a></li>
-                <li role="presentation"><a href="#">我要借款</a></li>
-                <li role="presentation"><a href="#">平台介绍</a><z/li>
-                <li role="presentation"><a href="#">新手专区</a></li>
-                <li role="presentation"><a href="#">最新资讯</a></li>
-                <li role="presentation"><a href="#">微论坛</a></li>
-                <li role="presentation" class="navbar-right"><a href="#">个人中心</a></li>
-            </ul>
+        <div class="item">
+            <div class="item-image" data-lg-image="img/slide_02_2000x410.jpg" data-sm-image="img/slide_02_640x340.jpg"></div>
         </div>
+        <div class="item">
+            <div class="item-image" data-lg-image="img/slide_03_2000x410.jpg" data-sm-image="img/slide_03_640x340.jpg"></div>
+        </div>
+        <div class="item">
+            <div class="item-image" data-lg-image="img/slide_04_2000x410.jpg" data-sm-image="img/slide_04_640x340.jpg"></div>
+        </div>
+
     </div>
-</nav>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 </body>
 </html>
