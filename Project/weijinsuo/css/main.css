@@ -1,0 +1,283 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+/**
+ *  顶部样式
+ */
+.topBar {
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 40px;
+    font-size: 10px;
+}
+
+.topBar .row > div + div {
+    border-left: 1px solid #e0e0e0;
+}
+
+
+.topBar .tb-4 a{
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.topBar .tb-1 a:hover {
+    text-decoration: none;
+}
+
+.a-base{
+    text-decoration: none;
+    font-size: 10px;
+    color: #777;
+    background-color: transparent;
+}
+
+.topBar .tb-1 img {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    margin-left: -60px;
+    z-index: 1000;
+    display: none;
+}
+
+.topBar .tb-1:hover  img{
+    display: block;
+}
+
+/**
+ * 导航样式
+ */
+
+
+/**
+ * 字体图标
+ */
+
+@font-face {
+    font-family: 'weijinsuo';
+    src: url('../fonts/MiFie-Web-Font.eot?6cyhth');
+    src: url('../fonts/MiFie-Web-Font.eot?6cyhth#iefix') format('embedded-opentype'), url('../fonts/MiFie-Web-Font.svg?6cyhth#MiFie-Web-Font') format('svg'), url('../fonts/MiFie-Web-Font.ttf?6cyhth') format('truetype'), url('../fonts/MiFie-Web-Font.woff?6cyhth') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'weijinsuo' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mobilephone:before {
+    content: "\e908";
+    font-size: 13px;
+}
+
+.icon-telephone:before {
+    content: "\e909";
+    font-size: 15px;
+}
+
+/**
+ *  导航
+ */
+
+.icon-icon {
+    color: #E9232C;
+    font-size: 36px;
+}
+
+.icon-icon::before {
+    content: "\e920";
+}
+
+.icon-logo {
+    color: #434243;
+    font-size: 36px;
+}
+
+.icon-logo::before {
+    content: "\e93e";
+}
+
+/**
+ *  自定义bootcss
+ */
+
+
+.btn-login {
+    color: #fff;
+    background-color: #E9232C;
+    border-color: #DB3B43;
+}
+.btn-login:focus,
+.btn-login.focus {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #DB3B43;
+}
+.btn-login:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #DB3B43;
+}
+.btn-login:active,
+.btn-login.active,
+.open > .dropdown-toggle.btn-danger {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #DB3B43;
+}
+.btn-login:active:hover,
+.btn-login.active:hover,
+.open > .dropdown-toggle.btn-login:hover,
+.btn-login:active:focus,
+.btn-login.active:focus,
+.open > .dropdown-toggle.btn-login:focus,
+.btn-login:active.focus,
+.btn-login.active.focus,
+.open > .dropdown-toggle.btn-login.focus {
+    color: #fff;
+    background-color: #ac2925;
+    border-color: #761c19;
+}
+.btn-login:active,
+.btn-login.active,
+.open > .dropdown-toggle.btn-login {
+    background-image: none;
+}
+.btn-login.disabled:hover,
+.btn-login[disabled]:hover,
+fieldset[disabled] .btn-login:hover,
+.btn-login.disabled:focus,
+.btn-login[disabled]:focus,
+fieldset[disabled] .btn-login:focus,
+.btn-login.disabled.focus,
+.btn-login[disabled].focus,
+fieldset[disabled] .btn-login.focus {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.btn-login .badge {
+    color: #d9534f;
+    background-color: #fff;
+}
+
+
+
+/**
+ * 导航
+ */
+
+.navbar-wjs {
+
+    border-bottom: 1px solid #f0f0f0;
+}
+.navbar-wjs .navbar-brand {
+    color: #777;
+    height: 70px;
+
+}
+.navbar-wjs .navbar-brand:hover,
+.navbar-wjs .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.navbar-wjs .navbar-text {
+    color: #777;
+}
+.navbar-wjs .navbar-nav > li > a {
+    color: #777;
+    line-height: 35px;
+    height: 70px;
+}
+.navbar-wjs .navbar-nav > li > a:hover,
+.navbar-wjs .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #e9232c;
+}
+.navbar-wjs .navbar-nav > .active > a,
+.navbar-wjs .navbar-nav > .active > a:hover,
+.navbar-wjs .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 2px solid #e9232c;
+}
+.navbar-wjs .navbar-nav > .disabled > a,
+.navbar-wjs .navbar-nav > .disabled > a:hover,
+.navbar-wjs .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.navbar-wjs .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 20px;
+}
+.navbar-wjs .navbar-toggle:hover,
+.navbar-wjs .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-wjs .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-wjs .navbar-collapse,
+.navbar-wjs .navbar-form {
+    border-color: #e7e7e7;
+}
+.navbar-wjs .navbar-nav > .open > a,
+.navbar-wjs .navbar-nav > .open > a:hover,
+.navbar-wjs .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .navbar-wjs .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-wjs .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.navbar-wjs .navbar-link {
+    color: #777;
+}
+.navbar-wjs .navbar-link:hover {
+    color: #333;
+}
+.navbar-wjs .btn-link {
+    color: #777;
+}
+.navbar-wjs .btn-link:hover,
+.navbar-wjs .btn-link:focus {
+    color: #333;
+}
+.navbar-wjs .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-wjs .btn-link:hover,
+.navbar-wjs .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-wjs .btn-link:focus {
+    color: #ccc;
+}
