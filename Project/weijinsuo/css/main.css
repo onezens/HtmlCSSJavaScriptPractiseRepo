@@ -93,6 +93,72 @@ body {
     line-height: 30px;
 }
 
+/**
+ * 预约
+ */
+#booking {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#booking div {
+    font-size: 16px;
+    line-height: 15px;
+}
+
+#booking p {
+    margin-bottom: 0px;
+}
+
+#booking .pull-left a {
+    color: #e9232c;
+    text-decoration: none;
+    border-bottom: 1px dashed #e9232c;
+}
+
+/**
+ * 产品列表
+ */
+#products {
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+
+#products .nav-tabs a {
+    border: 0px;
+    color: #444;
+}
+
+#products .nav-tabs li {
+    margin-bottom: 0px;
+}
+#products .nav-tabs .active a{
+    border-bottom: 3px solid #E9232C;
+    background-color: transparent;
+}
+
+#products .product {
+    height: 160px;
+    background-color: cyan;
+}
+
+#products .tab-content .row > div{
+    padding-top: 20px;
+}
+
+#products .panel-heading {
+    float: right;
+    /*width: 300px;*/
+}
+
+#products .panel-body {
+    width: 120px;
+    float: right;
+}
+
+.cl {
+    clear:both;
+}
 
 /**
  * 字体图标

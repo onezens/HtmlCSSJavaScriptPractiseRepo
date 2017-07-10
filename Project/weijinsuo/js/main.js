@@ -2,6 +2,9 @@
  * Created by wangzhen on 17/6/26.
  */
 $(function () {
+
+
+
     function resize() {
         var winWidth = $(window).width();
         console.log(winWidth);
