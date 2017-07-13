@@ -3,8 +3,6 @@
  */
 $(function () {
 
-
-
     function resize() {
         var winWidth = $(window).width();
         console.log(winWidth);
@@ -18,4 +16,7 @@ $(function () {
         });
     }
     $(window).on('resize', resize).trigger('resize');
+
+    // 提示框效果
+    $('[data-toggle="tooltip"]').tooltip();
 });
