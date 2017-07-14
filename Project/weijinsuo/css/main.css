@@ -2,6 +2,11 @@ body {
     font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
 
+.cl {
+    clear:both;
+}
+
+
 /**
  *  顶部样式
  */
@@ -298,12 +303,226 @@ body {
 }
 
 
+/**
+ * 新闻
+ */
+
+#news {
+    padding: 40px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.news-title {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px dashed #CCCCCC;
+    padding: 10px;
+}
+
+.news-title::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    /*background-color: orange;*/
+    right: -10px;
+    bottom: -5px;
+}
+
+#news .nav-tabs {
+    padding-top: 20px;
+}
+
+#news .nav-tabs li {
+    margin-bottom: 15px;
+}
+
+#news .nav-tabs li.active a {
+    border: 0px;
+
+}
+
+#news .nav-tabs li.active a:hover {
+    border: 0px;
+}
+
+#news .nav-tabs > li > a:hover {
+    border: 0px;
+}
+#news .nav-tabs > li > a {
+    border: 0px;
+    width: 60px;
+    height: 60px;
+    background-color: #CCCCCC;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+#news .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: 1px;
+    top: 0px;
+    right: 35px;
+    border-left: 1px dashed #CCCCCC;
+}
+
+#news .nav-tabs {
+    border: 0px;
+}
+
+#news .nav-tabs a {
+    text-align: center;
+    padding: 25%;
+}
+
+#news .nav-tabs li.active a, #news .nav-tabs li a:hover{
+    background-color: #E9232C;
+}
+
+
+#news .tab-content ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#news .tab-content li {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.icon-news01:before {
+    content: "\e90e";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news02:before {
+    content: "\e90f";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news03:before {
+    content: "\e910";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news04:before {
+    content: "\e911";
+    font-size: 28px;
+    color: #EAEAEA;
+}
 
 
 
+/**
+ * 合作伙伴
+ */
 
-.cl {
-    clear:both;
+#partner {
+    padding: 20px;
+}
+
+
+.partner-list ul > li > a {
+    font-family: weijinsuo;
+    color: #CCCCCC;
+    font-size: 50px;
+}
+
+.partner-list ul {
+    list-style: none;
+}
+
+.partner-list ul li {
+    float: left;
+    padding: 10px;
+    width: calc(100% / 9);
+}
+.partner-list ul li a:hover {
+    text-decoration: none;
+}
+.partner-list ul li+li{
+    border-left: 1px dashed #CCCCCC;
+}
+
+
+.icon-uniE930:hover {
+    color: #df3232;
+}
+
+.icon-uniE930:before {
+    content: "\e946";
+}
+
+.icon-uniE92F:hover {
+    color: #e8380d;
+}
+
+.icon-uniE92F:before {
+    content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+    color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+    content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+    color: #159f69;
+}
+
+.icon-uniE92A:before {
+    content: "\e92a";
+}
+
+.icon-uniE929:hover {
+    color: #07569e;
+}
+
+.icon-uniE929:before {
+    content: "\e929";
+}
+
+.icon-uniE931:hover {
+    color: #004098;
+}
+
+.icon-uniE931:before {
+    content: "\e931";
+}
+
+.icon-uniE92C:hover {
+    color: #d32019;
+}
+
+.icon-uniE92C:before {
+    content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+    color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+    content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+    color: #2bb289;
+}
+
+.icon-uniE92D:before {
+    content: "\e92d";
 }
 
 /**
@@ -570,3 +789,6 @@ fieldset[disabled] .navbar-wjs .btn-link:hover,
 fieldset[disabled] .navbar-wjs .btn-link:focus {
     color: #ccc;
 }
+
+
+
