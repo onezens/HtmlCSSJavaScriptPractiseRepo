@@ -1,0 +1,60 @@
+*,
+::after,
+::before{
+
+    padding: 0;
+    margin: 0;
+
+    /*ios 点击高亮效果  rgba(0,0,0,0)*/
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color:transparent;
+    /*父元素如果设置了-webkit-box属性值，子元素即使是一个block性质的元素，宽度也不会自动充满一行，而是会根据实际拥有的内容计算自己的宽度，所以一般要给它设置一个width:100%，这样就可以实现自动充满效果，而这个100%，是相对于内容区域，即上面所抒写*/
+    -webkit-box-sizing: border-box;
+
+}
+
+body{
+    font-family: "Microsoft YaHei" , "sans-serif";
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    position: relative;
+    background: #f5f5f5;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+input,textarea{
+    border:0;
+    outline: none;
+    resize: none;
+
+    /*去除浏览器默认样式,保持一致*/
+    -webkit-appearance: none;
+}
+
+img{
+    vertical-align: middle;
+    border: 0;
+}
+
+.layout {
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    background-color: cyan;
+    height: 1000px;
+}
+
+[class^="icon_"]{
+    background: url("../images/sprites.png") no-repeat;
+    background-size: 200px 200px;
+}

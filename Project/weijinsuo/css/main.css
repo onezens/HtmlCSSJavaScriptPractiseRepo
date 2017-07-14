@@ -51,6 +51,25 @@ body {
 }
 
 /**
+ * 导航
+ */
+
+#home-nav {
+    background-color: white;
+    z-index: 1;
+}
+
+#home-nav.affix {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+#home-nav .navbar {
+    margin-bottom: 0px;
+}
+
+/**
  * 顶部广告轮播
  */
 
